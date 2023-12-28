@@ -16,7 +16,7 @@
             <tr>
                 <th>Serial</th>
                 <th>Name</th>
-                <th>image</th>
+                <th>Image</th>
                 <th>Profession</th>
                 <th>Expertise</th>
                 <th>Address</th>

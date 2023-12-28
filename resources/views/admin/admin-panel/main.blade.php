@@ -376,10 +376,12 @@
     <!-- Custom scripts for all pages-->
     <script src="{{ asset('js/sb-admin-2.min.js') }}"></script>
 
-    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/rowreorder/1.2.8/js/dataTables.rowReorder.min.js"></script>
-    <script src="https://cdn.datatables.net/responsive/2.3.0/js/dataTables.responsive.min.js"></script>
-
+{{--    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>--}}
+{{--    <script src="https://cdn.datatables.net/rowreorder/1.2.8/js/dataTables.rowReorder.min.js"></script>--}}
+{{--    <script src="https://cdn.datatables.net/responsive/2.3.0/js/dataTables.responsive.min.js"></script>--}}
+    <script src="{{ asset('assets/scripts/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ asset('assets/scripts/dataTables.rowReorder.min.js') }}"></script>
+    <script src="{{ asset('assets/scripts/dataTables.responsive.min.js') }}"></script>
     <script>
         $(document).ready(function() {
             // $('#example').DataTable();
