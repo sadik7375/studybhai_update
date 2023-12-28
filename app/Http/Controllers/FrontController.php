@@ -33,6 +33,11 @@ class FrontController extends Controller
         return view('userprofile.userprofile');
     }
 
+    public function usercourse()
+    {
+        return view('userprofile.usercourse');
+    }
+
 
 
 

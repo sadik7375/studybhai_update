@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -78,7 +81,7 @@
 
                     <br/>
                     <div>
-                        <form id="enrollForm" method="POST" action="{{ route('pay') }}">
+                        <form id="enrollForm" method="POST" action="{{ route('pay', ['course_id' => $course->id]) }}">
                             @csrf
                             <input type="hidden" name="total_amount" id="total_amount" value="{{ $course->price }}"/>
 
@@ -86,6 +89,8 @@
                                 Enroll Now
                             </button>
                         </form>
+
+
 
 
                     </div>
@@ -121,7 +126,7 @@
                     <div class="card third-section-learning-box" style="width: auto">
                         <div class="card-body">
                             <h5 class="third-section-learning-box_p1">Intermediate</h5>
-                                {!! $course->intermediate !!}
+                            {!! $course->intermediate !!}
                         </div>
                     </div>
                 </div>
@@ -184,5 +189,5 @@
         });
     });
 
-</body>
-</html>
+    </body>
+    </html>

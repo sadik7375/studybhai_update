@@ -11,6 +11,7 @@ use App\Models\Footer;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\CanEnroll;
+use App\Http\Controllers\showBuyCourses;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,12 +31,15 @@ Route::get('test', function () {
 });
 
 // ------------------------------------user profile route-------------------------
-Route::get('userprofile', [FrontController::class, 'userprofile'])->name('userprofile')->middleware('userprofile');;
+Route::get('userprofile', [FrontController::class, 'userprofile'])->name('userprofile')->middleware('userprofile');
+
+//-------------------------------------user course show----------------------------
+Route::get('usercourse', [showBuyCourses::class, 'index'])->name('usercourse');
+
+// Route::get('usercourse', [FrontController::class, 'usercourse']);
 
 
-
-
-
+//--------------------------------------------------------------------------------------
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -103,7 +107,7 @@ Route::middleware('auth')->group(function () {});
 Route::get('/example1', [SslCommerzPaymentController::class, 'exampleEasyCheckout']);
 Route::get('/example2', [SslCommerzPaymentController::class, 'exampleHostedCheckout']);
 
-Route::post('/pay', [SslCommerzPaymentController::class, 'index'])->name('pay')->middleware('canEnroll');
+Route::post('/pay/{course_id}', [SslCommerzPaymentController::class, 'index'])->name('pay');
 Route::post('/pay-via-ajax', [SslCommerzPaymentController::class, 'payViaAjax']);
 
 Route::post('/success', [SslCommerzPaymentController::class, 'success']);
