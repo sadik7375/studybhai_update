@@ -7,39 +7,77 @@
     <title>studybhai</title>
 
     <link href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/rowreorder/1.2.8/css/rowReorder.dataTables.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.3.0/css/responsive.dataTables.min.css">
-
-    <script src="https://cdn.tiny.cloud/1/3jyy1zmqqq1lgcadurv15vtpzdvttvplxnvgtpjqjicmj1h5/tinymce/6/tinymce.min.js"
-            referrerpolicy="origin"></script>
-
-    <!-- Custom styles for this template-->
     <link href="{{ asset('css/sb-admin-2.min.css') }}" rel="stylesheet">
 </head>
 <body>
 
+<div id="wrapper">
+    <!-- Sidebar -->
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
+    </ul>
 
-<div class="profile-container">
-    <h3>Hello, {{ $user->name }}</h3>
-    <h4>Purchased Courses:</h4>
-    @foreach ($purchasedCourses as $course)
-        <div class="course-card">
-            <a href="#">{{ \App\Models\admin\Course::find($course->course_id)->first()->title ?? "No Data Found" }}</a>
-            <div class="course-card">
-                Price: {{ $course->amount }}
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+        <!-- Main Content -->
+        <div id="content">
+            <div class="container-fluid">
+                <div class="profile-container">
+                    <div class="table-responsive">
+                        <table class="table table-bordered" id="purchasedCoursesTable">
+                            <thead>
+                            <tr>
+                                <th>Serial</th>
+                                <th>Title</th>
+                                <th>Duration</th>
+                                <th>Image</th>
+                                <th>Price</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <?php $id = 0; ?>
+                            @foreach ($purchasedCourses as $course)
+                                    <?php $courseDetails = \App\Models\admin\Course::find($course->course_id)->first(); ?>
+                                <tr>
+                                    <td>{{ ++$id }}</td>
+                                    <td>{{ optional($courseDetails)->title ?? "No Data Found" }}</td>
+                                    <td>{{ optional($courseDetails)->duration ?? "No Data Found" }}</td>
+                                    <td>
+                                        <img src="{{ optional($courseDetails)->image ? asset('storage/'.$courseDetails->image) : 'no-image.jpg' }}" alt="" style="width: 100px">
+                                    </td>
+                                    <td>{{ $course->amount }}</td>
+                                </tr>
+                            @endforeach
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
-
-    @endforeach
+    </div>
 </div>
 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="{{ asset('assets/scripts/jquery.dataTables.min.js') }}"></script>
+<script src="{{ asset('assets/scripts/dataTables.rowReorder.min.js') }}"></script>
+<script src="{{ asset('assets/scripts/dataTables.responsive.min.js') }}"></script>
 
+<script>
+    $(document).ready(function () {
+        $('#purchasedCoursesTable').DataTable({
+            rowReorder: {
+                selector: 'td:nth-child(2)' // Assuming the second column is draggable (you can change this)
+            },
+            responsive: true
+            // Add more DataTables configurations as needed
+        });
+    });
+</script>
 
 </body>
 </html>

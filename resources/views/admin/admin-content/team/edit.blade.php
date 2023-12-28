@@ -18,11 +18,11 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Enter title</label>
-                    <input type="text" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="" name="title"
+                    <label for="exampleInputEmail1">Enter Name</label>
+                    <input type="text" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="" name="name"
                         class="form-control @error('title') is-invalid @enderror" value="{{ $team->title }}">
 
-                    @error('title')
+                    @error('name')
                         <div class="alert alert-danger" style="margin-top: 10px">{{ $message }}</div>
                     @enderror
                 </div>
@@ -30,7 +30,7 @@
 
             <div class="col-md-6">
                 <div class="form-group">
-                    <label for="image">Image [130px x 130px]</label>
+                    <label for="image">Image</label>
                     <input type="file" id="formFile" name="image"
                         class="form-control-file @error('image') is-invalid @enderror">
 

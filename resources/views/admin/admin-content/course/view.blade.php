@@ -19,7 +19,7 @@
             <th>Serial</th>
             <th>Title</th>
             <th>Duration</th>
-            <th>image</th>
+            <th>Image</th>
             <th>Price</th>
             <th>Update</th>
             <th>Delete</th>
