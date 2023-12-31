@@ -50,7 +50,7 @@
 
         <a class="nav-link" href="{{route("usercourse")}}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>my courses</span>
+            <span>My Courses</span>
     </li>
 
     <!-- Divider -->
