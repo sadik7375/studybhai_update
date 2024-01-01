@@ -59,19 +59,6 @@
 
 </ul>
 
-{{-- <div class="profile-container">
-    <h3>Hello, {{ $user->name }}</h3>
-    <h4>Purchased Courses:</h4>
-    @foreach ($purchasedCourses as $course)
-        <div class="course-card">
-            <a href="#">{{ \App\Models\admin\Course::find($course->course_id)->first()->title ?? "No Data Found" }}</a>
-            <div class="course-card">
-                Price: {{ $course->amount }}
-            </div>
-        </div>
-
-    @endforeach
-</div> --}}
 
 @section('content')
 

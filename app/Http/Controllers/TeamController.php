@@ -39,6 +39,7 @@ class TeamController extends Controller
         $inputs = request()->validate([
             'name' => 'required',
             'image' => 'required|mimes:jpeg,jpg,png,gif',
+            'institution' => 'string',
             'profession' => 'required',
             'expertise' => 'string',
             'category' => 'string',
