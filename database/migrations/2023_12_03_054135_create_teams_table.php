@@ -17,6 +17,7 @@ class CreateTeamsTable extends Migration
             $table->id();
             $table->string("name");
             $table->string("image");
+            $table->string("institution");
             $table->string("profession");
             $table->string("expertise");
             $table->string("category");

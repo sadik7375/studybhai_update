@@ -6,6 +6,7 @@ use App\Http\Controllers\FooterController;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\TeamController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\SslCommerzPaymentController;
 use App\Models\Footer;
 use Illuminate\Support\Facades\Auth;
@@ -90,8 +91,12 @@ Route::get('course-info/{id}', [FrontController::class, 'course_info'])->name('s
 
 Route::get('team', [FrontController::class, 'team'])->name('team_info');
 
-// ------------------------------------------ Team ------------------------------------------
+// ------------------------------------------ Dashboard ------------------------------------------
 
+//Route::middleware(['auth'])->group(function () {
+//    Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('user.dashboard');
+//
+//});
 // ----------------------------------------------------------------------- User [ public route ] -------------------------------------------------------
 
 // ----------------------------------------------------------------------- Logout -----------------------------------------------------------------------

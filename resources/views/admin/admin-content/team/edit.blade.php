@@ -20,7 +20,7 @@
                 <div class="form-group">
                     <label for="exampleInputEmail1">Enter Name</label>
                     <input type="text" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="" name="name"
-                        class="form-control @error('title') is-invalid @enderror" value="{{ $team->title }}">
+                        class="form-control @error('name') is-invalid @enderror" value="{{ $team->name }}">
 
                     @error('name')
                         <div class="alert alert-danger" style="margin-top: 10px">{{ $message }}</div>
@@ -36,6 +36,19 @@
 
                     @error('image')
                         <div class="alert alert-danger" style="margin-top: 10px">{{ $message }}</div>
+                    @enderror
+                </div>
+            </div>
+
+
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="profession">Institution</label>
+                    <input type="text" id="institution" name="institution"
+                           class="form-control @error('institution') is-invalid @enderror" value="{{ $team->institution }}">
+
+                    @error('institution')
+                    <div class="alert alert-danger" style="margin-top: 10px">{{ $message }}</div>
                     @enderror
                 </div>
             </div>

@@ -40,6 +40,17 @@
             </div>
 
 
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="profession">Institution</label>
+                    <input type="text" id="institution" name="institution"
+                           class="form-control @error('institution') is-invalid @enderror">
+                    @error('institution')
+                    <div class="alert alert-danger" style="margin-top: 10px">{{ $message }}</div>
+                    @enderror
+                </div>
+            </div>
+
 
             <div class="col-md-4">
                 <div class="form-group">

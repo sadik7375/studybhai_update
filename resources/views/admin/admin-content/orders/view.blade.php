@@ -23,24 +23,13 @@
         @foreach($orders as $order)
             <tr>
                 <td>{{ $serial += 1 }}</td>
-                <td>{{ $order['user']['name']  }}</td>
-                <td>{{ $order['user']['email']  }}</td>
-                <td>{{ $order['amount']  }}</td>
-                <td>{{ $order['currency']  }}</td>
-                <td>{{ $order['status']  }}</td>
-                <td>{{ $order['course_ID']  }}</td>
-                <td>{{ $order['transaction_id']  }}</td>
-
-{{--                <td>{{ $course->price }}</td>--}}
-
-{{--                <td><a href="{{ route('course.edit',$course->id) }}" class="btn btn-info">Update</a></td>--}}
-{{--                <td>--}}
-{{--                    <form action="{{ route('course.destroy',$course->id) }}" method="post">--}}
-{{--                        {{ csrf_field() }}--}}
-{{--                        @method('delete')--}}
-{{--                        <input type="submit" value="Delete" class="btn btn-danger">--}}
-{{--                    </form>--}}
-{{--                </td>--}}
+                <td>{{ optional($order['user'])['name'] }}</td>
+                <td>{{ optional($order['user'])['email'] }}</td>
+                <td>{{ $order['amount'] }}</td>
+                <td>{{ $order['currency'] }}</td>
+                <td>{{ $order['status'] }}</td>
+                <td>{{ $order['course_ID'] }}</td>
+                <td>{{ $order['transaction_id'] }}</td>
             </tr>
         @endforeach
         </tbody>
