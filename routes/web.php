@@ -6,7 +6,9 @@ use App\Http\Controllers\FooterController;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\TeamController;
+use App\Http\Controllers\profileEditController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\UserDashbroadController;
 use App\Http\Controllers\SslCommerzPaymentController;
 use App\Models\Footer;
 use Illuminate\Support\Facades\Auth;
@@ -31,16 +33,40 @@ Route::get('test', function () {
     return view('welcometest');
 });
 
-// ------------------------------------user profile route-------------------------
-Route::get('userprofile', [FrontController::class, 'userprofile'])->name('userprofile')->middleware('userprofile');
+// ------------------------------------user profile start-------------------------
+Route::get('userprofile', [FrontController::class, 'userprofile'])->name('userprofile');
+
+
+
 
 //-------------------------------------user course show----------------------------
+
 Route::get('usercourse', [showBuyCourses::class, 'index'])->name('usercourse');
 
-// Route::get('usercourse', [FrontController::class, 'usercourse']);
+//-------------------------------------user course end----------------------------
 
 
-//--------------------------------------------------------------------------------------
+//-------------------------------------user profile edit---------------------------
+
+Route::get('editprofile', [FrontController::class, 'userprofileEdit'])->name('editprofile');
+
+//-------------------------------------password change---------------------------
+
+Route::post('/updatepassword', [profileEditController::class, 'updatePassword'])->name('update.password');
+
+//----------------------------show info in user profile dashbroad---------------
+
+Route::get('userprofile', [UserDashbroadController::class, 'showinfo'])->name('userprofile');
+
+
+//----------------------------show info in user profile dashbroad End---------------
+
+
+
+
+
+//------------------------------------user profile End--------------------------
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

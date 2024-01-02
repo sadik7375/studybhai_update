@@ -29,15 +29,30 @@ class FrontController extends Controller
 
 
     public function userprofile()
-    {
+    {   $user = auth()->user();
+
+
+        if ($user) {
         return view('userprofile.userprofile');
+        }
+        else{
+            return redirect()->route('login'); // or any other action
+
+        }
     }
+
+
 
     public function usercourse()
     {
         return view('userprofile.usercourse');
     }
 
+
+    public function userprofileEdit()
+    {
+        return view('userprofile.userprofileEdit');
+    }
 
 
 
