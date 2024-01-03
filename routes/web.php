@@ -6,7 +6,7 @@ use App\Http\Controllers\FooterController;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\TeamController;
-use App\Http\Controllers\profileEditController;
+use App\Http\Controllers\usersettingsController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\UserDashbroadController;
 use App\Http\Controllers\SslCommerzPaymentController;
@@ -46,13 +46,13 @@ Route::get('usercourse', [showBuyCourses::class, 'index'])->name('usercourse');
 //-------------------------------------user course end----------------------------
 
 
-//-------------------------------------user profile edit---------------------------
+//-------------------------------------user profile settings---------------------------
 
-Route::get('editprofile', [FrontController::class, 'userprofileEdit'])->name('editprofile');
+Route::get('usersettings', [FrontController::class, 'usersettings'])->name('usersettings');
 
 //-------------------------------------password change---------------------------
 
-Route::post('/updatepassword', [profileEditController::class, 'updatePassword'])->name('update.password');
+Route::post('/updatepassword', [usersettingsController::class, 'updatePassword'])->name('update.password');
 
 //----------------------------show info in user profile dashbroad---------------
 
@@ -61,9 +61,9 @@ Route::get('userprofile', [UserDashbroadController::class, 'showinfo'])->name('u
 
 //----------------------------show info in user profile dashbroad End---------------
 
+//-----------------------------------show Editprofile-------------------------------
 
-
-
+Route::get('editprofile', [FrontController::class, 'usereditProfile'])->name('editprofile');
 
 //------------------------------------user profile End--------------------------
 

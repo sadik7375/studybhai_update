@@ -52,6 +52,14 @@
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>My Courses</span>
 
+            <a class="nav-link" href="{{route("editprofile")}}">
+                <i class="fas fa-fw fa-tachometer-alt"></i>
+                <span>Edit Profile</span>
+
+            <a class="nav-link" href="{{route("usersettings")}}">
+                <i class="fas fa-fw fa-tachometer-alt"></i>
+                <span>Settings</span>
+
     </li>
 
     <!-- Divider -->

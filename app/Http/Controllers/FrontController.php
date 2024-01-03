@@ -49,13 +49,24 @@ class FrontController extends Controller
     }
 
 
-    public function userprofileEdit()
+    public function usersettings()
     {
-        return view('userprofile.userprofileEdit');
+        return view('userprofile.settings');
     }
 
 
+    public function usereditProfile()
+    {   $user = auth()->user();
 
+
+        if ($user) {
+        return view('userprofile.editProfile');
+        }
+        else{
+            return redirect()->route('login'); // or any other action
+
+        }
+    }
 
 
 }

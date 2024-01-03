@@ -25,27 +25,13 @@
 
 
 <div class="container">
-    <h1>Edit Profile</h1>
+    <h4>Profile Settings</h4>
     <hr>
     <div class="row">
-        <!-- left column -->
-{{--        <div class="col-md-3">--}}
-{{--            <div class="text-center">--}}
-{{--                <img src="//placehold.it/100" class="avatar img-circle" alt="avatar">--}}
-{{--                <h6>Upload a different photo...</h6>--}}
 
-{{--                <input type="file" class="form-control">--}}
-{{--            </div>--}}
-{{--        </div>--}}
-
-        <!-- edit form column -->
         <div class="col-md-9 personal-info">
-            <div class="alert alert-info alert-dismissable">
-                <a class="panel-close close" data-dismiss="alert">×</a>
-                <i class="fa fa-coffee"></i>
-                Profile update succesfully .
-            </div>
-            <h3>Personal info</h3>
+
+            <h3>Change Information</h3>
 
             <form class="form-horizontal" role="form" action="{{ route('update.password') }}" method="post">
                 @csrf
@@ -71,7 +57,7 @@
                 <div class="form-group">
                     <div class="col-md-8">
                         <button type="submit" class="btn btn-primary">Save Changes</button>
-                        <input type="reset" class="btn btn-default" value="Cancel">
+
                     </div>
                 </div>
             </form>
