@@ -6,7 +6,9 @@ use App\Http\Controllers\FooterController;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\TeamController;
+use App\Http\Controllers\usersettingsController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\UserDashbroadController;
 use App\Http\Controllers\SslCommerzPaymentController;
 use App\Models\Footer;
 use Illuminate\Support\Facades\Auth;
@@ -31,16 +33,40 @@ Route::get('test', function () {
     return view('welcometest');
 });
 
-// ------------------------------------user profile route-------------------------
-Route::get('userprofile', [FrontController::class, 'userprofile'])->name('userprofile')->middleware('userprofile');
+// ------------------------------------user profile start-------------------------
+Route::get('userprofile', [FrontController::class, 'userprofile'])->name('userprofile');
+
+
+
 
 //-------------------------------------user course show----------------------------
+
 Route::get('usercourse', [showBuyCourses::class, 'index'])->name('usercourse');
 
-// Route::get('usercourse', [FrontController::class, 'usercourse']);
+//-------------------------------------user course end----------------------------
 
 
-//--------------------------------------------------------------------------------------
+//-------------------------------------user profile settings---------------------------
+
+Route::get('usersettings', [FrontController::class, 'usersettings'])->name('usersettings');
+
+//-------------------------------------password change---------------------------
+
+Route::post('/updatepassword', [usersettingsController::class, 'updatePassword'])->name('update.password');
+
+//----------------------------show info in user profile dashbroad---------------
+
+Route::get('userprofile', [UserDashbroadController::class, 'showinfo'])->name('userprofile');
+
+
+//----------------------------show info in user profile dashbroad End---------------
+
+//-----------------------------------show Editprofile-------------------------------
+
+Route::get('editprofile', [FrontController::class, 'usereditProfile'])->name('editprofile');
+
+//------------------------------------user profile End--------------------------
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -112,7 +138,7 @@ Route::middleware('auth')->group(function () {});
 Route::get('/example1', [SslCommerzPaymentController::class, 'exampleEasyCheckout']);
 Route::get('/example2', [SslCommerzPaymentController::class, 'exampleHostedCheckout']);
 
-Route::post('/pay/{course_id}', [SslCommerzPaymentController::class, 'index'])->name('pay');
+Route::post('/pay/{course_id}', [SslCommerzPaymentController::class, 'index'])->name('pay')->middleware('canEnroll');
 Route::post('/pay-via-ajax', [SslCommerzPaymentController::class, 'payViaAjax']);
 
 Route::post('/success', [SslCommerzPaymentController::class, 'success']);

@@ -63,8 +63,9 @@
                             <tbody>
                             <?php $id = 0; ?>
                             @foreach ($purchasedCourses as $course)
-                                    <?php $courseDetails = \App\Models\admin\Course::find($course->course_id)->first(); ?>
+
                                 <tr>
+                                        <?php $courseDetails = \App\Models\admin\Course::find($course->course_id)?>
                                     <td>{{ ++$id }}</td>
                                     <td>{{ optional($courseDetails)->title ?? "No Data Found" }}</td>
                                     <td>{{ optional($courseDetails)->duration ?? "No Data Found" }}</td>

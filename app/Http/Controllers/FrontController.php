@@ -29,9 +29,19 @@ class FrontController extends Controller
 
 
     public function userprofile()
-    {
+    {   $user = auth()->user();
+
+
+        if ($user) {
         return view('userprofile.userprofile');
+        }
+        else{
+            return redirect()->route('login'); // or any other action
+
+        }
     }
+
+
 
     public function usercourse()
     {
@@ -39,8 +49,24 @@ class FrontController extends Controller
     }
 
 
+    public function usersettings()
+    {
+        return view('userprofile.settings');
+    }
 
 
+    public function usereditProfile()
+    {   $user = auth()->user();
+
+
+        if ($user) {
+        return view('userprofile.editProfile');
+        }
+        else{
+            return redirect()->route('login'); // or any other action
+
+        }
+    }
 
 
 }

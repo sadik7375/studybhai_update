@@ -51,6 +51,15 @@
         <a class="nav-link" href="{{route("usercourse")}}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>My Courses</span>
+
+            <a class="nav-link" href="{{route("editprofile")}}">
+                <i class="fas fa-fw fa-tachometer-alt"></i>
+                <span>Edit Profile</span>
+
+            <a class="nav-link" href="{{route("usersettings")}}">
+                <i class="fas fa-fw fa-tachometer-alt"></i>
+                <span>Settings</span>
+
     </li>
 
     <!-- Divider -->
@@ -60,10 +69,10 @@
 </ul>
 
 
-@section('content')
-
-
-@endsection
+<div>
+    <h2>Total Number of Orders: {{ $totalOrders }}</h2>
+    <h2>Total Amount from Orders: {{ $totalAmount }} BDT</h2>
+</div>
 
 </body>
 </html>

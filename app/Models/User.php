@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\Models\admin\Course;
 use App\Models\admin\Feedback;
+use App\Models\Profile;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -94,4 +95,15 @@ public function footer()
     {
         return $this->hasMany(Orders::class,'email','email');
     }
+
+
+    public function profile()
+    {
+        return $this->hasOne(Profile::class);
+    }
+
+
+
+
+
 }
