@@ -28,6 +28,14 @@ class FrontController extends Controller
     }
 
 
+
+    public function assigncourseAndtrainerAssign(){
+
+        $trainers = Team::all();
+        return view("admin.admin-content.assigncourse.assign", compact('trainers'));
+    }
+
+
     public function userprofile()
     {   $user = auth()->user();
 
@@ -63,10 +71,22 @@ class FrontController extends Controller
         return view('userprofile.editProfile');
         }
         else{
-            return redirect()->route('login'); // or any other action
+            return redirect()->route('login');
 
         }
     }
+
+
+    public function trainerProfile()
+    {
+        return view('trainerprofile.trainerprofile');
+
+    }
+
+
+
+
+
 
 
 }

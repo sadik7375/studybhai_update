@@ -43,32 +43,33 @@
 
             <h3>Personal Info</h3>
 
-            <form class="form-horizontal" role="form">
+            <form method="POST" action="{{ route('profile.update') }}">
+                @csrf
                 <div class="form-group">
                     <label class="col-lg-3 control-label">Full Name:</label>
                     <div class="col-lg-8">
-                        <input class="form-control" type="text" value="tahmid vai">
+                        <input type="text" class="form-control" name="full_name" value="{{ Auth::user()->profile->full_name }}" />
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label class="col-lg-3 control-label">Institute Name:</label>
                     <div class="col-lg-8">
-                        <input class="form-control" type="text" value="Aiub">
+                        <input type="text" class="form-control" name="institute_name" value="{{ Auth::user()->profile->institute_name }}" />
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label class="col-lg-3 control-label">Phone Number:</label>
                     <div class="col-lg-8">
-                        <input class="form-control" type="text" value="013456789">
+                        <input type="text" class="form-control" name="phone_name" value="{{ Auth::user()->profile->phone_number }}" />
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label class="col-lg-3 control-label">Address:</label>
                     <div class="col-lg-8">
-                        <input class="form-control" type="text" value="Dhaka">
+                        <input type="text" class="form-control" name="address" value="{{ Auth::user()->profile->address }}" />
                     </div>
                 </div>
 
@@ -76,7 +77,7 @@
                 <div class="form-group">
                     <label class="col-lg-3 control-label">Current status:</label>
                     <div class="col-lg-8">
-                        <input class="form-control" type="text" value="job">
+                        <input type="text" class="form-control" name="current_status" value="{{ Auth::user()->profile->current_status }}" />
                     </div>
                 </div>
 
@@ -84,7 +85,7 @@
                     <label class="col-md-3 control-label"></label>
                     <div class="col-md-8">
 
-                        <button type="button" class="btn btn-primary">Update Info</button>
+                        <button type="submit" class="btn btn-primary">Update Info</button>
                         <span></span>
 
                     </div>
