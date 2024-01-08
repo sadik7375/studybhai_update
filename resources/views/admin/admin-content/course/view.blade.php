@@ -47,7 +47,7 @@
                 </td>
 
                 <td>
-                    <form action="{{ route('courseassign',$course->id) }}" method="GET">
+                    <form action="{{ route('courseassign',['course_id'=>$course->id]) }}" method="GET">
                         {{ csrf_field() }}
 
                         <input type="submit" value="assign course" class="btn btn-secondary">

@@ -15,7 +15,14 @@ class CreateAssigncoursesTable extends Migration
     {
         Schema::create('assigncourses', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('course_id');
+            $table->unsignedBigInteger('trainer_id');
+            
             $table->timestamps();
+
+
+            $table->foreign('course_id')->references('id')->on('courses')->onDelete('cascade');
+            $table->foreign('trainer_id')->references('id')->on('teams')->onDelete('cascade');
         });
     }
 
