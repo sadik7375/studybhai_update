@@ -7,6 +7,7 @@ use App\Http\Controllers\FrontController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\TeamController;
 use App\Http\Controllers\usersettingsController;
+use App\Http\Controllers\assigncourseController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProfileEditController;
 use App\Http\Controllers\UserDashbroadController;
@@ -37,9 +38,9 @@ Route::get('test', function () {
 
 //--------------------------------------admin course assign--------------------------
 
-Route::get('admin/courseassign', [FrontController::class, 'assigncourseAndtrainerAssign'])->name('courseassign'); //multi controller function use for one route
+Route::get('admin/courseassign/{course_id}', [FrontController::class, 'assigncourseAndtrainerAssign'])->name('courseassign'); //multi controller function use for one route
 
-
+Route::post('assign',[assigncourseController::class,'store'])->name('assign.store');
 
 
 
