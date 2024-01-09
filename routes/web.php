@@ -36,13 +36,6 @@ Route::get('test', function () {
 });
 
 
-//--------------------------------------admin course assign--------------------------
-
-Route::get('admin/courseassign/{course_id}', [FrontController::class, 'assigncourseAndtrainerAssign'])->name('courseassign'); //multi controller function use for one route
-
-Route::post('assign',[assigncourseController::class,'store'])->name('assign.store');
-
-
 
 
 
@@ -133,6 +126,34 @@ Route::middleware(['auth', 'admin'])
             Route::resource('footer', FooterController::class);
 
             // ------------------------------------------ Footer ------------------------------------------
+
+
+        //--------------------------------------admin course assign--------------------------
+
+        Route::get('courseassign/{course_id}', [FrontController::class, 'assigncourseAndtrainerAssign'])->name('courseassign'); //multi controller function use for one route
+
+        Route::get('assigncourses',[assigncourseController::class,'showAssignedCourses'])->name('assign.courses');
+
+
+        Route::post('assign',[assigncourseController::class,'store'])->name('assign.store');
+
+
+
+        Route::post('deleteassigncourse/{assignedCourse}', [assigncourseController::class, 'deleteAssignCourse'])->name('assign.course.delete');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     });
 
 // ----------------------------------------------------------------------- Admin -----------------------------------------------------------------------
