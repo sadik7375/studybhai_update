@@ -19,6 +19,8 @@ class CreateTeamsTable extends Migration
             $table->string("image");
             $table->string("institution");
             $table->string("profession");
+            $table->string('email');
+            $table->unsignedBigInteger('login_id');
             $table->string("expertise");
             $table->string("category");
             $table->string("address");
