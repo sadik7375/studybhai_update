@@ -34,8 +34,11 @@ Route::get('/', [FrontController::class, 'front'])->name('front.home');
 Route::get('test', function () {
     return view('welcometest');
 });
-
-
+//test for getting dashboard
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
+Route::middleware(['auth'])->group(function () {
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('user.dashboard');
+});
 //--------------------------------------admin course assign--------------------------
 
 Route::get('admin/courseassign/{course_id}', [FrontController::class, 'assigncourseAndtrainerAssign'])->name('courseassign'); //multi controller function use for one route
@@ -60,6 +63,8 @@ Route::get('usercourse', [showBuyCourses::class, 'index'])->name('usercourse');
 
 
 //-------------------------------------user profile settings---------------------------
+Route::get('settings', [FrontController::class, 'usersettings'])->name('settings');
+
 
 Route::get('usersettings', [FrontController::class, 'usersettings'])->name('usersettings');
 
@@ -147,10 +152,7 @@ Route::get('team', [FrontController::class, 'team'])->name('team_info');
 
 // ------------------------------------------ Dashboard ------------------------------------------
 
-//Route::middleware(['auth'])->group(function () {
-//    Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('user.dashboard');
-//
-//});
+
 // ----------------------------------------------------------------------- User [ public route ] -------------------------------------------------------
 
 // ----------------------------------------------------------------------- Logout -----------------------------------------------------------------------

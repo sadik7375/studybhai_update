@@ -10,6 +10,11 @@ class Course extends Model
 {
     use HasFactory;
     protected $guarded = [];
+    protected $fillable = [
+        'name',
+        'instructor',
+        'completion_percentage',
+    ];
     public function orders()
     {
         return $this->hasMany(Orders::class, 'course_id', 'id');
