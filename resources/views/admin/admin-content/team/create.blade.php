@@ -115,8 +115,5 @@
             <br><br><br>
 
         </div>
-
-        <!-- Add other form sections as needed -->
-
     </form>
 @endsection

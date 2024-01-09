@@ -7,15 +7,30 @@ use Illuminate\Http\Request;
 
 class TeamController extends Controller
 {
+
+    public function trainerList(): string
+    {
+        return "data";
+
+
+
+    }
+
+
+
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\Response
      */
     public function index()
     {
         $teams = Team::all();
-        return view('admin.admin-content.team.view', compact('teams'));
+
+        // Filter teams to get only trainers
+        $trainers = $teams->where('category', 'trainer');
+
+        return view('admin.admin-content.team.view', compact('teams', 'trainers'));
     }
 
     /**
@@ -27,6 +42,7 @@ class TeamController extends Controller
     {
         return view('admin.admin-content.team.create');
     }
+
 
     /**
      * Store a newly created resource in storage.
@@ -62,11 +78,14 @@ class TeamController extends Controller
      * Display the specified resource.
      *
      * @param  \App\Models\Team  $team
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\Response
      */
     public function show(Team $team)
     {
-        //
+        global $id;
+        $trainer = Team::find($id);
+
+        return view('trainer-profile', compact('trainer'));
     }
 
     /**
@@ -85,12 +104,12 @@ class TeamController extends Controller
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \App\Models\Team  $team
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function update(Request $request, Team $team)
     {
         $inputs = request()->validate([
-            'title' => 'required',
+            'name' => 'required',
             'image' => 'mimes:jpeg,jpg,png,gif',
             'profession' => 'required',
             'expertise' => 'string',
@@ -120,4 +139,17 @@ class TeamController extends Controller
         session()->flash('success', 'Team member Successfully Deleted');
         return back();
     }
+//    public function __construct()
+//    {
+//        $this->middleware(['auth', 'trainer']);
+//    }
+
+    public function trainerDashboard()
+    {
+        // Trainer dashboard logic
+        return view('trainer.dashboard');
+    }
+
+
+
 }

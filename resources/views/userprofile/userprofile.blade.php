@@ -43,10 +43,14 @@
         <a class="nav-link" href="{{route("home")}}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Home</span></a>
+
         <a class="nav-link" href="{{route("userprofile")}}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span></a>
 
+        <a class="nav-link" href="{{route("userprofile")}}">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>About Me</span></a>
 
         <a class="nav-link" href="{{route("usercourse")}}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
