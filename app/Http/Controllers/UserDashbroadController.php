@@ -9,30 +9,24 @@ class UserDashbroadController extends Controller
 {
 
     //---------------show number of paid courses------------
-public  function showinfo()
-{
-    $user=Auth::user();
+    public  function showinfo()
+    {
+        $user=Auth::user();
 
-    //-------------------number of course order------------------
-    $processingOrders=$user->orders()->where('status','Processing');
+        //-------------------number of course order------------------
+        $processingOrders=$user->orders()->where('status','Processing');
 
-    $totalOrders=$processingOrders->count();
-
-
-    //-------------------total amount------------------------------
-
-    $totalAmount=$processingOrders->sum('amount');
+        $totalOrders=$processingOrders->count();
 
 
-    return view('userprofile.userprofile',compact('totalOrders','totalAmount'));
+        //-------------------total amount------------------------------
+
+        $totalAmount=$processingOrders->sum('amount');
 
 
-}
+        return view('userprofile.userprofile',compact('totalOrders','totalAmount'));
 
 
-
-
-
-
+    }
 
 }
