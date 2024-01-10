@@ -6,17 +6,21 @@ use App\Http\Controllers\FooterController;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\TeamController;
+
 use App\Http\Controllers\usersettingsController;
 use App\Http\Controllers\assigncourseController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProfileEditController;
 use App\Http\Controllers\UserDashbroadController;
+
 use App\Http\Controllers\SslCommerzPaymentController;
 use App\Models\Footer;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\CanEnroll;
 use App\Http\Controllers\showBuyCourses;
+
+//use App\Http\Controllers\TrainerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,13 +33,25 @@ use App\Http\Controllers\showBuyCourses;
 |
 */
 
+
+
+
 Route::get('/', [FrontController::class, 'front'])->name('front.home');
 
 Route::get('test', function () {
     return view('welcometest');
 });
 
+//test for getting dashboard
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
+Route::middleware(['auth'])->group(function () {
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('user.dashboard');
+});
+//--------------------------------------admin course assign--------------------------
 
+Route::get('admin/courseassign/{course_id}', [FrontController::class, 'assigncourseAndtrainerAssign'])->name('courseassign'); //multi controller function use for one route
+
+Route::post('assign',[assigncourseController::class,'store'])->name('assign.store');
 
 
 
@@ -53,6 +69,8 @@ Route::get('usercourse', [showBuyCourses::class, 'index'])->name('usercourse');
 
 
 //-------------------------------------user profile settings---------------------------
+Route::get('settings', [FrontController::class, 'usersettings'])->name('settings');
+
 
 Route::get('usersettings', [FrontController::class, 'usersettings'])->name('usersettings');
 
@@ -96,6 +114,10 @@ Route::get('log_out', function () {
     return redirect()->route('front.home');
 })->name('log_out');
 
+
+//Userprofile Route
+Route::patch('/update-profile', [UserProfileController::class, 'update'])->name('update-profile');
+
 // ----------------------------------------------------------------------- Admin -----------------------------------------------------------------------
 
 Route::middleware(['auth', 'admin'])
@@ -119,8 +141,10 @@ Route::middleware(['auth', 'admin'])
 
         Route::resource('team', TeamController::class);
 
-        // ------------------------------------------ Team ------------------------------------------
-
+        // ------------------------------------------ Trainer ------------------------------------------
+        Route::middleware(['auth', 'tr'])->group(function () {
+            Route::get('/trainer/dashboard', [TeamController::class, 'trainerDashboard'])->name('trainer.dashboard');
+        });
             // ------------------------------------------ Footer ------------------------------------------
 
             Route::resource('footer', FooterController::class);
@@ -168,15 +192,15 @@ Route::get('team', [FrontController::class, 'team'])->name('team_info');
 
 // ------------------------------------------ Dashboard ------------------------------------------
 
-//Route::middleware(['auth'])->group(function () {
-//    Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('user.dashboard');
-//
-//});
+
 // ----------------------------------------------------------------------- User [ public route ] -------------------------------------------------------
 
 // ----------------------------------------------------------------------- Logout -----------------------------------------------------------------------
 
-Route::middleware('auth')->group(function () {});
+Route::middleware(['auth','tr'])->group(function () {
+
+
+});
 
 // ----------------------------------------------------------------------- Logout -----------------------------------------------------------------------
 
