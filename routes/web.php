@@ -45,7 +45,7 @@ Route::get('test', function () {
 //test for getting dashboard
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
 Route::middleware(['auth'])->group(function () {
-    Route::get('/dashboard', [DashboardController::class, 'index'])->name('user.dashboard');
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 });
 //--------------------------------------admin course assign--------------------------
 
@@ -80,7 +80,7 @@ Route::post('/updatepassword', [usersettingsController::class, 'updatePassword']
 
 //----------------------------show info in user profile dashbroad---------------
 
-Route::get('userprofile', [UserDashbroadController::class, 'showinfo'])->name('userprofile');
+//Route::get('userprofile', [UserDashbroadController::class, 'showinfo'])->name('userprofile');
 
 
 //----------------------------show info in user profile dashbroad End---------------

@@ -72,6 +72,5 @@ class Kernel extends HttpKernel
 
         'canEnroll' => \App\Http\Middleware\CanEnrollMiddleware::class,
         'userprofile' =>\App\Http\Middleware\UserprofileMiddleware::class
-
     ];
 }
