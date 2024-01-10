@@ -71,6 +71,7 @@
                                 <th>Duration</th>
                                 <th>Image</th>
                                 <th>Price</th>
+                                <th>Transaction ID</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -86,6 +87,7 @@
                                         <img src="{{ optional($courseDetails)->image ? asset('storage/'.$courseDetails->image) : 'no-image.jpg' }}" alt="" class="img-fluid" style="max-width: 100px; height: auto;">
                                     </td>
                                     <td>{{ $course->amount }}</td>
+                                    <td>{{ $course->transaction_id }}</td>
                                 </tr>
                             @endforeach
                             </tbody>

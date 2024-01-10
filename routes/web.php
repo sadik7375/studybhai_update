@@ -6,15 +6,13 @@ use App\Http\Controllers\FooterController;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\TeamController;
-<<<<<<< HEAD
+
 use App\Http\Controllers\usersettingsController;
 use App\Http\Controllers\assigncourseController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProfileEditController;
 use App\Http\Controllers\UserDashbroadController;
-=======
-//use App\Http\Controllers\DashboardController;
->>>>>>> abfdecc049161a2a7f0ffb906246df0187b0d179
+
 use App\Http\Controllers\SslCommerzPaymentController;
 use App\Models\Footer;
 use Illuminate\Support\Facades\Auth;
@@ -43,6 +41,7 @@ Route::get('/', [FrontController::class, 'front'])->name('front.home');
 Route::get('test', function () {
     return view('welcometest');
 });
+
 //test for getting dashboard
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
 Route::middleware(['auth'])->group(function () {
@@ -53,8 +52,6 @@ Route::middleware(['auth'])->group(function () {
 Route::get('admin/courseassign/{course_id}', [FrontController::class, 'assigncourseAndtrainerAssign'])->name('courseassign'); //multi controller function use for one route
 
 Route::post('assign',[assigncourseController::class,'store'])->name('assign.store');
-
-
 
 
 
@@ -153,6 +150,34 @@ Route::middleware(['auth', 'admin'])
             Route::resource('footer', FooterController::class);
 
             // ------------------------------------------ Footer ------------------------------------------
+
+
+        //--------------------------------------admin course assign--------------------------
+
+        Route::get('courseassign/{course_id}', [FrontController::class, 'assigncourseAndtrainerAssign'])->name('courseassign'); //multi controller function use for one route
+
+        Route::get('assigncourses',[assigncourseController::class,'showAssignedCourses'])->name('assign.courses');
+
+
+        Route::post('assign',[assigncourseController::class,'store'])->name('assign.store');
+
+
+
+        Route::post('deleteassigncourse/{assignedCourse}', [assigncourseController::class, 'deleteAssignCourse'])->name('assign.course.delete');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     });
 
 // ----------------------------------------------------------------------- Admin -----------------------------------------------------------------------
