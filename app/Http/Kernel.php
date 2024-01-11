@@ -71,11 +71,6 @@ class Kernel extends HttpKernel
         'admin' => AdminMiddleware::class,
 
         'canEnroll' => \App\Http\Middleware\CanEnrollMiddleware::class,
-        'userprofile' =>\App\Http\Middleware\UserprofileMiddleware::class];
-
-//        'canEnroll' => \App\Http\Middleware\CanEnroll::class,
-//        'userprofile' =>\App\Http\Middleware\UserprofileMiddleware::class,
-//        'tr' => \App\Http\Middleware\TrainerMiddleware::class
-//>>>>>>> abfdecc049161a2a7f0ffb906246df0187b0d179
-//    ];
+        'userprofile' =>\App\Http\Middleware\UserprofileMiddleware::class
+    ];
 }

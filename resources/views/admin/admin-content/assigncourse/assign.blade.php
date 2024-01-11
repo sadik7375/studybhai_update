@@ -15,9 +15,9 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Course Id</label>
+                    {{-- <label for="exampleInputEmail1">Course Id</label> --}}
                     <input type="text" value="{{ request('course_id') }}" aria-describedby="emailHelp" placeholder="" name="course_id"
-                           class="form-control  ">
+                           class="form-control "  hidden>
                 </div>
             </div>
 
