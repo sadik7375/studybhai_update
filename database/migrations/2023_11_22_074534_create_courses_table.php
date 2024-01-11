@@ -28,7 +28,7 @@ class CreateCoursesTable extends Migration
             $table->text("intermediate")->nullable();
             $table->text("advanced")->nullable();
             $table->string("availability")->nullable();
-            $table->string("user_id");
+            $table->string("user_id")->nullable();
             $table->timestamps();
         });
     }

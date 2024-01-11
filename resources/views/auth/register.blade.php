@@ -130,8 +130,9 @@
             <input type="password" placeholder="Confirm Password" class="form-control" name="password_confirmation"
                    required autocomplete="new-password"/>
 
-
-            <span><br></span>
+            <input type="text" placeholder="Phone Number" class="form-control"
+                 name="email"  required autocomplete="email"/>
+        <span><br></span>
             <button>Sign Up</button>
             <div class="new-here">
                 Already have an account?
