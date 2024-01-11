@@ -8,12 +8,14 @@
                 <br />
                 <div>
                     <p class="footer-paragraph-state">
-                        Online live skill development platform
-                    </p>
+                        An Online live skill development platform</p>
                 </div>
                 <br />
-                <div>
-                    <img src="{{ asset('assets/images/footer_state.png') }}" alt="" class="img-fluid" />
+                <div class="social-media-icons">
+                    <!-- Add social media icons and links vertically and side by side -->
+                    <a href="#" target="_blank"><img src="{{ asset('assets/images/linkedin-icon.png') }}" alt="LinkedIn" class="social-icon"></a>
+                    <a href="#" target="_blank"><img src="{{ asset('assets/images/facebook-icon.png') }}" alt="Facebook" class="social-icon"></a>
+                    <a href="#" target="_blank"><img src="{{ asset('assets/images/instagram-icon.png') }}" alt="Instagram" class="social-icon"></a>
                 </div>
             </div>
 
@@ -32,10 +34,11 @@
             <div class="col-md-3">
                 <div class="footer-list-section-margin">
                     <ul class="footer-lists">
-                        <li>About Us Need Help?</li>
+                        <li>About Us</li>
+                        <li>Need Help?</li>
                         <li>Privacy Policy</li>
                         <li>Terms and Conditions</li>
-                        <li>Need Help?</li>
+
                     </ul>
                 </div>
             </div>
@@ -66,3 +69,15 @@
         </div>
     </div>
 </section>
+
+<style>
+    .social-media-icons {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .social-icon {
+        width: 20px;
+        margin-bottom: 5px;
+    }
+</style>

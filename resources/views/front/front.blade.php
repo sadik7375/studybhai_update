@@ -42,8 +42,7 @@
                             <div>
                                 <div>
                                     <p class="second_left_section_heading">
-                                        Build a rewarding career in the Advanced technological era
-                                        with our skills development programs.
+                                        Unlock Your Potential with StudyBhai – Where Knowledge Meets Aspiration.
                                     </p>
                                 </div>
                                 <div class="second_left_section_p_div">
