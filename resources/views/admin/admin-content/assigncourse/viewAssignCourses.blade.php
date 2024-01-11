@@ -17,8 +17,8 @@
         <thead>
         <tr>
             <th>Serial</th>
-            <th>Title</th>
-            <th>Duration</th>
+            <th>Course Name</th>
+            <th>Trainer</th>
 
             <th>Delete</th>
 

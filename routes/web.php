@@ -65,6 +65,8 @@ Route::get('userprofile', [FrontController::class, 'userprofile'])->name('userpr
 
 Route::get('usercourse', [showBuyCourses::class, 'index'])->name('usercourse');
 
+Route::get('showcourses',[FrontController::class,'showcourses'])->name('showcourses.index');
+
 //-------------------------------------user course end----------------------------
 
 
@@ -163,7 +165,7 @@ Route::middleware(['auth', 'admin'])
 
 
 
-        Route::post('deleteassigncourse/{assignedCourse}', [assigncourseController::class, 'deleteAssignCourse'])->name('assign.course.delete');
+        Route::delete('deleteassigncourse/{assignedCourse}', [assigncourseController::class, 'deleteAssignCourse'])->name('assign.course.delete');
 
 
 

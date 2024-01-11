@@ -16,14 +16,13 @@ class CanEnrollMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
-        if (!Auth::check()) {
-            return redirect('/login')->with('error', 'You need to be logged in to enroll in the course.');
+        if (!auth()->user()==null) {
+            return $next($request);
         }
 
-        // Add additional logic to check if the user is allowed to enroll in the course
-        // For example, you might check if the user has the necessary role or permissions
+        else{
+           return redirect('/login')->with('error', 'You need to be logged in to enroll in the course.');
+        }
 
-        // If the user is allowed, continue with the request
-        return $next($request);
     }
 }

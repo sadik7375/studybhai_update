@@ -28,6 +28,16 @@ class FrontController extends Controller
     }
 
 
+     public function showcourses(){
+
+        $courses = Course::all();
+        return view("course.allcourseShow", compact('courses'));
+
+
+
+    }
+
+
 
     public function assigncourseAndtrainerAssign(){
 

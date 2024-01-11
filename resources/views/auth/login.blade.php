@@ -129,8 +129,20 @@
                 </span>
             @enderror
 
+
             <input type="password" placeholder="Confirm Password" class="form-control" name="password_confirmation"
                    required autocomplete="new-password"/>
+
+
+                   <input type="text" placeholder="Phone Number" class="form-control @error('phone_number') is-invalid @enderror"
+                   name="phone_number" value="{{ old('phone_number') }}" required autocomplete="phone_number"/>
+
+            @error('phone_number')
+            <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror
+
 
 
             <span><br></span>

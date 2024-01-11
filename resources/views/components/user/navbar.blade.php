@@ -18,7 +18,7 @@
 
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/')."#fifth-section" }}">Course</a>
+                    <a class="nav-link" href="{{ route('showcourses.index') }}">Course</a>
                 </li>
 
                 <li class="nav-item">
