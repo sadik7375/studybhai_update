@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Blank</title>
+    <title>Admin Panel Studybhai</title>
 
     <!-- Custom fonts for this template-->
     <link href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
@@ -30,12 +30,6 @@
 </head>
 
 <body id="page-top">
-
-
-
-
-
-
     <!-- Page Wrapper -->
     <div id="wrapper">
 
@@ -423,8 +417,6 @@
             // menubar: 'table',
         });
     </script>
-
-
 </body>
 
 </html>
