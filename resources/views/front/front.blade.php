@@ -180,51 +180,59 @@
         <div class="forth-section-div">
             <div class="row" style="margin: 0; padding: 0">
                 <div class="col-md-3">
-                    <div>
+                    <div style="background-color: #e1e1e1; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
                         <div>
-                            <p class="center-class third-section-learning-box_p1">
-                                Total Student
-                            </p>
-                        </div>
-                        <div>
-                            <p class="center-class third-section-learning-box_p1">100+</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3">
-                    <div>
-                        <div>
-                            <p class="center-class third-section-learning-box_p1">
-                                Mentors
-                            </p>
-                        </div>
-                        <div>
-                            <p class="center-class third-section-learning-box_p1">20+</p>
+                            <div>
+                                <p class="center-class third-section-learning-box_p1">
+                                    Total Student
+                                </p>
+                            </div>
+                            <div>
+                                <p class="center-class third-section-learning-box_p1">100+</p>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-md-3">
-                    <div>
+                    <div style="background-color: #e1e1e1; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
                         <div>
-                            <p class="center-class third-section-learning-box_p1">Course</p>
-                        </div>
-                        <div>
-                            <p class="center-class third-section-learning-box_p1">2+</p>
+                            <div>
+                                <p class="center-class third-section-learning-box_p1">
+                                    Mentors
+                                </p>
+                            </div>
+                            <div>
+                                <p class="center-class third-section-learning-box_p1">20+</p>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-md-3">
-                    <div>
+                    <div style="background-color: #e1e1e1; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
                         <div>
-                            <p class="center-class third-section-learning-box_p1">
-                                Active Students
-                            </p>
+                            <div>
+                                <p class="center-class third-section-learning-box_p1">Course</p>
+                            </div>
+                            <div>
+                                <p class="center-class third-section-learning-box_p1">2+</p>
+                            </div>
                         </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div style="background-color: #e1e1e1; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
                         <div>
-                            <p class="center-class third-section-learning-box_p1">50+</p>
+                            <div>
+                                <p class="center-class third-section-learning-box_p1">
+                                    Active Students
+                                </p>
+                            </div>
+                            <div>
+                                <p class="center-class third-section-learning-box_p1">50+</p>
+                            </div>
                         </div>
                     </div>
                 </div>
