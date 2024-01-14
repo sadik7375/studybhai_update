@@ -26,7 +26,7 @@
                 <td>{{ optional($order['user'])['name'] }}</td>
                 <td>{{ optional($order['user'])['email'] }}</td>
                 <td>{{ $order['amount'] }}</td>
-                <td>{{ $order['currency'] }}</td>
+                <td>{{ $order['phone'] }}</td>
                 <td>{{ $order['status'] }}</td>
                 <td>{{ $order['course_ID'] }}</td>
                 <td>{{ $order['transaction_id'] }}</td>
