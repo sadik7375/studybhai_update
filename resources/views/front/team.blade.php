@@ -80,7 +80,7 @@
                                                 src="https://upload.wikimedia.org/wikipedia/commons/1/10/Ruizanglada_-_Picador_Caballo_y_Toro_130x130..jpg">
                                         </div>
                                         <div class="team-content">
-                                            <h3 class="name">{{ $team->title }}</h3>
+                                            <h3 class="name">{{ $team->name }}</h3>
                                             <h4 class="title">{{ $team->profession }}</h4>
                                             <h4 class="title">{{ $team->expertise }}</h4>
                                         </div>

@@ -7,13 +7,14 @@
                 </div>
                 <br />
                 <div>
-                    <p class="footer-paragraph-state">
+                    <p class="footer-paragraph-state" style="font-family: 'Georgia', sans-serif;">
                         An Online live skill development platform</p>
                 </div>
                 <br />
+
                 <div class="social-media-icons">
                     <!-- Add social media icons and links vertically and side by side -->
-                    <a href="#" target="_blank"><img src="{{ asset('assets/images/linkedin-icon.png') }}" alt="LinkedIn" class="social-icon"></a>
+                    <a href="https://www.linkedin.com/company/study-bhai-app/" target="_blank"><img src="{{ asset('assets/images/linkedin-icon.png') }}" alt="LinkedIn" class="social-icon"></a>
                     <a href="#" target="_blank"><img src="{{ asset('assets/images/facebook-icon.png') }}" alt="Facebook" class="social-icon"></a>
                     <a href="#" target="_blank"><img src="{{ asset('assets/images/instagram-icon.png') }}" alt="Instagram" class="social-icon"></a>
                 </div>
@@ -73,11 +74,17 @@
 <style>
     .social-media-icons {
         display: flex;
-        flex-direction: column;
+        /*flex-direction: column;*/
     }
 
     .social-icon {
-        width: 20px;
+        width: 30px;
         margin-bottom: 5px;
+        margin-right: 10px;
     }
+    .footer-paragraph-state {
+        font-family: Georgia, sans-serif;
+    }
+
+
 </style>

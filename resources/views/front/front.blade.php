@@ -19,6 +19,65 @@
         input {
             margin-right: 0.5rem;
         }
+        /*styles for course section */
+
+        .card-group {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            column-gap: 20px;
+            margin: 20px;
+        }
+
+        .card {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card-img-top {
+            object-fit: cover;
+            height: 150px;
+        }
+
+        .card-body {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+        }
+
+        .card-text {
+            font-size: 1rem;
+            color: #6c757d;
+            margin-bottom: 5px;
+        }
+
+        .view_learning_anchor {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .btn-info {
+            background-color: #17a2b8;
+            border-color: #17a2b8;
+        }
+        .card:nth-child(odd) {
+            background-color: #bee3db; /* Odd cards background color */
+        }
+
+        .card:nth-child(even) {
+            background-color: #fcd5ce; /* Even cards background color */
+        }
+
     </style>
 </head>
 
@@ -327,7 +386,7 @@
                     @foreach ($feedbacks as $feedback)
                         <?php $id += 1; ?>
                         <input type="radio" name="testimonial" id="input-testimonial{{ $id }}"
-                            {{ $id == 1 ? 'checked' : '' }} />  //why
+                            {{ $id == 1 ? 'checked' : '' }} />
                     @endforeach
 
                     <div class="testimonials-inner">
@@ -421,8 +480,7 @@
 
 
 
+</body>
 
-</body>
-</body>
 
 </html>
