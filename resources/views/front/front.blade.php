@@ -9,16 +9,80 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
 
     <link rel="stylesheet" href="{{ asset('assets/css/navbar.css') }}" />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+          integrity="sha512-GWzVrcGlo0TxTRvz9ttioyYJ+Wwk9Ck0G81D+eO63BaqHaJ3YZX9wuqjwgfcV/MrB2PhaVX9DkYVhbFpStnqpQ=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
+
         form {
             display: flex;
             justify-content: center;
         }
-
         input {
             margin-right: 0.5rem;
         }
+        /*styles for course section */
+
+        .card-group {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            column-gap: 20px;
+            margin: 20px;
+        }
+
+        .card {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card-img-top {
+            object-fit: cover;
+            height: 150px;
+        }
+
+        .card-body {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+        }
+
+        .card-text {
+            font-size: 1rem;
+            color: #6c757d;
+            margin-bottom: 5px;
+        }
+
+        .view_learning_anchor {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .btn-info {
+            background-color: #17a2b8;
+            border-color: #17a2b8;
+        }
+        .card:nth-child(odd) {
+            background-color: #bee3db; /* Odd cards background color */
+        }
+
+        .card:nth-child(even) {
+            background-color: rgba(246, 206, 252, 0.6); /* Even cards background color */
+        }
+    /*-------------course section style done---------------------*/
+
+    /*----------------styles for Graduate feedbacks Section------------------*/
+
     </style>
 </head>
 
@@ -42,8 +106,7 @@
                             <div>
                                 <div>
                                     <p class="second_left_section_heading">
-                                        Build a rewarding career in the Advanced technological era
-                                        with our skills development programs.
+                                        Unlock Your Potential with StudyBhai – Where Knowledge Meets Aspiration.
                                     </p>
                                 </div>
                                 <div class="second_left_section_p_div">
@@ -88,82 +151,81 @@
             <div class="third-section-margin">
                 <div class="row" style="margin: 0; padding: 0">
                     <div class="col-md-4 mt-4">
-                        <div class="card third-section-learning-box" style="width: auto">
+                        <div class="card third-section-learning-box h-100">
                             <div class="card-body">
                                 <h5 class="third-section-learning-box_p1">
                                     Overcome the Lack of <br />
                                     Academic Learning
                                 </h5>
                                 <p class="third-section-learning-box_p2">
-                                    We are focused to teach the core concept of technology which
-                                    is not depended on stuttering theoretical concepts we got at
-                                    our universities.
+                                    We are focused on teaching the core concept of technology which is not depended on stuttering theoretical concepts we got at our universities.
                                 </p>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-md-4 mt-4">
-                        <div class="card third-section-learning-box" style="width: auto">
+                        <div class="card third-section-learning-box h-100">
                             <div class="card-body">
                                 <h5 class="third-section-learning-box_p1">
                                     Interaction with <br />
                                     Instructor
                                 </h5>
                                 <p class="third-section-learning-box_p2">
-                                    Offline training allows students to interact face-to-face
-                                    with instructors and peers. This can facilitate better
-                                    understanding, networking, and the immediate resolution of
-                                    queries.
+                                    Offline training allows students to interact face-to-face with instructors and peers. This can facilitate better understanding, networking, and the immediate resolution of queries.
                                 </p>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-md-4 mt-4">
-                        <div class="card third-section-learning-box" style="width: auto">
+                        <div class="card third-section-learning-box h-100">
                             <div class="card-body">
                                 <h5 class="third-section-learning-box_p1">
                                     Focused Learning <br />
                                     Environment
                                 </h5>
                                 <p class="third-section-learning-box_p2">
-                                    Offline programs often provide on-site technical support,
-                                    ensuring that equipment and software issues are promptly
-                                    resolved.
+                                    Offline programs often provide on-site technical support, ensuring that equipment and software issues are promptly resolved.
                                 </p>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-md-4 mt-4">
-                        <div class="card third-section-learning-box" style="width: auto">
+                        <div class="card third-section-learning-box h-100">
                             <div class="card-body">
                                 <h5 class="third-section-learning-box_p1">
                                     Certification <br />
                                 </h5>
                                 <p class="third-section-learning-box_p2">
-                                    Learners can earn industry-recognized certifications which
-                                    can enhance their career prospects and validate skills to
-                                    potential employers.
-                                    <br /><br />
+                                    Learners can earn industry-recognized certifications which can enhance their career prospects and validate skills to potential employers.
                                 </p>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-md-4 mt-4">
-                        <div class="card third-section-learning-box" style="width: auto">
+                        <div class="card third-section-learning-box h-100">
                             <div class="card-body">
                                 <h5 class="third-section-learning-box_p1">
-                                    Job Interview Support
+                                    Job Placement
                                 </h5>
                                 <p class="third-section-learning-box_p2">
-                                    We understand that education is not complete without
-                                    successful career transitions. We provide expert guidance on
-                                    resume building, cover letter writing, and optimizing
-                                    LinkedIn profiles to help you stand out to potential
-                                    employers.
+                                    We understand that education is not complete without successful career transitions. We provide expert guidance on resume building, cover letter writing, and optimizing LinkedIn profiles to help you stand out to potential employers.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 mt-4">
+                        <div class="card third-section-learning-box h-100">
+                            <div class="card-body">
+                                <h5 class="third-section-learning-box_p1">
+                                    Interview Support
+                                </h5>
+                                <p class="third-section-learning-box_p2">
+                                    We understand that education is not complete without successful career transitions. We provide expert guidance on resume building, cover letter writing, and optimizing LinkedIn profiles to help you stand out to potential employers.
                                 </p>
                             </div>
                         </div>
@@ -173,6 +235,7 @@
         </div>
     </section>
 
+
     <!-- ------------------------------------------------- third section ------------------------------------------------- -->
 
     <!-- ------------------------------------------------- forth section ------------------------------------------------- -->
@@ -181,51 +244,59 @@
         <div class="forth-section-div">
             <div class="row" style="margin: 0; padding: 0">
                 <div class="col-md-3">
-                    <div>
+                    <div style="background-color: #e1e1e1; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
                         <div>
-                            <p class="center-class third-section-learning-box_p1">
-                                Total Student
-                            </p>
-                        </div>
-                        <div>
-                            <p class="center-class third-section-learning-box_p1">100+</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3">
-                    <div>
-                        <div>
-                            <p class="center-class third-section-learning-box_p1">
-                                Mentors
-                            </p>
-                        </div>
-                        <div>
-                            <p class="center-class third-section-learning-box_p1">20+</p>
+                            <div>
+                                <p class="center-class third-section-learning-box_p1">
+                                    Total Student
+                                </p>
+                            </div>
+                            <div>
+                                <p class="center-class third-section-learning-box_p1">100+</p>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-md-3">
-                    <div>
+                    <div style="background-color: #e1e1e1; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
                         <div>
-                            <p class="center-class third-section-learning-box_p1">Course</p>
-                        </div>
-                        <div>
-                            <p class="center-class third-section-learning-box_p1">2+</p>
+                            <div>
+                                <p class="center-class third-section-learning-box_p1">
+                                    Mentors
+                                </p>
+                            </div>
+                            <div>
+                                <p class="center-class third-section-learning-box_p1">20+</p>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-md-3">
-                    <div>
+                    <div style="background-color: #e1e1e1; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
                         <div>
-                            <p class="center-class third-section-learning-box_p1">
-                                Active Students
-                            </p>
+                            <div>
+                                <p class="center-class third-section-learning-box_p1">Course</p>
+                            </div>
+                            <div>
+                                <p class="center-class third-section-learning-box_p1">2+</p>
+                            </div>
                         </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div style="background-color: #e1e1e1; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
                         <div>
-                            <p class="center-class third-section-learning-box_p1">50+</p>
+                            <div>
+                                <p class="center-class third-section-learning-box_p1">
+                                    Active Students
+                                </p>
+                            </div>
+                            <div>
+                                <p class="center-class third-section-learning-box_p1">50+</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -328,7 +399,7 @@
                     @foreach ($feedbacks as $feedback)
                         <?php $id += 1; ?>
                         <input type="radio" name="testimonial" id="input-testimonial{{ $id }}"
-                            {{ $id == 1 ? 'checked' : '' }} />  //why
+                            {{ $id == 1 ? 'checked' : '' }} />
                     @endforeach
 
                     <div class="testimonials-inner">
@@ -345,7 +416,7 @@
                                         {{ $feedback->description }}
                                     </p>
                                 </div>
-                                <div class="testimonial-author">{{ $feedback->title }}</div>
+                                <div class="testimonial-author"><h6><b>{{ $feedback->title }}</b></h6></div>
                             </div>
                         @endforeach
 
@@ -405,7 +476,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
     </script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"
+            integrity="sha512-GWzVrcGlo0TxTRvz9ttioyYJ+Wwk9Ck0G81D+eO63BaqHaJ3YZX9wuqjwgfcV/MrB2PhaVX9DkYVhbFpStnqpQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
 <script>
@@ -422,8 +495,7 @@
 
 
 
+</body>
 
-</body>
-</body>
 
 </html>

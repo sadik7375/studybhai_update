@@ -6,17 +6,20 @@ use App\Http\Controllers\FooterController;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\TeamController;
+
 use App\Http\Controllers\usersettingsController;
 use App\Http\Controllers\assigncourseController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\AdminDashboardController;
 use App\Http\Controllers\ProfileEditController;
-use App\Http\Controllers\UserDashbroadController;
 use App\Http\Controllers\SslCommerzPaymentController;
 use App\Models\Footer;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\CanEnroll;
 use App\Http\Controllers\showBuyCourses;
+
+//use App\Http\Controllers\TrainerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,14 +32,22 @@ use App\Http\Controllers\showBuyCourses;
 |
 */
 
+
+
+
 Route::get('/', [FrontController::class, 'front'])->name('front.home');
 
 Route::get('test', function () {
     return view('welcometest');
 });
 
-
-
+//--------------------------------Dashboard route for user---------------------------------
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
+Route::middleware(['auth'])->group(function () {
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+});
+//----------------------dashboard route for admin-------------------------
+Route::get('/admin/dashboard', [AdminDashboardController::class, 'index'])->name('admin.dashboard');
 
 
 // ------------------------------------user profile start-------------------------
@@ -49,10 +60,14 @@ Route::get('userprofile', [FrontController::class, 'userprofile'])->name('userpr
 
 Route::get('usercourse', [showBuyCourses::class, 'index'])->name('usercourse');
 
+Route::get('showcourses',[FrontController::class,'showcourses'])->name('showcourses.index');
+
 //-------------------------------------user course end----------------------------
 
 
 //-------------------------------------user profile settings---------------------------
+Route::get('settings', [FrontController::class, 'usersettings'])->name('settings');
+
 
 Route::get('usersettings', [FrontController::class, 'usersettings'])->name('usersettings');
 
@@ -62,7 +77,7 @@ Route::post('/updatepassword', [usersettingsController::class, 'updatePassword']
 
 //----------------------------show info in user profile dashbroad---------------
 
-Route::get('userprofile', [UserDashbroadController::class, 'showinfo'])->name('userprofile');
+//Route::get('userprofile', [UserDashbroadController::class, 'showinfo'])->name('userprofile');
 
 
 //----------------------------show info in user profile dashbroad End---------------
@@ -96,6 +111,10 @@ Route::get('log_out', function () {
     return redirect()->route('front.home');
 })->name('log_out');
 
+
+//Userprofile Route
+Route::patch('/update-profile', [UserProfileController::class, 'update'])->name('update-profile');
+
 // ----------------------------------------------------------------------- Admin -----------------------------------------------------------------------
 
 Route::middleware(['auth', 'admin'])
@@ -119,8 +138,10 @@ Route::middleware(['auth', 'admin'])
 
         Route::resource('team', TeamController::class);
 
-        // ------------------------------------------ Team ------------------------------------------
-
+        // ------------------------------------------ Trainer ------------------------------------------
+        Route::middleware(['auth', 'tr'])->group(function () {
+            Route::get('/trainer/dashboard', [TeamController::class, 'trainerDashboard'])->name('trainer.dashboard');
+        });
             // ------------------------------------------ Footer ------------------------------------------
 
             Route::resource('footer', FooterController::class);
@@ -139,7 +160,11 @@ Route::middleware(['auth', 'admin'])
 
 
 
+
+        Route::delete('deleteassigncourse/{assignedCourse}', [assigncourseController::class, 'deleteAssignCourse'])->name('assign.course.delete');
+
         Route::post('deleteassigncourse/{assignedCourse}', [assigncourseController::class, 'deleteAssignCourse'])->name('assign.course.delete');
+
 
 
 
@@ -168,15 +193,15 @@ Route::get('team', [FrontController::class, 'team'])->name('team_info');
 
 // ------------------------------------------ Dashboard ------------------------------------------
 
-//Route::middleware(['auth'])->group(function () {
-//    Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('user.dashboard');
-//
-//});
+
 // ----------------------------------------------------------------------- User [ public route ] -------------------------------------------------------
 
 // ----------------------------------------------------------------------- Logout -----------------------------------------------------------------------
 
-Route::middleware('auth')->group(function () {});
+Route::middleware(['auth','tr'])->group(function () {
+
+
+});
 
 // ----------------------------------------------------------------------- Logout -----------------------------------------------------------------------
 

@@ -11,7 +11,7 @@ class Profile extends Model
     protected $fillable = [
         'full_name',
         'institute_name',
-        'Phone_number',
+        'phone_number',
         'address',
         'current_status'
     ];

@@ -4,8 +4,8 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-class CanEnrollMiddleware
+
+class TrainerMiddleware
 {
     /**
      * Handle an incoming request.
@@ -16,13 +16,11 @@ class CanEnrollMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
-        if (!auth()->user()==null) {
+        if (auth()->check() && auth()->user()->role === 'tr') {
             return $next($request);
+        }else{
+            abort(404);
         }
-
-        else{
-           return redirect('/login')->with('error', 'You need to be logged in to enroll in the course.');
-        }
-
     }
+
 }

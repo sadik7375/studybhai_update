@@ -25,6 +25,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'phone_number'
     ];
 
     /**
@@ -101,9 +102,9 @@ public function footer()
     {
         return $this->hasOne(Profile::class);
     }
+    public function course_dashboard()
+    {
+        return $this->hasMany(Course::class);
 
-
-
-
-
+    }
 }
