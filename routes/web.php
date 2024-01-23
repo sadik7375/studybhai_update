@@ -10,9 +10,8 @@ use App\Http\Controllers\TeamController;
 use App\Http\Controllers\usersettingsController;
 use App\Http\Controllers\assigncourseController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\AdminDashboardController;
 use App\Http\Controllers\ProfileEditController;
-use App\Http\Controllers\UserDashbroadController;
-
 use App\Http\Controllers\SslCommerzPaymentController;
 use App\Models\Footer;
 use Illuminate\Support\Facades\Auth;
@@ -42,11 +41,14 @@ Route::get('test', function () {
     return view('welcometest');
 });
 
-//test for getting dashboard
+//--------------------------------Dashboard route for user---------------------------------
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 });
+//----------------------dashboard route for admin-------------------------
+Route::get('/admin/dashboard', [AdminDashboardController::class, 'index'])->name('admin.dashboard');
+
 //--------------------------------------admin course assign--------------------------
 
 Route::get('admin/courseassign/{course_id}', [FrontController::class, 'assigncourseAndtrainerAssign'])->name('courseassign'); //multi controller function use for one route

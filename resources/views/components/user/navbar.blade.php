@@ -32,11 +32,11 @@
                 @elseif(auth()->user() != null)
                 @if(auth()->user()->role=='a')
         <li class="nav-item">
-            <a class="nav-link" href="{{ route('course.index') }}">Panel</a>
+            <a class="nav-link" href="{{ route('admin.dashboard') }}">Panel</a>
         </li>
     @else
         <li class="nav-item">
-            <a class="nav-link" href="{{ route('userprofile') }}">Profile</a>
+            <a class="nav-link" href="{{ route('dashboard') }}">Profile</a>
         </li>
     @endif
                     <li class="nav-item">

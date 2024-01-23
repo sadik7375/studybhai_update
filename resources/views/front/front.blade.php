@@ -9,13 +9,15 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
 
     <link rel="stylesheet" href="{{ asset('assets/css/navbar.css') }}" />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+          integrity="sha512-GWzVrcGlo0TxTRvz9ttioyYJ+Wwk9Ck0G81D+eO63BaqHaJ3YZX9wuqjwgfcV/MrB2PhaVX9DkYVhbFpStnqpQ=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
+
         form {
             display: flex;
             justify-content: center;
         }
-
         input {
             margin-right: 0.5rem;
         }
@@ -75,8 +77,11 @@
         }
 
         .card:nth-child(even) {
-            background-color: #fcd5ce; /* Even cards background color */
+            background-color: rgba(246, 206, 252, 0.6); /* Even cards background color */
         }
+    /*-------------course section style done---------------------*/
+
+    /*----------------styles for Graduate feedbacks Section------------------*/
 
     </style>
 </head>
@@ -146,82 +151,81 @@
             <div class="third-section-margin">
                 <div class="row" style="margin: 0; padding: 0">
                     <div class="col-md-4 mt-4">
-                        <div class="card third-section-learning-box" style="width: auto">
+                        <div class="card third-section-learning-box h-100">
                             <div class="card-body">
                                 <h5 class="third-section-learning-box_p1">
                                     Overcome the Lack of <br />
                                     Academic Learning
                                 </h5>
                                 <p class="third-section-learning-box_p2">
-                                    We are focused to teach the core concept of technology which
-                                    is not depended on stuttering theoretical concepts we got at
-                                    our universities.
+                                    We are focused on teaching the core concept of technology which is not depended on stuttering theoretical concepts we got at our universities.
                                 </p>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-md-4 mt-4">
-                        <div class="card third-section-learning-box" style="width: auto">
+                        <div class="card third-section-learning-box h-100">
                             <div class="card-body">
                                 <h5 class="third-section-learning-box_p1">
                                     Interaction with <br />
                                     Instructor
                                 </h5>
                                 <p class="third-section-learning-box_p2">
-                                    Offline training allows students to interact face-to-face
-                                    with instructors and peers. This can facilitate better
-                                    understanding, networking, and the immediate resolution of
-                                    queries.
+                                    Offline training allows students to interact face-to-face with instructors and peers. This can facilitate better understanding, networking, and the immediate resolution of queries.
                                 </p>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-md-4 mt-4">
-                        <div class="card third-section-learning-box" style="width: auto">
+                        <div class="card third-section-learning-box h-100">
                             <div class="card-body">
                                 <h5 class="third-section-learning-box_p1">
                                     Focused Learning <br />
                                     Environment
                                 </h5>
                                 <p class="third-section-learning-box_p2">
-                                    Offline programs often provide on-site technical support,
-                                    ensuring that equipment and software issues are promptly
-                                    resolved.
+                                    Offline programs often provide on-site technical support, ensuring that equipment and software issues are promptly resolved.
                                 </p>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-md-4 mt-4">
-                        <div class="card third-section-learning-box" style="width: auto">
+                        <div class="card third-section-learning-box h-100">
                             <div class="card-body">
                                 <h5 class="third-section-learning-box_p1">
                                     Certification <br />
                                 </h5>
                                 <p class="third-section-learning-box_p2">
-                                    Learners can earn industry-recognized certifications which
-                                    can enhance their career prospects and validate skills to
-                                    potential employers.
-                                    <br /><br />
+                                    Learners can earn industry-recognized certifications which can enhance their career prospects and validate skills to potential employers.
                                 </p>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-md-4 mt-4">
-                        <div class="card third-section-learning-box" style="width: auto">
+                        <div class="card third-section-learning-box h-100">
                             <div class="card-body">
                                 <h5 class="third-section-learning-box_p1">
-                                    Job Interview Support
+                                    Job Placement
                                 </h5>
                                 <p class="third-section-learning-box_p2">
-                                    We understand that education is not complete without
-                                    successful career transitions. We provide expert guidance on
-                                    resume building, cover letter writing, and optimizing
-                                    LinkedIn profiles to help you stand out to potential
-                                    employers.
+                                    We understand that education is not complete without successful career transitions. We provide expert guidance on resume building, cover letter writing, and optimizing LinkedIn profiles to help you stand out to potential employers.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 mt-4">
+                        <div class="card third-section-learning-box h-100">
+                            <div class="card-body">
+                                <h5 class="third-section-learning-box_p1">
+                                    Interview Support
+                                </h5>
+                                <p class="third-section-learning-box_p2">
+                                    We understand that education is not complete without successful career transitions. We provide expert guidance on resume building, cover letter writing, and optimizing LinkedIn profiles to help you stand out to potential employers.
                                 </p>
                             </div>
                         </div>
@@ -230,6 +234,7 @@
             </div>
         </div>
     </section>
+
 
     <!-- ------------------------------------------------- third section ------------------------------------------------- -->
 
@@ -411,7 +416,7 @@
                                         {{ $feedback->description }}
                                     </p>
                                 </div>
-                                <div class="testimonial-author">{{ $feedback->title }}</div>
+                                <div class="testimonial-author"><h6><b>{{ $feedback->title }}</b></h6></div>
                             </div>
                         @endforeach
 
@@ -471,7 +476,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
     </script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"
+            integrity="sha512-GWzVrcGlo0TxTRvz9ttioyYJ+Wwk9Ck0G81D+eO63BaqHaJ3YZX9wuqjwgfcV/MrB2PhaVX9DkYVhbFpStnqpQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
 <script>

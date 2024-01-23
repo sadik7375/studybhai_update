@@ -10,7 +10,7 @@ class DashboardController extends Controller
     public function index()
     {
         $user = Auth::user();
-        $courses = $user->course_dashboard();
+        $courses = $user->course_dashboard;
 
         return view('dashboard.index', compact('courses'));
     }

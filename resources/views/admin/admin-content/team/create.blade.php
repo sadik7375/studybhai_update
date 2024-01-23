@@ -93,6 +93,7 @@
                     <label for="profession">Category</label>
 
                     <select id="" class="form-control" name="category">
+                        <option value="" selected disabled>Select Category</option>
                         <option value="team">Team</option>
                         <option value="advisor">Advisor</option>
                         <option value="trainer">Trainer</option>
