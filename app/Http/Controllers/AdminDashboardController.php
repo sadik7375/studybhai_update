@@ -1,9 +1,12 @@
 <?php
 namespace App\Http\Controllers;
 
-use App\Models\admin\Course;
+use App\Models\Admin\Course;
+use App\Models\Orders;
+use App\Models\Team;
 use App\Models\User;
 use Illuminate\Http\Request;
+
 
 class AdminDashboardController extends Controller
 {
@@ -11,10 +14,11 @@ class AdminDashboardController extends Controller
     {
         $coursesCount = Course::count();
         $studentsCount = User::count();
-//        $totalAmountPaid = Course::sum('amount_paid');
-//        $totalAmountPayable = Course::sum('amount_payable');
+        $trainersCount = Team::count();
+        $orders = Orders::all(); // Or use your own query to fetch orders
 
-        return view('dashboard.adminindex', compact('coursesCount', 'studentsCount'));
+        $totalRevenue = $orders->sum('amount');
 
+        return view('dashboard.adminindex', compact('coursesCount', 'studentsCount', 'trainersCount', 'totalRevenue', 'orders'));
     }
 }

@@ -102,7 +102,7 @@ public function footer()
     {
         return $this->hasOne(Profile::class);
     }
-    public function course_dashboard()
+    public function course_dashboard(): \Illuminate\Database\Eloquent\Relations\HasMany
     {
         return $this->hasMany(Course::class);
 

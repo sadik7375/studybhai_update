@@ -382,7 +382,7 @@
     <script src="{{ asset('assets/scripts/jquery.dataTables.min.js') }}"></script>
     <script src="{{ asset('assets/scripts/dataTables.rowReorder.min.js') }}"></script>
     <script src="{{ asset('assets/scripts/dataTables.responsive.min.js') }}"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
     <script>
         $(document).ready(function() {
             // $('#example').DataTable();
