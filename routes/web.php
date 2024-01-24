@@ -6,6 +6,7 @@ use App\Http\Controllers\FooterController;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\TeamController;
+use App\Http\Controllers\TotalStudentsController;
 
 use App\Http\Controllers\usersettingsController;
 use App\Http\Controllers\assigncourseController;
@@ -55,7 +56,8 @@ Route::get('admin/courseassign/{course_id}', [FrontController::class, 'assigncou
 
 Route::post('assign',[assigncourseController::class,'store'])->name('assign.store');
 
-
+//------------------------route to show the total student controller--------------------
+Route::get('/total-students', [TotalStudentsController::class, 'show'])->name('totalStudents.show');
 
 // ------------------------------------user profile start-------------------------
 Route::get('userprofile', [FrontController::class, 'userprofile'])->name('userprofile');

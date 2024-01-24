@@ -27,7 +27,7 @@
 
                 @if (auth()->user() == null)
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('login') }}">Login/Sign up</a>
+                        <a class="nav-link" href="{{ route('login') }}">Login/SignUp</a>
                     </li>
                 @elseif(auth()->user() != null)
                 @if(auth()->user()->role=='a')

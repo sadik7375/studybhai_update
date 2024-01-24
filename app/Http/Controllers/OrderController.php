@@ -13,4 +13,11 @@ class OrderController extends Controller
              ->where('status', 'Processing')->get();
         return view("admin.admin-content.orders.view", compact('orders'));
      }
+    public function show($id)
+    {
+
+        $student = User::find($id);
+
+        return view('course.totalStudents.show', compact('student'));
+    }
 }

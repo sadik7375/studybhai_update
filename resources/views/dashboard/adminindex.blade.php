@@ -122,49 +122,6 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- DataTable Section -->
-                <div class="card mb-4">
-                    <div class="card-header">
-                        <i class="fas fa-table me-1"></i>
-                        Total Student List
-                    </div>
-                    <div class="card-body">
-                        <div class="table-responsive">
-                            <table id="datatablesSimple" class="table table-bordered table-striped">
-                                <thead>
-                                <tr>
-                                    <th>Name</th>
-                                    <th>Enrolled Course/s</th>
-                                    <th>Address</th>
-                                    <th>Paid Amount</th>
-                                    <th>Due Amount</th>
-                                    <th>Status</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>Tiger Nixon</td>
-                                    <td>System Architect</td>
-                                    <td>Edinburgh</td>
-                                    <td>6998</td>
-                                    <td>2011</td>
-                                    <td>$320,800</td>
-                                </tr>
-                                <tr>
-                                    <td>Garrett Winters</td>
-                                    <td>Accountant</td>
-                                    <td>Tokyo</td>
-                                    <td>6300</td>
-                                    <td>400</td>
-                                    <td>50%</td>
-                                </tr>
-                                <!-- Add more table rows if needed -->
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
             </div>
         </main>
     </div>
@@ -234,5 +191,6 @@
                 }
             }
         });
+
     </script>
 @endsection
