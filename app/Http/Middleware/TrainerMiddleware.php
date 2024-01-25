@@ -16,7 +16,7 @@ class TrainerMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
-        if (auth()->check() && auth()->user()->role === 'tr') {
+        if (auth()->check() && auth()->user()->role === 't') {
             return $next($request);
         }else{
             abort(404);

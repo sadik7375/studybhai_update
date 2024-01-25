@@ -26,6 +26,9 @@ class HomeController extends Controller
         if(auth()->user()->role == "a"){
             return redirect()->route('course.index');
         }
+        if(auth()->user()->role == "t"){
+            return redirect()->route('trainer.profile');
+        }
 
         return redirect('/');
     }

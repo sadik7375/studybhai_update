@@ -1,8 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Hash;
+use App\Models\User;
 use App\Models\Team;
+use App\Models\admin\AssignCourse;
 use Illuminate\Http\Request;
 
 class TeamController extends Controller
@@ -52,27 +54,44 @@ class TeamController extends Controller
      */
     public function store(Request $request)
     {
-        $inputs = request()->validate([
+        $this->validate($request, [
             'name' => 'required',
             'image' => 'required|mimes:jpeg,jpg,png,gif',
-            'institution' => 'string',
+
             'profession' => 'required',
             'expertise' => 'string',
             'category' => 'string',
-            'address' => 'string'
+            'address' => 'string',
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'password' => ['required', 'string', 'min:8'],
+            'phone_number' => 'required|string'
         ]);
 
-        if (request('image')) {
-            $inputs['image'] = request('image')->store('photos');
-        }
+        // Create user
+        $user = User::create([
+            'name' => $request->input('name'),
+            'email' => $request->input('email'),
+            'password' => Hash::make($request->input('password')),
+            'phone_number' => $request->input('phone_number'),
+            'role' => 't'
+        ]);
 
-        auth()
-            ->user()
-            ->team()
-            ->create($inputs);
+        // Create team
+        $team = auth()->user()->team()->create([
+            'name' => $request->input('name'),
+            'image' => $request->file('image')->store('photos'),
+
+            'profession' => $request->input('profession'),
+            'expertise' => $request->input('expertise'),
+            'category' => $request->input('category'),
+            'address' => $request->input('address'),
+            't_id' => $user->id,
+        ]);
+
         session()->flash('success', 'Team Member Info Added Successfully');
         return back();
     }
+
 
     /**
      * Display the specified resource.
@@ -144,11 +163,42 @@ class TeamController extends Controller
 //        $this->middleware(['auth', 'trainer']);
 //    }
 
-    public function trainerDashboard()
+
+
+    public function assigncoursesShow()
     {
-        // Trainer dashboard logic
-        return view('trainer.dashboard');
+        $user = auth()->user();
+
+
+        $trainer = Team::where('t_id', $user->id)->first();
+
+        if (!$trainer) {
+            abort(404, 'Trainer not found');
+        }
+
+
+        $assignedCourses = $trainer->assignedCourses;
+        $courseCounts = [];
+
+
+        foreach ($assignedCourses as $course) {
+            $numberOfStudents = $course->orders()->count();
+            $courseCounts[] = [
+                'course' => $course,
+                'numberOfStudents' => $numberOfStudents,
+            ];
+        }
+
+
+        return view('trainerprofile.assignCourses', compact('assignedCourses','courseCounts'));
     }
+
+public function showTrainerProfile()
+{
+  return view('trainerprofile.trainerprofile');
+
+
+}
 
 
 

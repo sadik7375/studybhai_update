@@ -25,6 +25,7 @@ class CreateTeamsTable extends Migration
             $table->string("category");
             $table->string("address");
             $table->string("user_id");
+            $table->string("t_id");
             $table->timestamps();
         });
     }

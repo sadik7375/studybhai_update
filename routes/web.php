@@ -43,16 +43,14 @@ Route::get('test', function () {
 
 //--------------------------------Dashboard route for user---------------------------------
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
+
+
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
-});
-//----------------------dashboard route for admin-------------------------
-Route::get('/admin/dashboard', [AdminDashboardController::class, 'index'])->name('admin.dashboard');
 
 
 // ------------------------------------user profile start-------------------------
 Route::get('userprofile', [FrontController::class, 'userprofile'])->name('userprofile');
-
 
 
 
@@ -75,12 +73,11 @@ Route::get('usersettings', [FrontController::class, 'usersettings'])->name('user
 
 Route::post('/updatepassword', [usersettingsController::class, 'updatePassword'])->name('update.password');
 
-//----------------------------show info in user profile dashbroad---------------
-
-//Route::get('userprofile', [UserDashbroadController::class, 'showinfo'])->name('userprofile');
 
 
-//----------------------------show info in user profile dashbroad End---------------
+
+
+
 
 //-----------------------------------show Editprofile-------------------------------
 
@@ -91,14 +88,11 @@ Route::post('profile/update', [ProfileEditController::class, 'updateProfile'])->
 //------------------------------------user profile End--------------------------
 
 
-//----------------------------------Trainer profile start---------------------
-
-Route::get('trainerprofile', [FrontController::class, 'trainerProfile'])->name('trainerprofile');
 
 
 
 
-
+});
 
 
 
@@ -120,6 +114,9 @@ Route::patch('/update-profile', [UserProfileController::class, 'update'])->name(
 Route::middleware(['auth', 'admin'])
     ->prefix('admin') //all route add admin before example:admin/course or admin/feedback
     ->group(function () {
+
+        //----------------------dashboard route for admin-------------------------
+        Route::get('dashboard', [AdminDashboardController::class, 'index'])->name('admin.dashboard');
         // ------------------------------------------ Course ------------------------------------------
 
         Route::resource('course', CourseController::class); //course.store
@@ -138,10 +135,7 @@ Route::middleware(['auth', 'admin'])
 
         Route::resource('team', TeamController::class);
 
-        // ------------------------------------------ Trainer ------------------------------------------
-        Route::middleware(['auth', 'tr'])->group(function () {
-            Route::get('/trainer/dashboard', [TeamController::class, 'trainerDashboard'])->name('trainer.dashboard');
-        });
+
             // ------------------------------------------ Footer ------------------------------------------
 
             Route::resource('footer', FooterController::class);
@@ -194,16 +188,31 @@ Route::get('team', [FrontController::class, 'team'])->name('team_info');
 // ------------------------------------------ Dashboard ------------------------------------------
 
 
-// ----------------------------------------------------------------------- User [ public route ] -------------------------------------------------------
+
+Route::middleware(['auth', 't'])->group(function () {
+
+
+//------------------------------------trainer profile------------------------------
+
+Route::get('trainerprofile', [TeamController::class, 'showTrainerProfile'])->name('trainer.profile');
+
+Route::get('trainer/assigncourses',[TeamController::class,'assigncoursesShow'])->name('trainer.assigncourses');
+
+
+
+
+    });
+
+
+
+
+
 
 // ----------------------------------------------------------------------- Logout -----------------------------------------------------------------------
 
-Route::middleware(['auth','tr'])->group(function () {
 
 
-});
 
-// ----------------------------------------------------------------------- Logout -----------------------------------------------------------------------
 
 
 //-------------------------------------------------------------------PAYMENT GATEWAY---------------------------//

@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Models;
-
+use App\Models\Team;
 use App\Models\admin\Course;
 use App\Models\admin\Feedback;
 use App\Models\Profile;
@@ -22,10 +22,8 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
-        'email',
-        'password',
-        'phone_number'
+        'name', 'email', 'password', 'phone_number', 'role',
+
     ];
 
     /**
@@ -107,4 +105,12 @@ public function footer()
         return $this->hasMany(Course::class);
 
     }
+
+
+
+
+
 }
+
+
+

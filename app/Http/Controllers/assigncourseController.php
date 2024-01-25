@@ -10,20 +10,33 @@ class assigncourseController extends Controller
 
     public function store(Request $request)
     {
-
         $request->validate([
             'course_id' => 'required|numeric',
             'trainer_id' => 'required|numeric',
         ]);
+
+
+        $existingAssignment = AssignCourse::where('course_id', $request->input('course_id'))
+            ->where('trainer_id', $request->input('trainer_id'))
+            ->exists();
+
+        if ($existingAssignment) {
+
+            return redirect()->route('courseassign', ['course_id' => $request->input('course_id')])
+                ->with('error', 'This course is already assigned to the selected trainer.');
+        }
+
 
         AssignCourse::create([
             'course_id' => $request->input('course_id'),
             'trainer_id' => $request->input('trainer_id'),
 
         ]);
-        return redirect()->route('courseassign', ['course_id' => $request->input('course_id')])->with('success', 'course assign successfully');
 
+        return redirect()->route('courseassign', ['course_id' => $request->input('course_id')])
+            ->with('success', 'Course assigned successfully');
     }
+
 
 
 
@@ -42,16 +55,9 @@ class assigncourseController extends Controller
        $deleteassignCourse= AssignCourse::find($assignCourse);
 
        $deleteassignCourse->delete();
-=======
-    public function deleteAssignCourse(AssignCourse $assignCourse)
-    {
-
-        $assignCourse->delete();
-
-
-
-         return redirect()->route('assign.courses')->with('success', 'Assigned course deleted successfully');
     }
+
+
 
 
 
