@@ -11,6 +11,10 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
     <!-- Your custom CSS -->
     <link rel="stylesheet" href="path/to/your/custom.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
+
 </head>
 <body>
 <!-- Footer -->
@@ -41,12 +45,13 @@
                 <!-- Grid column -->
                 <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                     <div>
-                        <img src="{{ asset('assets/images/logo.png') }}" alt="" class="img-fluid" />
+                        <img src="{{ asset('assets/images/logo.png') }}" alt="" style="max-width: 50%; height: auto;" />
                     </div>
+
                     <br />
                     <div>
                         <p class="footer-paragraph-state">
-                            Online live skill development platform
+                            Online skill development platform
                         </p>
                     </div>
                     <br />
@@ -117,11 +122,20 @@
         display: flex;
     }
 
-    .social-icon {
-        width: 30px;
-        margin-bottom: 5px;
-        margin-right: 10px;
+        .social-icon {
+            width: 30px;
+            margin-bottom: 5px;
+            margin-right: 10px;
+        }
+    .footer-paragraph-state {
+        color: #fff;
+        font-family: 'Roboto Slab', serif;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
     }
+
 </style>
 </body>
 </html>

@@ -382,7 +382,7 @@
     <script src="{{ asset('assets/scripts/jquery.dataTables.min.js') }}"></script>
     <script src="{{ asset('assets/scripts/dataTables.rowReorder.min.js') }}"></script>
     <script src="{{ asset('assets/scripts/dataTables.responsive.min.js') }}"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
     <script>
         $(document).ready(function() {
             // $('#example').DataTable();
@@ -450,16 +450,7 @@
             };
 
             // Placeholder data for Bar Chart 1
-            var barChart1Data = {
-                labels: ['Category1', 'Category2', 'Category3', 'Category4', 'Category5'],
-                datasets: [{
-                    label: 'Example Data',
-                    backgroundColor: 'rgba(255,99,71,0.7)',
-                    borderColor: 'rgba(255,99,71,1)',
-                    borderWidth: 1,
-                    data: [30, 45, 60, 75, 90]
-                }]
-            };
+
 
             // Area Chart 1
             var ctxAreaChart1 = document.getElementById('myAreaChart1').getContext('2d');
@@ -482,10 +473,7 @@
                 data: barChart1Data
             });
         });
-        // ------------for student/employee table in dashboard--------------
-        $(document).ready(function() {
-            $('#datatablesSimple').DataTable();
-        });
+
     </script>
 
 </body>

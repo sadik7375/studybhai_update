@@ -4,21 +4,21 @@
     <div id="layoutSidenav_content">
         <main>
             <div class="container-fluid px-4">
-                <h1 class="mt-4">Dashboard</h1>
+                <h2 class="mt-4"><b>Dashboard</b></h2>
 
                 <!-- Cards Section -->
-                <div class="row">
+                <div class="row mb-4">
                     <!-- Total Students Card -->
                     <div class="col-xl-3 col-md-6 mb-4">
-                        <div class="card custom-card bg-info text-white shadow">
+                        <div class="card custom-card bg-warning text-white shadow">
                             <div class="card-body">
                                 <div class="row no-gutters align-items-center">
-                                    <div class="col mr-2">
+                                    <div class="col-8">
                                         <div class="text-xs font-weight-bold text-uppercase mb-1">
-                                            Total Students</div>
-                                        <div class="h5 mb-0 font-weight-bold text-white">500</div>
+                                            <b>Total Students</b></div>
+                                        <div class="h5 mb-0 font-weight-bold text-white">{{ $studentsCount }}</div>
                                     </div>
-                                    <div class="col-auto">
+                                    <div class="col-4 text-right">
                                         <i class="fas fa-users fa-2x"></i>
                                     </div>
                                 </div>
@@ -31,30 +31,32 @@
                         <div class="card custom-card bg-success text-white shadow">
                             <div class="card-body">
                                 <div class="row no-gutters align-items-center">
-                                    <div class="col mr-2">
+                                    <div class="col-8">
                                         <div class="text-xs font-weight-bold text-uppercase mb-1">
-                                            Total Revenue</div>
-                                        <div class="h5 mb-0 font-weight-bold text-white">$50,000</div>
+                                            <b>Total Sales</b>
+                                        </div>
+                                        <div class="h5 mb-0 font-weight-bold text-white">{{ $totalRevenue }}/-</div>
                                     </div>
-                                    <div class="col-auto">
-                                        <i class="fas fa-dollar-sign fa-2x"></i>
+                                    <div class="col-4 text-right">
+                                        <i class="fas fa-taka-sign"></i>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
+
                     <!-- Total Courses Card -->
                     <div class="col-xl-3 col-md-6 mb-4">
-                        <div class="card custom-card bg-primary text-white shadow">
+                        <div class="card custom-card bg-info text-white shadow">
                             <div class="card-body">
                                 <div class="row no-gutters align-items-center">
-                                    <div class="col mr-2">
+                                    <div class="col-8">
                                         <div class="text-xs font-weight-bold text-uppercase mb-1">
-                                            Total Courses</div>
-                                        <div class="h5 mb-0 font-weight-bold text-white">50</div>
+                                            <b>Total Courses</b></div>
+                                        <div class="h5 mb-0 font-weight-bold text-white">{{ $coursesCount }}</div>
                                     </div>
-                                    <div class="col-auto">
+                                    <div class="col-4 text-right">
                                         <i class="fas fa-book fa-2x"></i>
                                     </div>
                                 </div>
@@ -62,18 +64,18 @@
                         </div>
                     </div>
 
-                    <!-- Total Enrollments Card -->
+                    <!-- Total Trainers Card -->
                     <div class="col-xl-3 col-md-6 mb-4">
-                        <div class="card custom-card bg-warning text-white shadow">
+                        <div class="card custom-card bg-danger text-white shadow">
                             <div class="card-body">
                                 <div class="row no-gutters align-items-center">
-                                    <div class="col mr-2">
+                                    <div class="col-8">
                                         <div class="text-xs font-weight-bold text-uppercase mb-1">
-                                            Total Enrollments</div>
-                                        <div class="h5 mb-0 font-weight-bold text-white">1,000</div>
+                                            <b>Total Trainers</b></div>
+                                        <div class="h5 mb-0 font-weight-bold text-white">{{ $trainersCount }}</div>
                                     </div>
-                                    <div class="col-auto">
-                                        <i class="fas fa-check-circle fa-2x"></i>
+                                    <div class="col-4 text-right">
+                                        <i class="fas fa-chalkboard-teacher fa-2x"></i>
                                     </div>
                                 </div>
                             </div>
@@ -84,7 +86,7 @@
                 <!-- Charts Section -->
                 <div class="row">
                     <!-- Revenue Chart -->
-                    <div class="col-xl-4">
+                    <div class="col-xl-4 mb-4">
                         <div class="card mb-4">
                             <div class="card-header">
                                 <i class="fas fa-chart-area me-1"></i>
@@ -97,7 +99,7 @@
                     </div>
 
                     <!-- Total Sales Chart -->
-                    <div class="col-xl-4">
+                    <div class="col-xl-4 mb-4">
                         <div class="card mb-4">
                             <div class="card-header">
                                 <i class="fas fa-chart-area me-1"></i>
@@ -110,7 +112,7 @@
                     </div>
 
                     <!-- Class Attendance Chart -->
-                    <div class="col-xl-4">
+                    <div class="col-xl-4 mb-4">
                         <div class="card mb-4">
                             <div class="card-header">
                                 <i class="fas fa-chart-bar me-1"></i>
@@ -119,49 +121,6 @@
                             <div class="card-body">
                                 <canvas id="myBarChart1" width="100%" height="200"></canvas>
                             </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- DataTable Section -->
-                <div class="card mb-4">
-                    <div class="card-header">
-                        <i class="fas fa-table me-1"></i>
-                        Total Student List
-                    </div>
-                    <div class="card-body">
-                        <div class="table-responsive">
-                            <table id="datatablesSimple" class="table table-bordered table-striped">
-                                <thead>
-                                <tr>
-                                    <th>Name</th>
-                                    <th>Enrolled Course/s</th>
-                                    <th>Address</th>
-                                    <th>Paid Amount</th>
-                                    <th>Due Amount</th>
-                                    <th>Status</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>Tiger Nixon</td>
-                                    <td>System Architect</td>
-                                    <td>Edinburgh</td>
-                                    <td>6998</td>
-                                    <td>2011</td>
-                                    <td>$320,800</td>
-                                </tr>
-                                <tr>
-                                    <td>Garrett Winters</td>
-                                    <td>Accountant</td>
-                                    <td>Tokyo</td>
-                                    <td>6300</td>
-                                    <td>400</td>
-                                    <td>50%</td>
-                                </tr>
-                                <!-- Add more table rows if needed -->
-                                </tbody>
-                            </table>
                         </div>
                     </div>
                 </div>
@@ -198,12 +157,15 @@
         var myAreaChart2 = new Chart(ctx2, {
             type: 'line',
             data: {
-                labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+                labels: {!! json_encode($orders->pluck('created_at')->map(function ($date) {
+    return $date ? $date->format('Y-m-d') : null;
+})->toArray()) !!}
+                , // Assuming orders have a 'created_at' field
                 datasets: [{
                     label: 'Total Sales',
                     backgroundColor: 'rgba(255,99,132,0.2)',
                     borderColor: 'rgba(255,99,132,1)',
-                    data: [28, 48, 40, 19, 86, 27]
+                    data: {!! json_encode($orders->pluck('amount')->toArray()) !!}
                 }]
             },
             options: {
