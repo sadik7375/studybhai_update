@@ -20,9 +20,8 @@
 
             <th>Course Name</th>
             <th>Trainer</th>
-=======
-            <th>Title</th>
-            <th>Duration</th>
+
+
 
 
             <th>Delete</th>

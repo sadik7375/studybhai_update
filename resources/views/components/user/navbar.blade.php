@@ -34,6 +34,11 @@
         <li class="nav-item">
             <a class="nav-link" href="{{ route('admin.dashboard') }}">Panel</a>
         </li>
+            {{-- trainer profile --}}
+          @elseif(auth()->user()->role=='t')
+        <li class="nav-item">
+            <a class="nav-link" href="{{ route('trainer.profile') }}"> trainer profile</a>
+        </li>
     @else
         <li class="nav-item">
             <a class="nav-link" href="{{ route('dashboard') }}">Profile</a>
