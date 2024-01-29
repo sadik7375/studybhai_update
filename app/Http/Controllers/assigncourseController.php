@@ -36,11 +36,18 @@ class assigncourseController extends Controller
     }
 
 
+
     public function deleteAssignCourse($assignCourse)
     {
        $deleteassignCourse= AssignCourse::find($assignCourse);
 
        $deleteassignCourse->delete();
+=======
+    public function deleteAssignCourse(AssignCourse $assignCourse)
+    {
+
+        $assignCourse->delete();
+
 
 
          return redirect()->route('assign.courses')->with('success', 'Assigned course deleted successfully');
