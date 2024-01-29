@@ -16,9 +16,10 @@ class CanEnrollMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
-        if (!auth()->user()==null) {
+        if (!auth()->user()==null && !auth()->user()->role='a'  )    {
             return $next($request);
         }
+
 
         else{
            return redirect('/login')->with('error', 'You need to be logged in to enroll in the course.');
