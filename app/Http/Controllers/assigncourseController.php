@@ -55,6 +55,8 @@ class assigncourseController extends Controller
        $deleteassignCourse= AssignCourse::find($assignCourse);
 
        $deleteassignCourse->delete();
+
+       return redirect()->route("assign.courses");
     }
 
 

@@ -58,7 +58,7 @@ Route::post('assign',[assigncourseController::class,'store'])->name('assign.stor
 
 //------------------------route to show the total student controller--------------------
 Route::get('/total-students', [TotalStudentsController::class, 'show'])->name('totalStudents.show');
-=======
+
 
 
 // ------------------------------------user profile start-------------------------
