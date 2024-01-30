@@ -13,7 +13,7 @@
             <th>Amount</th>
             <th>Currency</th>
             <th>Status</th>
-            <th>Course Id</th>
+            <th>Course ID</th>
             <th>Transaction ID</th>
         </tr>
         </thead>

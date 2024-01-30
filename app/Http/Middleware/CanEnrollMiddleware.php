@@ -16,14 +16,22 @@ class CanEnrollMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
-        if (!auth()->user()==null && !auth()->user()->role='a'  )    {
+
+        if (auth()->check()) {
+            $user = auth()->user();
+
+
+            if ($user->role==='a') {
+
+                return redirect('/')->with('error', 'Admins cannot make payments.');
+            }
+
+
             return $next($request);
+        } else {
+
+            return redirect('/login')->with('error', 'You need to be logged in to enroll in the course.');
         }
-
-
-        else{
-           return redirect('/login')->with('error', 'You need to be logged in to enroll in the course.');
-        }
-
     }
+
 }

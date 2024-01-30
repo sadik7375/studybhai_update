@@ -38,7 +38,7 @@
             <a class="collapse-item" href="{{ route('course.create') }}">Create Course</a>
             <a class="collapse-item" href="{{ route('course.index') }}">View Course</a>
             <a class="collapse-item" href="{{ route('assign.courses') }}">Assign Courses</a>
-            <a class="collapse-item" href="{{ route('totalStudents.show') }}">Total Students</a>
+{{--            <a class="collapse-item" href="{{ route('totalStudents.show') }}">Total Students</a>--}}
 
         </div>
     </div>

@@ -1,28 +1,58 @@
 
     @extends('admin.admin-panel.main')
+
+
+
+
     @section('content')
 
+        @if(session('update') != null)
+            <p>{{ session('update') }}</p>
 
-    <div class="container-fluid mt-4">
-        <h2>Assign Courses and Number of student</h2>
-        <div class="row">
+        @elseif(session('delete') != null)
+            <p>{{ session('delete') }}</p>
+        @endif
 
+
+        <h4>My Courses</h4>
+        <hr>
+
+        <table id="example" class="display" style="width:100%">
+            <thead>
+            <tr>
+                <th>Serial</th>
+
+                <th>Course Name</th>
+                <th>Number of Student</th>
+
+
+
+
+
+
+            </tr>
+            </thead>
+            <tbody>
+
+            <?php $id = 0 ?>
             @foreach($courseCounts as $courseCount)
-                <div class="col-lg-4 mb-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">{{ $courseCount['course']->title }}</h5>
-                            <p class="card-text">
-                                {{ $courseCount['numberOfStudents'] }} students Enroll this course
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                <tr>
+                    <td>{{ $id += 1 }}</td>
+                    <td>{{ $courseCount['course']->title }}</td>
+                    <td>{{ $courseCount['numberOfStudents'] }}</td>
+
+
+
+
+
+
+
+
+
+                </tr>
             @endforeach
+            </tbody>
+        </table>
 
-        </div>
-    </div>
-
-
-@endsection
+    @endsection
 

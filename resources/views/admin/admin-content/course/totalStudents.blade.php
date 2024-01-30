@@ -17,7 +17,7 @@
             </thead>
             <tbody>
             <?php $serial = 0 ?>
-            @forelse($orders as $order)
+            @forelse($students as $order)
                 <tr>
                     <td>{{ $serial += 1 }}</td>
                     <td>{{ optional($order['user'])->name }}</td>
@@ -35,3 +35,6 @@
         </table>
     </div>
 @endsection
+
+
+

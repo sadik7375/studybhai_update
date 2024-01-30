@@ -202,4 +202,13 @@ public function showTrainerProfile()
 
 
 
+    public function trainersettings()
+    {
+        return view('trainerprofile.settings');
+
+
+    }
+
+
+
 }

@@ -56,9 +56,6 @@ Route::get('admin/courseassign/{course_id}', [FrontController::class, 'assigncou
 
 Route::post('assign',[assigncourseController::class,'store'])->name('assign.store');
 
-//------------------------route to show the total student controller--------------------
-Route::get('/total-students', [TotalStudentsController::class, 'show'])->name('totalStudents.show');
-
 
 
 // ------------------------------------user profile start-------------------------
@@ -210,8 +207,9 @@ Route::get('trainerprofile', [TeamController::class, 'showTrainerProfile'])->nam
 
 Route::get('trainer/assigncourses',[TeamController::class,'assigncoursesShow'])->name('trainer.assigncourses');
 
+Route::get('trainer/settings',[TeamController::class,'trainersettings'])->name('trainer.settings');
 
-
+Route::post('trainer/profileupdate', [ProfileEditController::class, 'trainerprofileupdate'])->name('trainer.profileupdate');
 
     });
 
@@ -230,8 +228,7 @@ Route::get('trainer/assigncourses',[TeamController::class,'assigncoursesShow'])-
 //-------------------------------------------------------------------PAYMENT GATEWAY---------------------------//
 
 
-Route::get('/example1', [SslCommerzPaymentController::class, 'exampleEasyCheckout']);
-Route::get('/example2', [SslCommerzPaymentController::class, 'exampleHostedCheckout']);
+
 
 Route::post('/pay/{course_id}', [SslCommerzPaymentController::class, 'index'])->name('pay')->middleware('canEnroll');
 Route::post('/pay-via-ajax', [SslCommerzPaymentController::class, 'payViaAjax']);

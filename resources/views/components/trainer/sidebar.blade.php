@@ -13,7 +13,7 @@
 
 <!-- Nav Item - Pages Collapse Menu -->
 <li class="nav-item">
-    <a class="nav-link collapsed" href="#"  data-target="#collapseTwo" aria-expanded="true"
+    <a class="nav-link collapsed" href="{{route('trainer.profile')}}"  data-target="#collapseTwo" aria-expanded="true"
         aria-controls="collapseTwo">
         <i class="fas fa-fw fa-cog"></i>
         <span>Dashbroad</span>
@@ -30,7 +30,7 @@
 </li>
 
 <li class="nav-item">
-    <a class="nav-link collapsed" href="#" data-target="#Orders" aria-expanded="true"
+    <a class="nav-link collapsed" href="{{route('trainer.settings')}}" data-target="#Orders" aria-expanded="true"
        aria-controls="collapseTwo">
         <i class="fas fa-fw fa-cog"></i>
         <span>Settings</span>

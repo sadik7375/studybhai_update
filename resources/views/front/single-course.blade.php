@@ -100,25 +100,32 @@
                     </div>
 
                     <div class="payment-buttons">
-                        <form id="enrollForm" method="POST" action="{{ route('pay', ['course_id' => $course->id]) }}">
-                            @csrf
-                            <input type="hidden" name="total_amount" id="total_amount" value="{{ $course->price }}"/>
+                        @if(auth()->check() && auth()->user()->role==='a' || auth()->user()->role==='t'   )
+                            <p class="text-danger">Admins and trainers cannot enroll in courses.</p>
+                        @elseif(auth()->check())
+                            <form id="enrollForm" method="POST" action="{{ route('pay', ['course_id' => $course->id]) }}">
+                                @csrf
+                                <input type="hidden" name="total_amount" id="total_amount" value="{{ $course->price }}"/>
 
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="payment_option" id="fullPayment" value="full" checked>
-                                <label class="form-check-label btn btn-outline-primary" for="fullPayment">Full Payment</label>
-                            </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="payment_option" id="fullPayment" value="full" checked>
+                                    <label class="form-check-label btn btn-outline-primary" for="fullPayment">Full Payment</label>
+                                </div>
 
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="payment_option" id="partialPayment" value="partial">
-                                <label class="form-check-label btn btn-outline-success" for="partialPayment">Partial Payment (50%)</label>
-                            </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="payment_option" id="partialPayment" value="partial">
+                                    <label class="form-check-label btn btn-outline-success" for="partialPayment">Partial Payment (50%)</label>
+                                </div>
 
-                            <button type="submit" class="btn btn-primary">
-                                Enroll Now
-                            </button>
-                        </form>
+                                <button type="submit" class="btn btn-primary">
+                                    Enroll Now
+                                </button>
+                            </form>
+                        @else
+                            <p class="text-danger">You need to be logged in to enroll in the course.</p>
+                        @endif
                     </div>
+
                 </div>
             </div>
         </div>
@@ -156,26 +163,7 @@
                     <div class="card third-section-learning-box" style="width: auto">
                         <div class="card-body">
                             <h5 class="third-section-learning-box_p1">Advanced</h5>
-                            <ul>
-                                <li>ANNS (Artificial Neural Networks)</li>
-                                <li>Regularization</li>
-                                <li>Metaparameters (activations, optimizers)</li>
-                                <li>FFNs (Feed-Forward Networks)</li>
-                                <li>More on Data</li>
-                                <li>Measuring Model Performance</li>
-                                <li>FFN Milestone Projects</li>
-                                <li>Weight Inits and Investigations</li>
-                                <li>Autoencoders</li>
-                                <li>Running Models on a GPU</li>
-                                <li>Convolution and Transformations</li>
-                                <li>Understand and Design CNNs</li>
-                                <li>CNN Milestone Projects</li>
-                                <li>Transfer Learning</li>
-                                <li>Style Transfer</li>
-                                <li>Generative Adversarial Networks</li>
-                                <li>RNNs (Recurrent Neural Networks) (and GRU/LSTM)</li>
-                                <li>Ethics of Deep Learning</li>
-                            </ul>
+                            {!! $course->advanced !!}
                         </div>
                     </div>
                 </div>
