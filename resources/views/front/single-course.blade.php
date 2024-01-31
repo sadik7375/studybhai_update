@@ -100,31 +100,36 @@
                     </div>
 
                     <div class="payment-buttons">
-                        @if(auth()->check() && auth()->user()->role==='a' || auth()->user()->role==='t'   )
-                            <p class="text-danger">Admins and trainers cannot enroll in courses.</p>
-                        @elseif(auth()->check())
-                            <form id="enrollForm" method="POST" action="{{ route('pay', ['course_id' => $course->id]) }}">
+                        @auth
+                            @if(auth()->user()->role === 'a' || auth()->user()->role === 't')
                                 @csrf
-                                <input type="hidden" name="total_amount" id="total_amount" value="{{ $course->price }}"/>
+                                <p class="text-danger">Admins and trainers cannot enroll in courses.</p>
+                            @else
+                                <form id="enrollForm" method="POST" action="{{ route('pay', ['course_id' => $course->id]) }}">
+                                    @csrf
+                                    <input type="hidden" name="total_amount" id="total_amount" value="{{ $course->price }}"/>
 
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="payment_option" id="fullPayment" value="full" checked>
-                                    <label class="form-check-label btn btn-outline-primary" for="fullPayment">Full Payment</label>
-                                </div>
+                                    {{-- <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="payment_option" id="fullPayment" value="full" checked>
+                                        <label class="form-check-label btn btn-outline-primary" for="fullPayment">Full Payment</label>
+                                    </div>
 
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="payment_option" id="partialPayment" value="partial">
-                                    <label class="form-check-label btn btn-outline-success" for="partialPayment">Partial Payment (50%)</label>
-                                </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="payment_option" id="partialPayment" value="partial">
+                                        <label class="form-check-label btn btn-outline-success" for="partialPayment">Partial Payment (50%)</label>
+                                    </div> --}}
 
-                                <button type="submit" class="btn btn-primary">
-                                    Enroll Now
-                                </button>
-                            </form>
+                                    <button type="submit" class="btn btn-primary">
+                                        Enroll Now
+                                    </button>
+                                </form>
+                            @endif
                         @else
                             <p class="text-danger">You need to be logged in to enroll in the course.</p>
-                        @endif
+                        @endauth
                     </div>
+
+
 
                 </div>
             </div>

@@ -67,7 +67,7 @@ Route::get('userprofile', [FrontController::class, 'userprofile'])->name('userpr
 
 Route::get('usercourse', [showBuyCourses::class, 'index'])->name('usercourse');
 
-Route::get('showcourses',[FrontController::class,'showcourses'])->name('showcourses.index');
+
 
 //-------------------------------------user course end----------------------------
 
@@ -103,7 +103,7 @@ Route::post('profile/update', [ProfileEditController::class, 'updateProfile'])->
 
 });
 
-
+Route::get('showcourses',[FrontController::class,'showcourses'])->name('showcourses.index');
 
 Auth::routes();
 
