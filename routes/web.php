@@ -42,8 +42,7 @@ Route::get('test', function () {
     return view('welcometest');
 });
 
-//--------------------------------Dashboard route for user---------------------------------
-Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
+
 
 
 Route::middleware(['auth'])->group(function () {

@@ -9,9 +9,9 @@
             <tr>
                 <th>ID</th>
                 <th>Name</th>
-                <th>Phone</th>
                 <th>Email</th>
-                <th>Status</th>
+                <th>Phone</th>
+
                 <!-- Add more table headers as needed -->
             </tr>
             </thead>

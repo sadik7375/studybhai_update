@@ -28,7 +28,7 @@
                 <td>{{ $order['amount'] }}</td>
                 <td>{{ $order['phone'] }}</td>
                 <td>{{ $order['status'] }}</td>
-                <td>{{ $order['course_ID'] }}</td>
+                <td>{{ $order['course_id'] }}</td>
                 <td>{{ $order['transaction_id'] }}</td>
             </tr>
         @endforeach
