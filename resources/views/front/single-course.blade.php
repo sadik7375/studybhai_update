@@ -107,17 +107,17 @@
                             @else
                                 <form id="enrollForm" method="POST" action="{{ route('pay', ['course_id' => $course->id]) }}">
                                     @csrf
-                                    <input type="hidden" name="total_amount" id="total_amount" value="{{ $course->price }}"/>
+                                    {{-- <input type="hidden" name="total_amount" id="total_amount" value="{{ $course->price }}"/> --}}
 
-                                    {{-- <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="payment_option" id="fullPayment" value="full" checked>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="payment_option" id="full" value="full" checked>
                                         <label class="form-check-label btn btn-outline-primary" for="fullPayment">Full Payment</label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="radio" name="payment_option" id="partialPayment" value="partial">
                                         <label class="form-check-label btn btn-outline-success" for="partialPayment">Partial Payment (50%)</label>
-                                    </div> --}}
+                                    </div>
 
                                     <button type="submit" class="btn btn-primary">
                                         Enroll Now
@@ -193,9 +193,9 @@
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('enrollForm').addEventListener('submit', function () {
-            // Update the hidden input value with the selected payment option
+
             const paymentOption = document.querySelector('input[name="payment_option"]:checked').value;
-            // Adjust the calculation for partial payment
+
             document.getElementById('total_amount').value = (paymentOption === 'partial') ? '{{ $course->price / 2 }}' : '{{ $course->price }}';
         });
     });

@@ -33,7 +33,9 @@ class SslCommerzPaymentController extends Controller
         $coursePrice = $course->price;
 
         $post_data = array();
-        $post_data['total_amount'] = $coursePrice;
+        $paymentOption = $request->input('payment_option');
+        $post_data['total_amount'] = ($paymentOption === 'partial') ? ($coursePrice / 2) : $coursePrice;
+
         $post_data['currency'] = "BDT";
         $post_data['tran_id'] = uniqid(); // tran_id must be unique
 

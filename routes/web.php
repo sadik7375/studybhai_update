@@ -96,6 +96,21 @@ Route::post('profile/update', [ProfileEditController::class, 'updateProfile'])->
 //------------------------------------user profile End--------------------------
 
 
+//-------------------------------------------------------------------PAYMENT GATEWAY---------------------------//
+
+
+
+
+Route::post('/pay/{course_id}', [SslCommerzPaymentController::class, 'index'])->name('pay')->middleware('canEnroll');
+Route::post('/pay-via-ajax', [SslCommerzPaymentController::class, 'payViaAjax']);
+
+Route::post('/success', [SslCommerzPaymentController::class, 'success']);
+Route::post('/fail', [SslCommerzPaymentController::class, 'fail']);
+Route::post('/cancel', [SslCommerzPaymentController::class, 'cancel']);
+
+Route::post('/ipn', [SslCommerzPaymentController::class, 'ipn']);
+
+//------------------------------------------------------------------PAYMENT GATEWAY END--------------------------------------//
 
 
 
@@ -224,18 +239,3 @@ Route::post('trainer/profileupdate', [ProfileEditController::class, 'trainerprof
 
 
 
-//-------------------------------------------------------------------PAYMENT GATEWAY---------------------------//
-
-
-
-
-Route::post('/pay/{course_id}', [SslCommerzPaymentController::class, 'index'])->name('pay')->middleware('canEnroll');
-Route::post('/pay-via-ajax', [SslCommerzPaymentController::class, 'payViaAjax']);
-
-Route::post('/success', [SslCommerzPaymentController::class, 'success']);
-Route::post('/fail', [SslCommerzPaymentController::class, 'fail']);
-Route::post('/cancel', [SslCommerzPaymentController::class, 'cancel']);
-
-Route::post('/ipn', [SslCommerzPaymentController::class, 'ipn']);
-
-//------------------------------------------------------------------PAYMENT GATEWAY END--------------------------------------//
