@@ -49,13 +49,6 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
 
-//--------------------------------------admin course assign--------------------------
-
-Route::get('admin/courseassign/{course_id}', [FrontController::class, 'assigncourseAndtrainerAssign'])->name('courseassign'); //multi controller function use for one route
-
-Route::post('assign',[assigncourseController::class,'store'])->name('assign.store');
-
-
 
 // ------------------------------------user profile start-------------------------
 Route::get('userprofile', [FrontController::class, 'userprofile'])->name('userprofile');
