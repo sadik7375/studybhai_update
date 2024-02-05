@@ -95,7 +95,7 @@
                                         /></a>
                                 </div>
                             </div>
-                            <div class="col-xl-7 d-none d-xl-block" style="padding-top: 20px; padding-left: 90px">
+                            <div class="col-xl-7 d-none d-xl-block">
                                 <div class="it-header-2-main-menu">
                                     <nav class="it-menu-content">
                                         <ul>
