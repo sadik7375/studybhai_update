@@ -35,56 +35,43 @@ use App\Http\Controllers\showBuyCourses;
 
 
 
-
-Route::get('/', [FrontController::class, 'front'])->name('front.home');
-
 Route::get('test', function () {
     return view('welcometest');
 });
-
-
 
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
 
-
 // ------------------------------------user profile start-------------------------
-Route::get('userprofile', [FrontController::class, 'userprofile'])->name('userprofile');
-
+    Route::get('userprofile', [FrontController::class, 'userprofile'])->name('userprofile');
 
 
 //-------------------------------------user course show----------------------------
 
-Route::get('usercourse', [showBuyCourses::class, 'index'])->name('usercourse');
-
+    Route::get('usercourse', [showBuyCourses::class, 'index'])->name('usercourse');
 
 
 //-------------------------------------user course end----------------------------
 
 
 //-------------------------------------user profile settings---------------------------
-Route::get('settings', [FrontController::class, 'usersettings'])->name('settings');
+    Route::get('settings', [FrontController::class, 'usersettings'])->name('settings');
 
 
-Route::get('usersettings', [FrontController::class, 'usersettings'])->name('usersettings');
+    Route::get('usersettings', [FrontController::class, 'usersettings'])->name('usersettings');
 
 //-------------------------------------password change---------------------------
 
-Route::post('/updatepassword', [usersettingsController::class, 'updatePassword'])->name('update.password');
-
-
-
-
-
+    Route::post('/updatepassword', [usersettingsController::class, 'updatePassword'])->name('update.password');
 
 
 //-----------------------------------show Editprofile-------------------------------
 
-Route::get('editprofile', [FrontController::class, 'usereditProfile'])->name('editprofile');
+    Route::get('editprofile', [FrontController::class, 'usereditProfile'])->name('editprofile');
 
-Route::post('profile/update', [ProfileEditController::class, 'updateProfile'])->name('profile.update');
+    Route::post('profile/update', [ProfileEditController::class, 'updateProfile'])->name('profile.update');
 
 //------------------------------------user profile End--------------------------
 
@@ -92,25 +79,21 @@ Route::post('profile/update', [ProfileEditController::class, 'updateProfile'])->
 //-------------------------------------------------------------------PAYMENT GATEWAY---------------------------//
 
 
+    Route::post('/pay/{course_id}', [SslCommerzPaymentController::class, 'index'])->name('pay')->middleware('canEnroll');
+    Route::post('/pay-via-ajax', [SslCommerzPaymentController::class, 'payViaAjax']);
 
+    Route::post('/success', [SslCommerzPaymentController::class, 'success']);
+    Route::post('/fail', [SslCommerzPaymentController::class, 'fail']);
+    Route::post('/cancel', [SslCommerzPaymentController::class, 'cancel']);
 
-Route::post('/pay/{course_id}', [SslCommerzPaymentController::class, 'index'])->name('pay')->middleware('canEnroll');
-Route::post('/pay-via-ajax', [SslCommerzPaymentController::class, 'payViaAjax']);
-
-Route::post('/success', [SslCommerzPaymentController::class, 'success']);
-Route::post('/fail', [SslCommerzPaymentController::class, 'fail']);
-Route::post('/cancel', [SslCommerzPaymentController::class, 'cancel']);
-
-Route::post('/ipn', [SslCommerzPaymentController::class, 'ipn']);
+    Route::post('/ipn', [SslCommerzPaymentController::class, 'ipn']);
 
 //------------------------------------------------------------------PAYMENT GATEWAY END--------------------------------------//
 
 
-
-
 });
 
-Route::get('showcourses',[FrontController::class,'showcourses'])->name('showcourses.index');
+Route::get('showcourses', [FrontController::class, 'showcourses'])->name('showcourses.index');
 
 Auth::routes();
 
@@ -152,41 +135,26 @@ Route::middleware(['auth', 'admin'])
         Route::resource('team', TeamController::class);
 
 
-            // ------------------------------------------ Footer ------------------------------------------
+        // ------------------------------------------ Footer ------------------------------------------
 
-            Route::resource('footer', FooterController::class);
+        Route::resource('footer', FooterController::class);
 
-            // ------------------------------------------ Footer ------------------------------------------
+        // ------------------------------------------ Footer ------------------------------------------
 
 
         //--------------------------------------admin course assign--------------------------
 
         Route::get('courseassign/{course_id}', [FrontController::class, 'assigncourseAndtrainerAssign'])->name('courseassign'); //multi controller function use for one route
 
-        Route::get('assigncourses',[assigncourseController::class,'showAssignedCourses'])->name('assign.courses');
+        Route::get('assigncourses', [assigncourseController::class, 'showAssignedCourses'])->name('assign.courses');
 
 
-        Route::post('assign',[assigncourseController::class,'store'])->name('assign.store');
-
-
+        Route::post('assign', [assigncourseController::class, 'store'])->name('assign.store');
 
 
         Route::delete('deleteassigncourse/{assignedCourse}', [assigncourseController::class, 'deleteAssignCourse'])->name('assign.course.delete');
 
-        Route::post('deleteassigncourse/{assignedCourse}', [assigncourseController::class, 'deleteAssignCourse'])->name('assign.course.delete');
-
-
-
-
-
-
-
-
-
-
-
-
-
+//        Route::post('deleteassigncourse/{assignedCourse}', [assigncourseController::class, 'deleteAssignCourse'])->name('assign.course.delete');
 
 
     });
@@ -204,21 +172,20 @@ Route::get('team', [FrontController::class, 'team'])->name('team_info');
 // ------------------------------------------ Dashboard ------------------------------------------
 
 
-
 Route::middleware(['auth', 't'])->group(function () {
 
 
 //------------------------------------trainer profile------------------------------
 
-Route::get('trainerprofile', [TeamController::class, 'showTrainerProfile'])->name('trainer.profile');
+    Route::get('trainerprofile', [TeamController::class, 'showTrainerProfile'])->name('trainer.profile');
 
-Route::get('trainer/assigncourses',[TeamController::class,'assigncoursesShow'])->name('trainer.assigncourses');
+    Route::get('trainer/assigncourses', [TeamController::class, 'assigncoursesShow'])->name('trainer.assigncourses');
 
-Route::get('trainer/settings',[TeamController::class,'trainersettings'])->name('trainer.settings');
+    Route::get('trainer/settings', [TeamController::class, 'trainersettings'])->name('trainer.settings');
 
-Route::post('trainer/profileupdate', [ProfileEditController::class, 'trainerprofileupdate'])->name('trainer.profileupdate');
+    Route::post('trainer/profileupdate', [ProfileEditController::class, 'trainerprofileupdate'])->name('trainer.profileupdate');
 
-    });
+});
 
 
 
