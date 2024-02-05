@@ -60,7 +60,7 @@
                             <ul>
                                 <li class="d-none d-md-inline-block">
                                     <div class="it-header-3-top-right">
-                                        <a href="#">
+                                        <a href="{{ route('login') }}">
                           <span class="icon"
                           ><i class="fa-solid fa-user"></i
                               ></span>
@@ -99,209 +99,15 @@
                                 <div class="it-header-2-main-menu">
                                     <nav class="it-menu-content">
                                         <ul>
-                                            <li class="has-dropdown p-static">
-                                                <a href="index.html">home</a>
-                                                <div class="it-submenu submenu has-home-img">
-                                                    <div
-                                                        class="row gx-6 row-cols-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-5"
-                                                    >
-                                                        <div class="col home-img">
-                                                            <div class="home-img-thumb mb-15">
-                                                                <img src="{{ asset('assets/img/menu/home-1.jpg') }}"
-                                                                     alt/>
-                                                                <div class="home-img-btn">
-                                                                    <a
-                                                                        class="it-btn-white-sm"
-                                                                        href="index.html"
-                                                                    >Multi Page</a
-                                                                    >
-                                                                    <a
-                                                                        class="it-btn-white-sm"
-                                                                        href="index-one-page.html"
-                                                                    >One Page</a
-                                                                    >
-                                                                </div>
-                                                            </div>
-                                                            <div class="home-img-content text-center">
-                                                                <h4 class="home-img-title">
-                                                                    <a href="index.html">Home 01</a>
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col home-img">
-                                                            <div class="home-img-thumb mb-15">
-                                                                <img src="{{ asset('assets/img/menu/home-2.jpg') }}"
-                                                                     alt/>
-                                                                <div class="home-img-btn">
-                                                                    <a
-                                                                        class="it-btn-white-sm"
-                                                                        href="index-2.html"
-                                                                    >Multi Page</a
-                                                                    >
-                                                                    <a
-                                                                        class="it-btn-white-sm"
-                                                                        href="index-2-one-page.html"
-                                                                    >One Page</a
-                                                                    >
-                                                                </div>
-                                                            </div>
-                                                            <div class="home-img-content text-center">
-                                                                <h4 class="home-img-title">
-                                                                    <a href="index-2.html">Home 02</a>
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col home-img">
-                                                            <div class="home-img-thumb mb-15">
-                                                                <img src="{{ asset('assets/img/menu/home-3.jpg') }}"
-                                                                     alt/>
-                                                                <div class="home-img-btn">
-                                                                    <a
-                                                                        class="it-btn-white-sm"
-                                                                        href="index-3.html"
-                                                                    >Multi Page</a
-                                                                    >
-                                                                    <a
-                                                                        class="it-btn-white-sm"
-                                                                        href="index-3-one-page.html"
-                                                                    >One Page</a
-                                                                    >
-                                                                </div>
-                                                            </div>
-                                                            <div class="home-img-content text-center">
-                                                                <h4 class="home-img-title">
-                                                                    <a href="index-3.html">Home 03</a>
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col home-img">
-                                                            <div class="home-img-thumb mb-15">
-                                                                <img src="{{ asset('assets/img/menu/home-4.jpg') }}"
-                                                                     alt/>
-                                                                <div class="home-img-btn">
-                                                                    <a
-                                                                        class="it-btn-white-sm"
-                                                                        href="index-4.html"
-                                                                    >Multi Page</a
-                                                                    >
-                                                                    <a
-                                                                        class="it-btn-white-sm"
-                                                                        href="index-4-one-page.html"
-                                                                    >One Page</a
-                                                                    >
-                                                                </div>
-                                                            </div>
-                                                            <div class="home-img-content text-center">
-                                                                <h4 class="home-img-title">
-                                                                    <a href="index-4.html">Home 04</a>
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col home-img">
-                                                            <div class="home-img-thumb mb-15">
-                                                                <img src="{{ asset('assets/img/menu/home-5.jpg') }}"
-                                                                     alt/>
-                                                                <div class="home-img-btn">
-                                                                    <a
-                                                                        class="it-btn-white-sm"
-                                                                        href="index-5.html"
-                                                                    >Multi Page</a
-                                                                    >
-                                                                    <a
-                                                                        class="it-btn-white-sm"
-                                                                        href="index-5-one-page.html"
-                                                                    >One Page</a
-                                                                    >
-                                                                </div>
-                                                            </div>
-                                                            <div class="home-img-content text-center">
-                                                                <h4 class="home-img-title">
-                                                                    <a href="index-5.html">Home 05</a>
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                            <li class=" p-static">
+                                                <a href="{{route("index-page")}}">home</a>
+
                                             </li>
 
                                             <li><a href="about-us.html">about us</a></li>
 
-                                            {{--                                            <li class="has-dropdown">--}}
-                                            {{--                                                <a href="services-1.html">services</a>--}}
-                                            {{--                                                <ul class="it-submenu submenu">--}}
-                                            {{--                                                    <li><a href="services-1.html">services 01</a></li>--}}
-                                            {{--                                                    <li><a href="services-2.html">services 02</a></li>--}}
-                                            {{--                                                    <li><a href="services-3.html">services 03</a></li>--}}
-                                            {{--                                                    <li>--}}
-                                            {{--                                                        <a href="service-details.html"--}}
-                                            {{--                                                        >services details</a--}}
-                                            {{--                                                        >--}}
-                                            {{--                                                    </li>--}}
-                                            {{--                                                </ul>--}}
-                                            {{--                                            </li>--}}
-
-                                            {{--                                            <li class="has-dropdown">--}}
-                                            {{--                                                <a href="#">pages</a>--}}
-                                            {{--                                                <ul class="it-submenu submenu has-megamenu">--}}
-                                            {{--                                                    <li><a href="course-1.html">Course 01</a></li>--}}
-                                            {{--                                                    <li><a href="course-2.html">Course 02</a></li>--}}
-                                            {{--                                                    <li>--}}
-                                            {{--                                                        <a href="course-details.html">Course Details</a>--}}
-                                            {{--                                                    </li>--}}
-                                            {{--                                                    <li><a href="teacher.html">Teacher</a></li>--}}
-                                            {{--                                                    <li>--}}
-                                            {{--                                                        <a href="teacher-details.html"--}}
-                                            {{--                                                        >Teacher Details</a--}}
-                                            {{--                                                        >--}}
-                                            {{--                                                    </li>--}}
-                                            {{--                                                    <li><a href="price.html">Price</a></li>--}}
-                                            {{--                                                    <li><a href="event.html">Event</a></li>--}}
-                                            {{--                                                    <li>--}}
-                                            {{--                                                        <a href="event-details.html">Event Details</a>--}}
-                                            {{--                                                    </li>--}}
-                                            {{--                                                    <li><a href="cart.html">Cart</a></li>--}}
-                                            {{--                                                    <li><a href="checkout.html">Checkout</a></li>--}}
-                                            {{--                                                    <li>--}}
-                                            {{--                                                        <a href="testimonial.html">Testimonial</a>--}}
-                                            {{--                                                    </li>--}}
-                                            {{--                                                    <li>--}}
-                                            {{--                                                        <a href="Instructor-registration.html"--}}
-                                            {{--                                                        >Instructor Registration</a--}}
-                                            {{--                                                        >--}}
-                                            {{--                                                    </li>--}}
-                                            {{--                                                    <li>--}}
-                                            {{--                                                        <a href="student-registration-1.html"--}}
-                                            {{--                                                        >Student Registration 01</a--}}
-                                            {{--                                                        >--}}
-                                            {{--                                                    </li>--}}
-                                            {{--                                                    <li>--}}
-                                            {{--                                                        <a href="student-registration-2.html"--}}
-                                            {{--                                                        >Student Registration 02</a--}}
-                                            {{--                                                        >--}}
-                                            {{--                                                    </li>--}}
-                                            {{--                                                    <li><a href="faq.html">Faq</a></li>--}}
-                                            {{--                                                    <li><a href="signin.html">Sign IN</a></li>--}}
-                                            {{--                                                    <li><a href="signup.html">Sign UP</a></li>--}}
-                                            {{--                                                    <li><a href="404.html">Error</a></li>--}}
-                                            {{--                                                </ul>--}}
-                                            {{--                                            </li>--}}
-
-                                            {{--                                            <li class="has-dropdown">--}}
-                                            {{--                                                <a href="blog-1.html">blog</a>--}}
-                                            {{--                                                <ul class="it-submenu submenu">--}}
-                                            {{--                                                    <li><a href="blog-1.html">Blog 01</a></li>--}}
-                                            {{--                                                    <li><a href="blog-2.html">BLog 02</a></li>--}}
-                                            {{--                                                    <li>--}}
-                                            {{--                                                        <a href="blog-sidebar.html">Blog Sidebar</a>--}}
-                                            {{--                                                    </li>--}}
-                                            {{--                                                    <li>--}}
-                                            {{--                                                        <a href="blog-details.html">Blog details</a>--}}
-                                            {{--                                                    </li>--}}
-                                            {{--                                                </ul>--}}
-                                            {{--                                            </li>--}}
-
-                                            <li><a href="contact.html">Course</a></li>
-                                            <li><a href="contact.html">Team</a></li>
+                                            <li><a href="{{route("show.courses")}}">Course</a></li>
+                                            <li><a href="{{route("team_info")}}">Team</a></li>
                                             <li><a href="contact.html">contact</a></li>
                                         </ul>
                                     </nav>

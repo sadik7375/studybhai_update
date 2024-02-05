@@ -181,6 +181,10 @@
             </div>
         </div>
 
+
+        <!------------------------ course section -------------------------->
+
+
         <div
             class="it-course-area it-course-style-3 it-course-bg p-relative grey-bg pt-120 pb-120"
             data-background="assets/img/course/course-bg.png"
@@ -202,9 +206,9 @@
                         </div>
                         <div class="col-xl-5 col-lg-5 col-md-4">
                             <div class="it-course-button text-start text-md-end pt-25">
-                                <a class="it-btn-theme-2" href="course-2.html">
+                                <a class="it-btn-theme-2" href="{{route('show.courses')}}">
                     <span>
-                      Load More Course
+                      see More Course
                       <svg
                           width="17"
                           height="14"
@@ -235,160 +239,71 @@
                         </div>
                     </div>
                 </div>
+
+
+
+
+
                 <div class="row">
-                    <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
-                        <div class="it-course-item">
-                            <div class="it-course-thumb mb-20 p-relative">
-                                <a href="course-details.html"
-                                ><img src="assets/img/course/course-1-1.jpg" alt
-                                    /></a>
-                                <div class="it-course-thumb-text">
-                                    <span>Development</span>
-                                </div>
-                            </div>
-                            <div class="it-course-content">
-                                <div class="it-course-rating mb-10">
-                                    <i class="fa-sharp fa-solid fa-star"></i>
-                                    <i class="fa-sharp fa-solid fa-star"></i>
-                                    <i class="fa-sharp fa-solid fa-star"></i>
-                                    <i class="fa-sharp fa-solid fa-star"></i>
-                                    <i class="fa-sharp fa-regular fa-star"></i>
-                                    <span>(4.7)</span>
-                                </div>
-                                <h4 class="it-course-title pb-5">
+
+                    @foreach ($courses as $course)
+                        <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                            <div class="it-course-item">
+                                <div class="it-course-thumb mb-20 p-relative">
                                     <a href="course-details.html"
-                                    >It statistics data science and Business analysis</a
+                                    ><img src="{{ asset('storage/' . $course->image) }}" alt
+                                        /></a>
+                                </div>
+                                <div class="it-course-content">
+{{--                                    <div class="it-course-rating mb-10">--}}
+{{--                                        <i class="fa-sharp fa-solid fa-star"></i>--}}
+{{--                                        <i class="fa-sharp fa-solid fa-star"></i>--}}
+{{--                                        <i class="fa-sharp fa-solid fa-star"></i>--}}
+{{--                                        <i class="fa-sharp fa-solid fa-star"></i>--}}
+{{--                                        <i class="fa-sharp fa-regular fa-star"></i>--}}
+{{--                                        <span>(4.7)</span>--}}
+{{--                                    </div>--}}
+                                    <h4 class="it-course-title pb-5">
+                                        <a href="course-details.html"
+                                        >{{ $course->title }}</a
+                                        >
+                                    </h4>
+                                    <div
+                                        class="it-course-info pb-15 mb-25 d-flex justify-content-between"
                                     >
-                                </h4>
-                                <div
-                                    class="it-course-info pb-15 mb-25 d-flex justify-content-between"
-                                >
                     <span
                     ><i class="fa-light fa-file-invoice"></i>Lesson 10</span
                     >
-                                    <span
-                                    ><i class="fa-sharp fa-regular fa-clock"></i>19h 30m</span
+                                        <span
+                                        ><i class="fa-sharp fa-regular fa-clock"></i>{{ $course->duration }}</span
+                                        >
+                                        <!-- <span><i class="fa-light fa-user"></i>Students 20+</span> -->
+                                    </div>
+                                    <div
+                                        class="it-course-price-box d-flex justify-content-between"
                                     >
-                                    <span><i class="fa-light fa-user"></i>Students 20+</span>
-                                </div>
-                                <div class="it-course-author pb-15">
-                                    <img src="{{ asset('assets/img/course/avata-1.png') }}" alt/>
-                                    <span>By <i>Angela</i> in <i>Development</i></span>
-                                </div>
-                                <div
-                                    class="it-course-price-box d-flex justify-content-between"
-                                >
-                                    <span><i>$60</i> $120</span>
-                                    <a href="cart.html"
-                                    ><i class="fa-light fa-cart-shopping"></i>Add to cart</a
-                                    >
+                                        <span><i>{{ $course->price }}</i></span>
+                                        <a href="{{ route('single_course_info', ['id' => $course->id]) }}"
+                                        ><i class="fa-light fa-cart-shopping"></i>Enroll Now</a
+                                        >
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
-                        <div class="it-course-item">
-                            <div class="it-course-thumb mb-20 p-relative">
-                                <a href="course-details.html"
-                                ><img src="{{ asset('assets/img/course/course-1-2.jpg') }}" alt
-                                    /></a>
-                                <div class="it-course-thumb-text">
-                                    <span>Development</span>
-                                </div>
-                            </div>
-                            <div class="it-course-content">
-                                <div class="it-course-rating mb-10">
-                                    <i class="fa-sharp fa-solid fa-star"></i>
-                                    <i class="fa-sharp fa-solid fa-star"></i>
-                                    <i class="fa-sharp fa-solid fa-star"></i>
-                                    <i class="fa-sharp fa-solid fa-star"></i>
-                                    <i class="fa-sharp fa-regular fa-star"></i>
-                                    <span>(4.7)</span>
-                                </div>
-                                <h4 class="it-course-title pb-5">
-                                    <a href="course-details.html"
-                                    >It statistics data science and Business analysis</a
-                                    >
-                                </h4>
-                                <div
-                                    class="it-course-info pb-15 mb-25 d-flex justify-content-between"
-                                >
-                    <span
-                    ><i class="fa-light fa-file-invoice"></i>Lesson 10</span
-                    >
-                                    <span
-                                    ><i class="fa-sharp fa-regular fa-clock"></i>19h 30m</span
-                                    >
-                                    <span><i class="fa-light fa-user"></i>Students 20+</span>
-                                </div>
-                                <div class="it-course-author pb-15">
-                                    <img src="{{ asset('assets/img/course/avata-1.png') }}" alt/>
-                                    <span>By <i>Angela</i> in <i>Development</i></span>
-                                </div>
-                                <div
-                                    class="it-course-price-box d-flex justify-content-between"
-                                >
-                                    <span><i>$60</i> $120</span>
-                                    <a href="cart.html"
-                                    ><i class="fa-light fa-cart-shopping"></i>Add to cart</a
-                                    >
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
-                        <div class="it-course-item">
-                            <div class="it-course-thumb mb-20 p-relative">
-                                <a href="course-details.html"
-                                ><img src="{{ asset('assets/img/course/course-1-3.jpg') }}" alt
-                                    /></a>
-                                <div class="it-course-thumb-text">
-                                    <span>Development</span>
-                                </div>
-                            </div>
-                            <div class="it-course-content">
-                                <div class="it-course-rating mb-10">
-                                    <i class="fa-sharp fa-solid fa-star"></i>
-                                    <i class="fa-sharp fa-solid fa-star"></i>
-                                    <i class="fa-sharp fa-solid fa-star"></i>
-                                    <i class="fa-sharp fa-solid fa-star"></i>
-                                    <i class="fa-sharp fa-regular fa-star"></i>
-                                    <span>(4.7)</span>
-                                </div>
-                                <h4 class="it-course-title pb-5">
-                                    <a href="course-details.html"
-                                    >Bilginer Adobe Illustrator for Graphic Design</a
-                                    >
-                                </h4>
-                                <div
-                                    class="it-course-info pb-15 mb-25 d-flex justify-content-between"
-                                >
-                    <span
-                    ><i class="fa-light fa-file-invoice"></i>Lesson 10</span
-                    >
-                                    <span
-                                    ><i class="fa-sharp fa-regular fa-clock"></i>19h 30m</span
-                                    >
-                                    <span><i class="fa-light fa-user"></i>Students 20+</span>
-                                </div>
-                                <div class="it-course-author pb-15">
-                                    <img src="{{ asset('assets/img/course/avata-1.png') }}" alt/>
-                                    <span>By <i>Angela</i> in <i>Development</i></span>
-                                </div>
-                                <div
-                                    class="it-course-price-box d-flex justify-content-between"
-                                >
-                                    <span><i>$60</i> $120</span>
-                                    <a href="cart.html"
-                                    ><i class="fa-light fa-cart-shopping"></i>Add to cart</a
-                                    >
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
+
                 </div>
+
+
             </div>
         </div>
+
+
+        </div>
+
+
+        <!------------------------ course section end -------------------------->
+
 
         <div class="it-value-area pt-120 pb-120 p-relative fix">
             <div class="it-value-shape-1 d-none d-xxl-block">
@@ -1017,7 +932,8 @@
                                                         class="it-testimonial-3-author-box d-flex align-items-center"
                                                     >
                                                         <div class="it-testimonial-3-avata">
-                                                            <img src="{{ asset('assets/img/avatar/avatar-2.png') }}" alt/>
+                                                            <img src="{{ asset('assets/img/avatar/avatar-2.png') }}"
+                                                                 alt/>
                                                         </div>
                                                         <div class="it-testimonial-3-author-info">
                                                             <h5>Jorge Carter</h5>
@@ -1042,7 +958,8 @@
                                                         class="it-testimonial-3-author-box d-flex align-items-center"
                                                     >
                                                         <div class="it-testimonial-3-avata">
-                                                            <img src="{{ asset('assets/img/avatar/avatar-1.png') }}" alt/>
+                                                            <img src="{{ asset('assets/img/avatar/avatar-1.png') }}"
+                                                                 alt/>
                                                         </div>
                                                         <div class="it-testimonial-3-author-info">
                                                             <h5>Laurie Duncanr</h5>
@@ -1152,6 +1069,7 @@
             </div>
         </div>
 
+
         <div class="it-team-3-area p-relative z-index pt-110 pb-90">
             <div
                 class="it-team-3-bg"
@@ -1173,115 +1091,49 @@
                     </div>
                 </div>
 
+
+                {{--                --------------------------trainer show-----------------------------------------}}
+
                 <div class="row">
-                    <div class="col-xl-3 col-lg-4 col-md-6 mb-30">
-                        <div class="it-team-3-item text-center">
-                            <div class="it-team-3-thumb fix">
-                                <img src="{{ asset('assets/img/team/team-3-1.jpg') }}" alt/>
-                            </div>
 
 
-                            <div class="it-team-3-content">
-                                <div class="it-team-3-social-box p-relative">
-                                    <button>
-                                        <i class="fa-light fa-share-nodes"></i>
-                                    </button>
-                                    <div class="it-team-3-social-wrap">
-                                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                                        <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
-                                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                                    </div>
+                    @foreach($teams as $team)
+                        <div class="col-xl-3 col-lg-4 col-md-6 mb-30">
+                            <div class="it-team-3-item text-center">
+                                <div class="it-team-3-thumb fix">
+                                    <img src="{{ asset('storage/' . $team->image) }}" alt>
                                 </div>
-                                <div class="it-team-3-author-box">
-                                    <h4 class="it-team-3-title">
-                                        <a href="teacher-details.html">Nathan Allen</a>
-                                    </h4>
-                                    <span>Teacher</span>
+                                <div class="it-team-3-content">
+                                    <div class="it-team-3-social-box p-relative">
+                                        <button>
+                                            <i class="fa-light fa-share-nodes"></i>
+                                        </button>
+                                        <div class="it-team-3-social-wrap">
+                                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                            <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+                                            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="it-team-3-author-box">
+                                        <h4 class="it-team-3-title"><a href="teacher-details.html">{{$team->name}}</a></h4>
+                                        <span>{{ $team->profession }}</span>
+                                        <span>{{ $team->expertise }}</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    @endforeach
 
 
-                    <div class="col-xl-3 col-lg-4 col-md-6 mb-30">
-                        <div class="it-team-3-item text-center">
-                            <div class="it-team-3-thumb fix">
-                                <img src="{{ asset('assets/img/team/team-3-2.jpg') }}" alt/>
-                            </div>
-                            <div class="it-team-3-content">
-                                <div class="it-team-3-social-box p-relative">
-                                    <button>
-                                        <i class="fa-light fa-share-nodes"></i>
-                                    </button>
-                                    <div class="it-team-3-social-wrap">
-                                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                                        <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
-                                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                                    </div>
-                                </div>
-                                <div class="it-team-3-author-box">
-                                    <h4 class="it-team-3-title">
-                                        <a href="teacher-details.html">Esther Boyd</a>
-                                    </h4>
-                                    <span>Teacher</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6 mb-30">
-                        <div class="it-team-3-item text-center">
-                            <div class="it-team-3-thumb fix">
-                                <img src="{{ asset('assets/img/team/team-3-3.jpg') }}" alt/>
-                            </div>
-                            <div class="it-team-3-content">
-                                <div class="it-team-3-social-box p-relative">
-                                    <button>
-                                        <i class="fa-light fa-share-nodes"></i>
-                                    </button>
-                                    <div class="it-team-3-social-wrap">
-                                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                                        <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
-                                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                                    </div>
-                                </div>
-                                <div class="it-team-3-author-box">
-                                    <h4 class="it-team-3-title">
-                                        <a href="teacher-details.html">Jamie Keller</a>
-                                    </h4>
-                                    <span>Teacher</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6 mb-30">
-                        <div class="it-team-3-item text-center">
-                            <div class="it-team-3-thumb fix">
-                                <img src="{{ asset('assets/img/team/team-3-4.jpg') }}" alt/>
-                            </div>
-                            <div class="it-team-3-content">
-                                <div class="it-team-3-social-box p-relative">
-                                    <button>
-                                        <i class="fa-light fa-share-nodes"></i>
-                                    </button>
-                                    <div class="it-team-3-social-wrap">
-                                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                                        <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
-                                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                                    </div>
-                                </div>
-                                <div class="it-team-3-author-box">
-                                    <h4 class="it-team-3-title">
-                                        <a href="teacher-details.html">Jesus Pendley</a>
-                                    </h4>
-                                    <span>Teacher</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
+
+
+
+
+
+
+
                 </div>
             </div>
         </div>

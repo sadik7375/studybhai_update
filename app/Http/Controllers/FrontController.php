@@ -12,13 +12,13 @@ class FrontController extends Controller
     public function front(){
         $courses = Course::all();
         $feedbacks = Feedback::all();
-        return view("front.front", compact('courses',"feedbacks"));
+        return view("front.v2.index", compact('courses',"feedbacks"));
     }
 
     public function course_info($id){
 
-        $course = Course::findOrFail($id);
-        return view("front.single-course", compact('course'));
+        $courses = Course::findOrFail($id);
+        return view("front.single-course", compact('courses'));
     }
 
     public function team(){

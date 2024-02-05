@@ -35,6 +35,9 @@ use App\Http\Controllers\showBuyCourses;
 
 
 
+// Route::get('/', [FrontController::class, 'front'])->name('front.home');
+
+
 Route::get('test', function () {
     return view('welcometest');
 });
@@ -163,11 +166,11 @@ Route::middleware(['auth', 'admin'])
 
 // ----------------------------------------------------------------------- User [ public route ] -------------------------------------------------------
 
-Route::get('course-info/{id}', [FrontController::class, 'course_info'])->name('single_course_info');
+//Route::get('course-info/{id}', [FrontController::class, 'course_info'])->name('single_course_info');
 
 // ------------------------------------------ Team ------------------------------------------
 
-Route::get('team', [FrontController::class, 'team'])->name('team_info');
+//Route::get('team', [FrontController::class, 'team'])->name('team_info');
 
 // ------------------------------------------ Dashboard ------------------------------------------
 
