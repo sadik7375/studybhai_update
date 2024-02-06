@@ -5,6 +5,10 @@
 
     <main>
 
+
+
+
+
         <div class="it-breadcrumb-area it-breadcrumb-bg" data-background="assets/img/breadcrumb/breadcrumb.jpg">
             <div class="container">
                 <div class="row ">
@@ -191,15 +195,22 @@
                             </div>
 
 
-                            <button class="it-btn w-100 text-center mb-20">
-<span>
-Enroll Now
-<svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M11 1.24023L16 7.24023L11 13.2402" stroke="currentcolor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-<path d="M1 7.24023H16" stroke="currentcolor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-</svg>
-</span>
+                            <form id="enrollForm" method="POST" action="{{ route('pay', ['course_id' => $courses->id]) }}">
+                            @csrf
+                            <input type="hidden" name="total_amount" id="total_amount" value="{{ $courses->price }}"/>
+
+                            <input type="hidden" name="course_id" value="{{ $courses->id }}">
+                            <input type="radio" id="fullPayment" name="payment_option" value="full" checked>
+                            <label for="fullPayment">Full Payment</label><br>
+
+                             <!-- Partial Payment -->
+                            <input type="radio" id="partialPayment" name="payment_option" value="partial">
+                            <label for="partialPayment">Partial Payment</label><br>
+
+                            <button type="submit" class="it-btn w-100 text-center mb-20">
+                                Enroll Now
                             </button>
+                        </form>
 
 
 
@@ -226,7 +237,16 @@ Enroll Now
 
     </main>
 
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        document.getElementById('enrollForm').addEventListener('submit', function () {
 
+            const paymentOption = document.querySelector('input[name="payment_option"]:checked').value;
+
+            document.getElementById('total_amount').value = (paymentOption === 'partial') ? '{{ $courses->price / 2 }}' : '{{ $courses->price }}';
+        });
+    });
+</script>
 
 
 @endsection

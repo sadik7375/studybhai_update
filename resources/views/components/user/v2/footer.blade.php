@@ -16,16 +16,13 @@
                         </div>
                         <div class="it-footer-text pb-5">
                             <p>
-                                Interdum velit laoreet id donec ultrices <br/>
-                                tincidunt arcu. Tincidunt tortor aliquam nulla facilisi cras
-                                fermentum odio eu.
+                                Come along with us and experience a learning journey that blends flexibility, excellence, and practical use, putting you on the road to success in the rapidly evolving field of information technology.
                             </p>
                         </div>
                         <div class="it-footer-social">
-                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="https://www.facebook.com/Studybhaibd"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="https://www.linkedin.com/company/study-bhai-app/"><i class="fab fa-linkedin"></i></a>
                             <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                            <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
-                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
                         </div>
                     </div>
                 </div>

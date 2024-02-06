@@ -104,7 +104,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('log_out', function () {
     \auth()->logout();
-    return redirect()->route('front.home');
+    return redirect()->route('index-page');
 })->name('log_out');
 
 

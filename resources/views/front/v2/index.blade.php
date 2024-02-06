@@ -5,19 +5,19 @@
     <main>
         <div class="it-hero-3-area theme-bg-2">
             <div class="it-hero-3-shape-1">
-                <img src="{{ asset('assets/img/hero/hero-3-shape1.png') }}" alt/>
+                <img src="assets/img/hero/hero-3-shape1.png" alt/>
             </div>
             <div class="it-hero-3-shape-2">
-                <img src="{{ asset('assets/img/hero/hero-3-shape2.png') }}" alt/>
+                <img src="assets/img/hero/hero-3-shape2.png" alt/>
             </div>
             <div class="it-hero-3-shape-3 d-none d-lg-block">
-                <img src="{{ asset('assets/img/hero/hero-3-shape3.png') }}" alt/>
+                <img src="assets/img/hero/hero-3-shape3.png" alt/>
             </div>
             <div class="it-hero-3-shape-4 d-none d-xxl-block">
-                <img src="{{ asset('assets/img/hero/hero-3-shape4.png') }}" alt/>
+                <img src="assets/img/hero/hero-3-shape4.png" alt/>
             </div>
             <div class="it-hero-3-shape-5 d-none d-xxl-block">
-                <img src="{{ asset('assets/img/hero/hero-3-shape5.png') }}" alt/>
+                <img src="assets/img/hero/hero-3-shape5.png" alt/>
             </div>
             <div class="container">
                 <div class="row align-items-end">
@@ -68,19 +68,123 @@
                     >Happy <br/>
                       Students</span
                     >
-                                    <img src="{{ asset('assets/img/hero/hero-3-client-img.png') }}" alt/>
+                                    <img src="assets/img/hero/hero-3-client-img.png" alt/>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                     <div class="col-xl-6">
                         <div class="it-hero-3-thumb">
-                            <img src="{{ asset('assets/img/hero/hero-3-img.png') }}" alt/>
+                            {{--                            <img src="assets/img/hero/hero-3-img.png" alt />--}}
+                            <img src="{{ asset('assets/img/career/demo.png') }}" alt/>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="it-about-3-area pt-120 pb-120 p-relative">
+            <div class="it-about-3-left-shape-4 d-none d-lg-block">
+                <img src="assets/img/about/about-3-shap-4.png" alt/>
+            </div>
+            <div class="it-about-3-left-shape-5 d-none d-lg-block">
+                <img src="assets/img/about/about-3-shap-5.png" alt/>
+            </div>
+            <div class="container">
+                <div class="row g-0 align-items-center">
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="it-about-3-left-box text-end p-relative">
+                            <div class="it-about-3-left-shape-1 d-none d-lg-block">
+                                <img src="assets/img/about/about-3-shap-1.png" alt/>
+                            </div>
+                            <div class="it-about-3-left-shape-2 d-none d-lg-block">
+                                <img src="assets/img/about/about-3-shap-2.png" alt/>
+                            </div>
+                            <div class="it-about-3-thumb">
+                                <img src="assets/img/about/about-3-img.png" alt/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="it-about-3-title-box">
+                <span class="it-section-subtitle-3">
+                  <img src="assets/img/about/bg.svg" alt/>
+                  about us
+                </span>
+                            <h2 class="it-section-title-3 pb-30">
+                                Benefit from our online learning expertise earn
+                                <span>professional</span>
+                            </h2>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                                do <br/>
+                                eiusmod tempor incididunt ut labore.
+                            </p>
+                        </div>
+                        <div class="it-about-3-mv-box">
+                            <div class="row">
+                                <div class="col-xl-6 col-md-6">
+                                    <div class="it-about-3-mv-item">
+                                        <span class="it-about-3-mv-title">OUR MISSION:</span>
+                                        <p>
+                                            Suspendisse ultrice gravida dictum fusce placerat
+                                            ultricies integer quis auctor elit sed vulputate mi sit.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-md-6">
+                                    <div class="it-about-3-mv-item">
+                                        <span class="it-about-3-mv-title">OUR VISSION:</span>
+                                        <p>
+                                            Suspendisse ultrice gravida dictum fusce placerat
+                                            ultricies integer quis auctor elit sed vulputate mi sit.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="it-about-3-btn-box p-relative">
+                            <a class="it-btn-yellow" href="about-us.html">
+                  <span>
+                    admission open
+                    <svg
+                        width="17"
+                        height="14"
+                        viewBox="0 0 17 14"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                          d="M11 1.24023L16 7.24023L11 13.2402"
+                          stroke="currentcolor"
+                          stroke-width="1.5"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                      />
+                      <path
+                          d="M1 7.24023H16"
+                          stroke="currentcolor"
+                          stroke-width="1.5"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                            </a>
+                            <div class="it-about-3-left-shape-3 d-none d-md-block">
+                                <img src="assets/img/about/about-3-shap-3.png" alt/>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
 
         <div class="it-about-3-area pt-120 pb-120 p-relative">
             <div class="it-about-3-left-shape-4 d-none d-lg-block">
@@ -199,8 +303,7 @@
                     Top Popular Course
                   </span>
                                 <h4 class="it-section-title-3">
-                                    Check out educate features <br/>
-                                    win any exam
+                                    Check out best <span>courses</span>
                                 </h4>
                             </div>
                         </div>
@@ -241,9 +344,6 @@
                 </div>
 
 
-
-
-
                 <div class="row">
 
                     @foreach ($courses as $course)
@@ -255,14 +355,14 @@
                                         /></a>
                                 </div>
                                 <div class="it-course-content">
-{{--                                    <div class="it-course-rating mb-10">--}}
-{{--                                        <i class="fa-sharp fa-solid fa-star"></i>--}}
-{{--                                        <i class="fa-sharp fa-solid fa-star"></i>--}}
-{{--                                        <i class="fa-sharp fa-solid fa-star"></i>--}}
-{{--                                        <i class="fa-sharp fa-solid fa-star"></i>--}}
-{{--                                        <i class="fa-sharp fa-regular fa-star"></i>--}}
-{{--                                        <span>(4.7)</span>--}}
-{{--                                    </div>--}}
+                                    {{--                                    <div class="it-course-rating mb-10">--}}
+                                    {{--                                        <i class="fa-sharp fa-solid fa-star"></i>--}}
+                                    {{--                                        <i class="fa-sharp fa-solid fa-star"></i>--}}
+                                    {{--                                        <i class="fa-sharp fa-solid fa-star"></i>--}}
+                                    {{--                                        <i class="fa-sharp fa-solid fa-star"></i>--}}
+                                    {{--                                        <i class="fa-sharp fa-regular fa-star"></i>--}}
+                                    {{--                                        <span>(4.7)</span>--}}
+                                    {{--                                    </div>--}}
                                     <h4 class="it-course-title pb-5">
                                         <a href="course-details.html"
                                         >{{ $course->title }}</a
@@ -282,7 +382,7 @@
                                     <div
                                         class="it-course-price-box d-flex justify-content-between"
                                     >
-                                        <span><i>{{ $course->price }}</i></span>
+                                        <span><i>{{ $course->price }} </i>BDT</span>
                                         <a href="{{ route('single_course_info', ['id' => $course->id]) }}"
                                         ><i class="fa-light fa-cart-shopping"></i>Enroll Now</a
                                         >
@@ -469,199 +569,199 @@
                   <img src="{{ asset('assets/img/about/bg.svg') }}" alt/>
                 </span>
                             <h4 class="it-section-title-3">
-                                Check out educate features <br/>
-                                win any exam
+                                Our best services <br/>
+
                             </h4>
                         </div>
                     </div>
                 </div>
+
+
                 <div class="row">
                     <div class="col-xl-3 col-lg-6 col-md-6">
                         <div class="it-feature-3-item mb-30 text-center">
-                            <div class="it-feature-3-icon">
-                                <span><i class="flaticon-coach"></i></span>
-                            </div>
+
                             <div class="it-feature-3-content">
                                 <h4 class="it-feature-3-title">
-                                    <a href="service-details.html">Best Coaching</a>
+                                    Interactive Learning
                                 </h4>
                                 <p>
-                                    In pellentesque massa vida placerat duis. Cursus sit amet
-                                    dictum sit amet.
+                                    Engaging materials for active participation.Videos, quizzes, and interactive
+                                    content.
+
                                 </p>
                             </div>
-                            <div class="it-feature-3-btn">
-                                <a class="it-btn-theme-sm" href="service-details.html">
-                    <span>
-                      view details
-                      <svg
-                          width="17"
-                          height="14"
-                          viewBox="0 0 17 14"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                            d="M11 1.24023L16 7.24023L11 13.2402"
-                            stroke="currentcolor"
-                            stroke-width="1.5"
-                            stroke-miterlimit="10"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                        />
-                        <path
-                            d="M1 7.24023H16"
-                            stroke="currentcolor"
-                            stroke-width="1.5"
-                            stroke-miterlimit="10"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                        />
-                      </svg>
-                    </span>
-                                </a>
-                            </div>
+                            {{--                            <div class="it-feature-3-btn">--}}
+                            {{--                                <a class="it-btn-theme-sm" href="service-details.html">--}}
+                            {{--                    <span>--}}
+                            {{--                      view details--}}
+                            {{--                      <svg--}}
+                            {{--                          width="17"--}}
+                            {{--                          height="14"--}}
+                            {{--                          viewBox="0 0 17 14"--}}
+                            {{--                          fill="none"--}}
+                            {{--                          xmlns="http://www.w3.org/2000/svg"--}}
+                            {{--                      >--}}
+                            {{--                        <path--}}
+                            {{--                            d="M11 1.24023L16 7.24023L11 13.2402"--}}
+                            {{--                            stroke="currentcolor"--}}
+                            {{--                            stroke-width="1.5"--}}
+                            {{--                            stroke-miterlimit="10"--}}
+                            {{--                            stroke-linecap="round"--}}
+                            {{--                            stroke-linejoin="round"--}}
+                            {{--                        />--}}
+                            {{--                        <path--}}
+                            {{--                            d="M1 7.24023H16"--}}
+                            {{--                            stroke="currentcolor"--}}
+                            {{--                            stroke-width="1.5"--}}
+                            {{--                            stroke-miterlimit="10"--}}
+                            {{--                            stroke-linecap="round"--}}
+                            {{--                            stroke-linejoin="round"--}}
+                            {{--                        />--}}
+                            {{--                      </svg>--}}
+                            {{--                    </span>--}}
+                            {{--                                </a>--}}
+                            {{--                            </div>--}}
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-6 col-md-6">
                         <div class="it-feature-3-item mb-30 text-center">
-                            <div class="it-feature-3-icon">
+                            <!-- <div class="it-feature-3-icon">
                                 <span><i class="flaticon-study"></i></span>
-                            </div>
+                            </div> -->
                             <div class="it-feature-3-content">
                                 <h4 class="it-feature-3-title">
-                                    <a href="service-details.html">Best Coaching</a>
+                                    Experienced Instructors
                                 </h4>
                                 <p>
-                                    In pellentesque massa vida placerat duis. Cursus sit amet
-                                    dictum sit amet.
+                                    Qualified teachers with practical knowledge.Experts in their respective fields.
                                 </p>
                             </div>
-                            <div class="it-feature-3-btn">
-                                <a class="it-btn-theme-sm" href="service-details.html">
-                    <span>
-                      view details
-                      <svg
-                          width="17"
-                          height="14"
-                          viewBox="0 0 17 14"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                            d="M11 1.24023L16 7.24023L11 13.2402"
-                            stroke="currentcolor"
-                            stroke-width="1.5"
-                            stroke-miterlimit="10"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                        />
-                        <path
-                            d="M1 7.24023H16"
-                            stroke="currentcolor"
-                            stroke-width="1.5"
-                            stroke-miterlimit="10"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                        />
-                      </svg>
-                    </span>
-                                </a>
-                            </div>
+                            {{--                            <div class="it-feature-3-btn">--}}
+                            {{--                                <a class="it-btn-theme-sm" href="service-details.html">--}}
+                            {{--                    <span>--}}
+                            {{--                      view details--}}
+                            {{--                      <svg--}}
+                            {{--                          width="17"--}}
+                            {{--                          height="14"--}}
+                            {{--                          viewBox="0 0 17 14"--}}
+                            {{--                          fill="none"--}}
+                            {{--                          xmlns="http://www.w3.org/2000/svg"--}}
+                            {{--                      >--}}
+                            {{--                        <path--}}
+                            {{--                            d="M11 1.24023L16 7.24023L11 13.2402"--}}
+                            {{--                            stroke="currentcolor"--}}
+                            {{--                            stroke-width="1.5"--}}
+                            {{--                            stroke-miterlimit="10"--}}
+                            {{--                            stroke-linecap="round"--}}
+                            {{--                            stroke-linejoin="round"--}}
+                            {{--                        />--}}
+                            {{--                        <path--}}
+                            {{--                            d="M1 7.24023H16"--}}
+                            {{--                            stroke="currentcolor"--}}
+                            {{--                            stroke-width="1.5"--}}
+                            {{--                            stroke-miterlimit="10"--}}
+                            {{--                            stroke-linecap="round"--}}
+                            {{--                            stroke-linejoin="round"--}}
+                            {{--                        />--}}
+                            {{--                      </svg>--}}
+                            {{--                    </span>--}}
+                            {{--                                </a>--}}
+                            {{--                            </div>--}}
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-6 col-md-6">
                         <div class="it-feature-3-item mb-30 text-center">
-                            <div class="it-feature-3-icon">
+                            <!-- <div class="it-feature-3-icon">
                                 <span><i class="flaticon-booking"></i></span>
-                            </div>
+                            </div> -->
                             <div class="it-feature-3-content">
                                 <h4 class="it-feature-3-title">
-                                    <a href="service-details.html">Best Coaching</a>
+                                    Live Q&A Sessions
                                 </h4>
                                 <p>
-                                    In pellentesque massa vida placerat duis. Cursus sit amet
-                                    dictum sit amet.
+                                    Real-time Live discussions with instructors.Students can ask questions and get
+                                    immediate answers.
                                 </p>
                             </div>
-                            <div class="it-feature-3-btn">
-                                <a class="it-btn-theme-sm" href="service-details.html">
-                    <span>
-                      view details
-                      <svg
-                          width="17"
-                          height="14"
-                          viewBox="0 0 17 14"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                            d="M11 1.24023L16 7.24023L11 13.2402"
-                            stroke="currentcolor"
-                            stroke-width="1.5"
-                            stroke-miterlimit="10"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                        />
-                        <path
-                            d="M1 7.24023H16"
-                            stroke="currentcolor"
-                            stroke-width="1.5"
-                            stroke-miterlimit="10"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                        />
-                      </svg>
-                    </span>
-                                </a>
-                            </div>
+                            {{--                            <div class="it-feature-3-btn">--}}
+                            {{--                                <a class="it-btn-theme-sm" href="service-details.html">--}}
+                            {{--                    <span>--}}
+                            {{--                      view details--}}
+                            {{--                      <svg--}}
+                            {{--                          width="17"--}}
+                            {{--                          height="14"--}}
+                            {{--                          viewBox="0 0 17 14"--}}
+                            {{--                          fill="none"--}}
+                            {{--                          xmlns="http://www.w3.org/2000/svg"--}}
+                            {{--                      >--}}
+                            {{--                        <path--}}
+                            {{--                            d="M11 1.24023L16 7.24023L11 13.2402"--}}
+                            {{--                            stroke="currentcolor"--}}
+                            {{--                            stroke-width="1.5"--}}
+                            {{--                            stroke-miterlimit="10"--}}
+                            {{--                            stroke-linecap="round"--}}
+                            {{--                            stroke-linejoin="round"--}}
+                            {{--                        />--}}
+                            {{--                        <path--}}
+                            {{--                            d="M1 7.24023H16"--}}
+                            {{--                            stroke="currentcolor"--}}
+                            {{--                            stroke-width="1.5"--}}
+                            {{--                            stroke-miterlimit="10"--}}
+                            {{--                            stroke-linecap="round"--}}
+                            {{--                            stroke-linejoin="round"--}}
+                            {{--                        />--}}
+                            {{--                      </svg>--}}
+                            {{--                    </span>--}}
+                            {{--                                </a>--}}
+                            {{--                            </div>--}}
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-6 col-md-6">
                         <div class="it-feature-3-item mb-30 text-center">
-                            <div class="it-feature-3-icon">
+                            <!-- <div class="it-feature-3-icon">
                                 <span><i class="flaticon-video"></i></span>
-                            </div>
+                            </div> -->
                             <div class="it-feature-3-content">
                                 <h4 class="it-feature-3-title">
-                                    <a href="service-details.html">Best Coaching</a>
+                                    24/7 Technical Support
                                 </h4>
                                 <p>
-                                    In pellentesque massa vida placerat duis. Cursus sit amet
-                                    dictum sit amet.
+                                    Technical Support will be available 24/7.Helps with any technical issues or
+                                    concerns.
                                 </p>
                             </div>
-                            <div class="it-feature-3-btn">
-                                <a class="it-btn-theme-sm" href="service-details.html">
-                    <span>
-                      view details
-                      <svg
-                          width="17"
-                          height="14"
-                          viewBox="0 0 17 14"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                            d="M11 1.24023L16 7.24023L11 13.2402"
-                            stroke="currentcolor"
-                            stroke-width="1.5"
-                            stroke-miterlimit="10"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                        />
-                        <path
-                            d="M1 7.24023H16"
-                            stroke="currentcolor"
-                            stroke-width="1.5"
-                            stroke-miterlimit="10"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                        />
-                      </svg>
-                    </span>
-                                </a>
-                            </div>
+                            {{--                            <div class="it-feature-3-btn">--}}
+                            {{--                                <a class="it-btn-theme-sm" href="service-details.html">--}}
+                            {{--                    <span>--}}
+                            {{--                      view details--}}
+                            {{--                      <svg--}}
+                            {{--                          width="17"--}}
+                            {{--                          height="14"--}}
+                            {{--                          viewBox="0 0 17 14"--}}
+                            {{--                          fill="none"--}}
+                            {{--                          xmlns="http://www.w3.org/2000/svg"--}}
+                            {{--                      >--}}
+                            {{--                        <path--}}
+                            {{--                            d="M11 1.24023L16 7.24023L11 13.2402"--}}
+                            {{--                            stroke="currentcolor"--}}
+                            {{--                            stroke-width="1.5"--}}
+                            {{--                            stroke-miterlimit="10"--}}
+                            {{--                            stroke-linecap="round"--}}
+                            {{--                            stroke-linejoin="round"--}}
+                            {{--                        />--}}
+                            {{--                        <path--}}
+                            {{--                            d="M1 7.24023H16"--}}
+                            {{--                            stroke="currentcolor"--}}
+                            {{--                            stroke-width="1.5"--}}
+                            {{--                            stroke-miterlimit="10"--}}
+                            {{--                            stroke-linecap="round"--}}
+                            {{--                            stroke-linejoin="round"--}}
+                            {{--                        />--}}
+                            {{--                      </svg>--}}
+                            {{--                    </span>--}}
+                            {{--                                </a>--}}
+                            {{--                            </div>--}}
                         </div>
                     </div>
                 </div>
@@ -746,6 +846,7 @@
                 </div>
             </div>
         </div>
+
 
         <div
             class="it-career-area it-career-style-3 it-career-bg p-relative pb-100 pt-120"
@@ -864,6 +965,7 @@
             </div>
         </div>
 
+
         <div
             class="it-testimonial-3-area"
             data-background="assets/img/testimonial/bg-2.png"
@@ -889,86 +991,32 @@
                                 </div>
                                 <div class="swiper-container it-testimonial-3-active">
                                     <div class="swiper-wrapper">
-                                        <div class="swiper-slide">
-                                            <div class="it-testimonial-3-item">
-                                                <div class="it-testimonial-3-content">
-                                                    <p>
-                                                        Lorem ipsum dolor sit amet, consectetur adipiscing
-                                                        elit, sed do eiusmod tempor incididunt ut labore
-                                                        et dolore magna aliqua. Ut enim ad minim veniam,
-                                                        quis nostrud exercitation ullamco laboris nisi ut
-                                                        aliquipLorem ipsum dolor sit amet, consectetur
-                                                        adipiscing elit.
-                                                    </p>
-                                                    <div
-                                                        class="it-testimonial-3-author-box d-flex align-items-center"
-                                                    >
-                                                        <div class="it-testimonial-3-avata">
-                                                            <img
-                                                                src="{{ asset('assets/img/avatar/avatar-3-1.png') }}"
-                                                                alt
-                                                            />
-                                                        </div>
-                                                        <div class="it-testimonial-3-author-info">
-                                                            <h5>Jorge Carter</h5>
-                                                            <span>Software Developer</span>
+                                        @foreach($feedbacks as $feedback)
+                                            <div class="swiper-slide">
+                                                <div class="it-testimonial-3-item">
+                                                    <div class="it-testimonial-3-content">
+                                                        <p>
+                                                            {{$feedback->description}}
+                                                        </p>
+                                                        <div
+                                                            class="it-testimonial-3-author-box d-flex align-items-center"
+                                                        >
+                                                            <div class="it-testimonial-3-avata">
+                                                                <img
+                                                                    src="{{ asset('storage/' . $feedback->image) }}"
+                                                                    alt
+                                                                />
+                                                            </div>
+                                                            <div class="it-testimonial-3-author-info">
+                                                                <h5>{{$feedback->title}}</h5>
+                                                                <span>student</span>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="it-testimonial-3-item">
-                                                <div class="it-testimonial-3-content">
-                                                    <p>
-                                                        Lorem ipsum dolor sit amet, consectetur adipiscing
-                                                        elit, sed do eiusmod tempor incididunt ut labore
-                                                        et dolore magna aliqua. Ut enim ad minim veniam,
-                                                        quis nostrud exercitation ullamco laboris nisi ut
-                                                        aliquipLorem ipsum dolor sit amet, consectetur
-                                                        adipiscing elit.
-                                                    </p>
-                                                    <div
-                                                        class="it-testimonial-3-author-box d-flex align-items-center"
-                                                    >
-                                                        <div class="it-testimonial-3-avata">
-                                                            <img src="{{ asset('assets/img/avatar/avatar-2.png') }}"
-                                                                 alt/>
-                                                        </div>
-                                                        <div class="it-testimonial-3-author-info">
-                                                            <h5>Jorge Carter</h5>
-                                                            <span>Gloria Burnett</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="it-testimonial-3-item">
-                                                <div class="it-testimonial-3-content">
-                                                    <p>
-                                                        Lorem ipsum dolor sit amet, consectetur adipiscing
-                                                        elit, sed do eiusmod tempor incididunt ut labore
-                                                        et dolore magna aliqua. Ut enim ad minim veniam,
-                                                        quis nostrud exercitation ullamco laboris nisi ut
-                                                        aliquipLorem ipsum dolor sit amet, consectetur
-                                                        adipiscing elit.
-                                                    </p>
-                                                    <div
-                                                        class="it-testimonial-3-author-box d-flex align-items-center"
-                                                    >
-                                                        <div class="it-testimonial-3-avata">
-                                                            <img src="{{ asset('assets/img/avatar/avatar-1.png') }}"
-                                                                 alt/>
-                                                        </div>
-                                                        <div class="it-testimonial-3-author-info">
-                                                            <h5>Laurie Duncanr</h5>
-                                                            <span>Software Developer</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        @endforeach
+
                                     </div>
                                 </div>
                                 <div class="test-slider-dots d-none d-sm-block"></div>
@@ -978,6 +1026,7 @@
                 </div>
             </div>
         </div>
+
 
         <div class="it-event-area p-relative pt-120 pb-120">
             <div class="it-event-shape-3 d-none d-xxl-block">
@@ -1116,7 +1165,8 @@
                                         </div>
                                     </div>
                                     <div class="it-team-3-author-box">
-                                        <h4 class="it-team-3-title"><a href="teacher-details.html">{{$team->name}}</a></h4>
+                                        <h4 class="it-team-3-title"><a href="teacher-details.html">{{$team->name}}</a>
+                                        </h4>
                                         <span>{{ $team->profession }}</span>
                                         <span>{{ $team->expertise }}</span>
                                     </div>
@@ -1134,241 +1184,11 @@
 
 
 
-                </div>
+
             </div>
         </div>
 
-        <div class="it-blog-area it-blog-color pb-90">
-            <div class="container">
-                <div class="it-blog-title-wrap mb-80">
-                    <div class="row align-items-end">
-                        <div class="col-xl-7 col-lg-7 col-md-8">
-                            <div class="it-course-title-box">
-                  <span class="it-section-subtitle-3">
-                    <img src="{{ asset('assets/img/about/bg.svg') }}" alt/>
-                    Top Popular Course
-                  </span>
-                                <h4 class="it-section-title-3">
-                                    Check out educate features <br/>
-                                    win any exam
-                                </h4>
-                            </div>
-                        </div>
-                        <div class="col-xl-5 col-lg-5 col-md-4">
-                            <div class="it-course-button text-start text-md-end pt-25">
-                                <a class="it-btn-theme-2" href="blog-2.html">
-                    <span>
-                      all blog post
-                      <svg
-                          width="17"
-                          height="14"
-                          viewBox="0 0 17 14"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                            d="M11 1.24023L16 7.24023L11 13.2402"
-                            stroke="currentcolor"
-                            stroke-width="1.5"
-                            stroke-miterlimit="10"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                        />
-                        <path
-                            d="M1 7.24023H16"
-                            stroke="currentcolor"
-                            stroke-width="1.5"
-                            stroke-miterlimit="10"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                        />
-                      </svg>
-                    </span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
-                        <div
-                            class="it-blog-item-box"
-                            data-background="assets/img/blog/bg-1.jpg"
-                        >
-                            <div class="it-blog-item">
-                                <div class="it-blog-thumb fix">
-                                    <a href="blog-details.html"
-                                    ><img src="{{ asset('assets/img/blog/blog-1-1.jpg') }}" alt
-                                        /></a>
-                                </div>
-                                <div class="it-blog-meta pb-15">
-                    <span>
-                      <i class="fa-solid fa-calendar-days"></i>
-                      14 June 2023</span
-                    >
-                                    <span>
-                      <i class="fa-light fa-messages"></i>
-                      Comment (06)</span
-                                    >
-                                </div>
-                                <h4 class="it-blog-title">
-                                    <a href="blog-details.html"
-                                    >velit esse cillum dolore eu fugiat nulla pariatur.
-                                        Excepteur sint occaecat cupidatat</a
-                                    >
-                                </h4>
-                                <a class="it-btn-theme-sm" href="blog-details.html">
-                    <span>
-                      read more
-                      <svg
-                          width="17"
-                          height="14"
-                          viewBox="0 0 17 14"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                            d="M11 1.24023L16 7.24023L11 13.2402"
-                            stroke="currentcolor"
-                            stroke-width="1.5"
-                            stroke-miterlimit="10"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                        />
-                        <path
-                            d="M1 7.24023H16"
-                            stroke="currentcolor"
-                            stroke-width="1.5"
-                            stroke-miterlimit="10"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                        />
-                      </svg>
-                    </span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
-                        <div
-                            class="it-blog-item-box"
-                            data-background="assets/img/blog/bg-1.jpg"
-                        >
-                            <div class="it-blog-item">
-                                <div class="it-blog-thumb fix">
-                                    <a href="blog-details.html"
-                                    ><img src="{{ asset('assets/img/blog/blog-1-2.jpg') }}" alt
-                                        /></a>
-                                </div>
-                                <div class="it-blog-meta pb-15">
-                    <span>
-                      <i class="fa-solid fa-calendar-days"></i>
-                      14 June 2023</span
-                    >
-                                    <span>
-                      <i class="fa-light fa-messages"></i>
-                      Comment (06)</span
-                                    >
-                                </div>
-                                <h4 class="it-blog-title">
-                                    <a href="blog-details.html"
-                                    >velit esse cillum dolore eu fugiat nulla pariatur.
-                                        Excepteur sint occaecat cupidatat</a
-                                    >
-                                </h4>
-                                <a class="it-btn-theme-sm" href="blog-details.html">
-                    <span>
-                      read more
-                      <svg
-                          width="17"
-                          height="14"
-                          viewBox="0 0 17 14"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                            d="M11 1.24023L16 7.24023L11 13.2402"
-                            stroke="currentcolor"
-                            stroke-width="1.5"
-                            stroke-miterlimit="10"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                        />
-                        <path
-                            d="M1 7.24023H16"
-                            stroke="currentcolor"
-                            stroke-width="1.5"
-                            stroke-miterlimit="10"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                        />
-                      </svg>
-                    </span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
-                        <div
-                            class="it-blog-item-box"
-                            data-background="assets/img/blog/bg-1.jpg"
-                        >
-                            <div class="it-blog-item">
-                                <div class="it-blog-thumb fix">
-                                    <a href="blog-details.html"
-                                    ><img src="{{ asset('assets/img/blog/blog-1-3.jpg') }}" alt
-                                        /></a>
-                                </div>
-                                <div class="it-blog-meta pb-15">
-                    <span>
-                      <i class="fa-solid fa-calendar-days"></i>
-                      14 June 2023</span
-                    >
-                                    <span>
-                      <i class="fa-light fa-messages"></i>
-                      Comment (06)</span
-                                    >
-                                </div>
-                                <h4 class="it-blog-title">
-                                    <a href="blog-details.html"
-                                    >velit esse cillum dolore eu fugiat nulla pariatur.
-                                        Excepteur sint occaecat cupidatat</a
-                                    >
-                                </h4>
-                                <a class="it-btn-theme-sm" href="blog-details.html">
-                    <span>
-                      read more
-                      <svg
-                          width="17"
-                          height="14"
-                          viewBox="0 0 17 14"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                            d="M11 1.24023L16 7.24023L11 13.2402"
-                            stroke="currentcolor"
-                            stroke-width="1.5"
-                            stroke-miterlimit="10"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                        />
-                        <path
-                            d="M1 7.24023H16"
-                            stroke="currentcolor"
-                            stroke-width="1.5"
-                            stroke-miterlimit="10"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                        />
-                      </svg>
-                    </span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
         </div>
     </main>
 @endsection

@@ -60,7 +60,7 @@
 <!-- <span><i class="fa-light fa-user"></i>Students 20+</span> -->
 </div>
 <div class="it-course-price-box d-flex justify-content-between">
-<span><i>{{$course->price}}</i></span>
+<span><i>{{$course->price}} </i>BDT</span>
 <a href="{{ route('single_course_info', $course->id) }}"><i class="fa-light fa-cart-shopping"></i>Enroll now</a>
 </div>
 </div>

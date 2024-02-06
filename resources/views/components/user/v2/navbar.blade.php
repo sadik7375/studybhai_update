@@ -70,9 +70,8 @@
                                 </li>
                                 <li>
                                     <div class="it-header-2-top-social">
-                                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                        <a href="#"><i class="fab fa-twitter"></i></a>
-                                        <a href="#"><i class="fab fa-skype"></i></a>
+                                        <a href="https://www.facebook.com/Studybhaibd"><i class="fab fa-facebook-f"></i></a>
+
                                         <a href="#"><i class="fab fa-linkedin"></i></a>
                                     </div>
                                 </li>
@@ -103,12 +102,13 @@
                                                 <a href="{{route("index-page")}}">home</a>
 
                                             </li>
-
-                                            <li><a href="about-us.html">about us</a></li>
-
                                             <li><a href="{{route("show.courses")}}">Course</a></li>
                                             <li><a href="{{route("team_info")}}">Team</a></li>
+                                            <li><a href="about-us.html">about us</a></li>
                                             <li><a href="contact.html">contact</a></li>
+
+
+
                                         </ul>
                                     </nav>
                                 </div>
@@ -117,11 +117,7 @@
                                 <div
                                     class="it-header-2-right d-flex align-items-center justify-content-end"
                                 >
-                                    <div class="it-header-2-icon">
-                                        <a href="cart.html">
-                                            <i class="fa-regular fa-cart-shopping"></i>
-                                        </a>
-                                    </div>
+
                                     <div class="it-header-2-button d-none d-md-block">
                                         <a class="it-btn-white" href="contact.html">
                           <span>
