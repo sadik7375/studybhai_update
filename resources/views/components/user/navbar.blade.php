@@ -25,29 +25,11 @@
                     <a class="nav-link" href="{{ route('team_info') }}">Team</a>
                 </li>
 
-                @if (auth()->user() == null)
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('login') }}">Login/SignUp</a>
-                    </li>
-                @elseif(auth()->user() != null)
-                @if(auth()->user()->role=='a')
-        <li class="nav-item">
-            <a class="nav-link" href="{{ route('admin.dashboard') }}">Panel</a>
-        </li>
-            {{-- trainer profile --}}
-          @elseif(auth()->user()->role=='t')
-        <li class="nav-item">
-            <a class="nav-link" href="{{ route('trainer.profile') }}"> trainer profile</a>
-        </li>
-    @else
-        <li class="nav-item">
-            <a class="nav-link" href="{{ route('dashboard') }}">Profile</a>
-        </li>
-    @endif
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('log_out') }}">Logout</a>
-                    </li>
-                @endif
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('login') }}">Login/Register</a>
+                </li>
+
+
             </ul>
         </div>
     </nav>

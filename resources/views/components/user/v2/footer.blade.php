@@ -1,7 +1,7 @@
 {{-- ---------------------------------------------- Footer ---------------------------------------------- --}}
 
 <footer>
-    <div
+    <div id="footer"
         class="it-footer-area it-footer-bg black-bg pt-120 pb-70"
         data-background="assets/img/footer/bg-1-1.jpg"
     >
@@ -28,37 +28,31 @@
                 </div>
                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-50">
                     <div class="it-footer-widget footer-col-2">
-                        <h4 class="it-footer-title">our services:</h4>
+                        <h4 class="it-footer-title">Contact Us:</h4>
                         <div class="it-footer-list">
                             <ul>
                                 <li>
                                     <a href="#"
-                                    ><i class="fa-regular fa-angle-right"></i>Web
-                                        development</a
+                                    ><i class="fa-regular fa-angle-right"></i>{{ \App\Models\Footer::first()->phone ?? '' }}</a
                                     >
                                 </li>
+
+
+
                                 <li>
                                     <a href="#"
-                                    ><i class="fa-regular fa-angle-right"></i>UI/UX
-                                        Design</a
+                                    ><i class="fa-regular fa-angle-right"></i>{{ \App\Models\Footer::first()->email ?? '' }}</a
                                     >
                                 </li>
+
+
+
                                 <li>
                                     <a href="#"
-                                    ><i class="fa-regular fa-angle-right"></i>Management</a
+                                    ><i class="fa-regular fa-angle-right"></i>{{ \App\Models\Footer::first()->location ?? '' }}</a
                                     >
                                 </li>
-                                <li>
-                                    <a href="#"
-                                    ><i class="fa-regular fa-angle-right"></i>Digital
-                                        Marketing</a
-                                    >
-                                </li>
-                                <li>
-                                    <a href="#"
-                                    ><i class="fa-regular fa-angle-right"></i>Blog News</a
-                                    >
-                                </li>
+                                
                             </ul>
                         </div>
                     </div>
@@ -68,34 +62,29 @@
                         <h4 class="it-footer-title">quick links:</h4>
                         <div class="it-footer-list">
                             <ul>
+                            
                                 <li>
-                                    <a href="#"
-                                    ><i class="fa-regular fa-angle-right"></i>templates</a
+                                    <a href="#aboutus"
+                                    ><i class="fa-regular fa-angle-right"></i>About Us</a
                                     >
                                 </li>
                                 <li>
-                                    <a href="#"
-                                    ><i class="fa-regular fa-angle-right"></i>blog and
-                                        article</a
-                                    >
-                                </li>
-                                <li>
-                                    <a href="#"
+                                    <a href="{{route("show.courses")}}"
                                     ><i class="fa-regular fa-angle-right"></i
-                                        >integrations</a
+                                        >Courses</a
                                     >
                                 </li>
                                 <li>
-                                    <a href="#"
-                                    ><i class="fa-regular fa-angle-right"></i>webinars</a
+                                    <a href="{{route("team_info")}}"
+                                    ><i class="fa-regular fa-angle-right"></i>Team</a
                                     >
                                 </li>
-                                <li>
+                                <!-- <li>
                                     <a href="#"
                                     ><i class="fa-regular fa-angle-right"></i>privacy &
                                         policy</a
                                     >
-                                </li>
+                                </li> -->
                             </ul>
                         </div>
                     </div>

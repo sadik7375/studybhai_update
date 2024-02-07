@@ -12,6 +12,7 @@ class FrontController extends Controller
     public function front(){
         $courses = Course::all();
         $feedbacks = Feedback::all();
+    
         return view("front.v2.index", compact('courses',"feedbacks"));
     }
 

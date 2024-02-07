@@ -14,7 +14,7 @@
 <!-- Nav Item - Dashboard -->
 <li class="nav-item">
 
-    <a class="nav-link" href="{{ url('/') }}">
+    <a class="nav-link" href="{{ route("index-page") }}">
         <i class="fas fa-fw fa-tachometer-alt"></i>
         <span>Home</span></a>
 

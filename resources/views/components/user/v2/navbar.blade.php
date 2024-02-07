@@ -41,7 +41,7 @@
                             </defs>
                           </svg>
                         </span>
-                                        (568) 367-987-237
+                                       012345678
                                     </a>
                                 </li>
                                 <li class="d-none d-lg-inline-block">
@@ -49,7 +49,7 @@
                         <span>
                           <i class="fa-light fa-location-dot"></i>
                         </span>
-                                        Hudson, Wisconsin(WI), 54016
+                                        Monsurabad,Adabar,Dhaka
                                     </a>
                                 </li>
                             </ul>
@@ -61,10 +61,10 @@
                                 <li class="d-none d-md-inline-block">
                                     <div class="it-header-3-top-right">
                                         <a href="{{ route('login') }}">
-                          <span class="icon"
-                          ><i class="fa-solid fa-user"></i
-                              ></span>
-                                            <span class="text">Login/ Register</span>
+{{--                          <span class="icon"--}}
+{{--                          ><i class="fa-solid fa-user"></i--}}
+{{--                              ></span>--}}
+{{--                                            <span class="text">Login/ Register</span>--}}
                                         </a>
                                     </div>
                                 </li>
@@ -104,8 +104,19 @@
                                             </li>
                                             <li><a href="{{route("show.courses")}}">Course</a></li>
                                             <li><a href="{{route("team_info")}}">Team</a></li>
-                                            <li><a href="about-us.html">about us</a></li>
-                                            <li><a href="contact.html">contact</a></li>
+                                            <li><a href="#aboutus">about us</a></li>
+                                            <li><a href="#footer">contact</a></li>
+
+
+                                            @if(auth()->user() == null)
+                                                <li><a href="{{ route("login") }}">Login/Register</a></li>
+                                            @elseif(auth()->user()->role == 'a')
+                                                <li><a href="{{ route("course.index") }}">Panel</a></li>
+                                            @elseif(auth()->user()->role == 't')
+                                                <li><a href="{{ route("userprofile") }}">Trainer Profile</a></li>
+                                            @elseif(auth()->user()->role == 's')
+                                                <li><a href="{{ route("dashboard") }}">Profile</a></li>
+                                            @endif
 
 
 

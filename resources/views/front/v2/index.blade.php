@@ -25,12 +25,10 @@
                         <div class="it-hero-3-title-wrap it-hero-3-ptb">
                             <div class="it-hero-3-title-box">
                                 <h1 class="it-hero-3-title">
-                                    Learn new skills online with top <span>educators.</span>
+                                    Learn new skills with <span>studybhai</span>
                                 </h1>
                                 <p>
-                                    We are experienced in educationl platform and skilled
-                                    strategies <br/>
-                                    for the success of our online learning.
+                                Blended learning combines traditional classroom instruction with online learning, providing a flexible, interactive environment for diverse learning styles, self-paced study and enhanced student experience through resources and multimedia content.
                                 </p>
                             </div>
                             <div class="it-hero-3-btn-box d-flex align-items-center">
@@ -63,20 +61,20 @@
                       </svg>
                     </span>
                                 </a>
-                                <div class="it-hero-3-client-box d-flex align-items-center">
-                    <span
-                    >Happy <br/>
-                      Students</span
-                    >
-                                    <img src="assets/img/hero/hero-3-client-img.png" alt/>
-                                </div>
+{{--                                <div class="it-hero-3-client-box d-flex align-items-center">--}}
+{{--                    <span--}}
+{{--                    >Happy <br/>--}}
+{{--                      Students</span--}}
+{{--                    >--}}
+{{--                                    <img src="assets/img/hero/Happy Students.png" alt/>--}}
+{{--                                </div>--}}
                             </div>
                         </div>
                     </div>
 
                     <div class="col-xl-6">
                         <div class="it-hero-3-thumb">
-                            {{--                            <img src="assets/img/hero/hero-3-img.png" alt />--}}
+
                             <img src="{{ asset('assets/img/career/demo.png') }}" alt/>
                         </div>
                     </div>
@@ -86,104 +84,7 @@
             </div>
         </div>
 
-        <div class="it-about-3-area pt-120 pb-120 p-relative">
-            <div class="it-about-3-left-shape-4 d-none d-lg-block">
-                <img src="assets/img/about/about-3-shap-4.png" alt/>
-            </div>
-            <div class="it-about-3-left-shape-5 d-none d-lg-block">
-                <img src="assets/img/about/about-3-shap-5.png" alt/>
-            </div>
-            <div class="container">
-                <div class="row g-0 align-items-center">
-                    <div class="col-xl-6 col-lg-6">
-                        <div class="it-about-3-left-box text-end p-relative">
-                            <div class="it-about-3-left-shape-1 d-none d-lg-block">
-                                <img src="assets/img/about/about-3-shap-1.png" alt/>
-                            </div>
-                            <div class="it-about-3-left-shape-2 d-none d-lg-block">
-                                <img src="assets/img/about/about-3-shap-2.png" alt/>
-                            </div>
-                            <div class="it-about-3-thumb">
-                                <img src="assets/img/about/about-3-img.png" alt/>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-6 col-lg-6">
-                        <div class="it-about-3-title-box">
-                <span class="it-section-subtitle-3">
-                  <img src="assets/img/about/bg.svg" alt/>
-                  about us
-                </span>
-                            <h2 class="it-section-title-3 pb-30">
-                                Benefit from our online learning expertise earn
-                                <span>professional</span>
-                            </h2>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                                do <br/>
-                                eiusmod tempor incididunt ut labore.
-                            </p>
-                        </div>
-                        <div class="it-about-3-mv-box">
-                            <div class="row">
-                                <div class="col-xl-6 col-md-6">
-                                    <div class="it-about-3-mv-item">
-                                        <span class="it-about-3-mv-title">OUR MISSION:</span>
-                                        <p>
-                                            Suspendisse ultrice gravida dictum fusce placerat
-                                            ultricies integer quis auctor elit sed vulputate mi sit.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="col-xl-6 col-md-6">
-                                    <div class="it-about-3-mv-item">
-                                        <span class="it-about-3-mv-title">OUR VISSION:</span>
-                                        <p>
-                                            Suspendisse ultrice gravida dictum fusce placerat
-                                            ultricies integer quis auctor elit sed vulputate mi sit.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="it-about-3-btn-box p-relative">
-                            <a class="it-btn-yellow" href="about-us.html">
-                  <span>
-                    admission open
-                    <svg
-                        width="17"
-                        height="14"
-                        viewBox="0 0 17 14"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                          d="M11 1.24023L16 7.24023L11 13.2402"
-                          stroke="currentcolor"
-                          stroke-width="1.5"
-                          stroke-miterlimit="10"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                      />
-                      <path
-                          d="M1 7.24023H16"
-                          stroke="currentcolor"
-                          stroke-width="1.5"
-                          stroke-miterlimit="10"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                      />
-                    </svg>
-                  </span>
-                            </a>
-                            <div class="it-about-3-left-shape-3 d-none d-md-block">
-                                <img src="assets/img/about/about-3-shap-3.png" alt/>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+
 
 
         <div class="it-about-3-area pt-120 pb-120 p-relative">
@@ -208,7 +109,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-6 col-lg-6">
+
+
+
+                    <div id="aboutus" class="col-xl-6 col-lg-6">
                         <div class="it-about-3-title-box">
                 <span class="it-section-subtitle-3">
                   <img src="{{ asset('assets/img/about/bg.svg') }}" alt/>
@@ -230,8 +134,7 @@
                                     <div class="it-about-3-mv-item">
                                         <span class="it-about-3-mv-title">OUR MISSION:</span>
                                         <p>
-                                            Suspendisse ultrice gravida dictum fusce placerat
-                                            ultricies integer quis auctor elit sed vulputate mi sit.
+                                            Our goal is to close the achievement gap that exists between ambition and actuality. Our objective is to create a group of tech enthusiasts who can manage the opportunities and challenges brought about by the rapidly changing technological environment.
                                         </p>
                                     </div>
                                 </div>
@@ -239,17 +142,16 @@
                                     <div class="it-about-3-mv-item">
                                         <span class="it-about-3-mv-title">OUR VISSION:</span>
                                         <p>
-                                            Suspendisse ultrice gravida dictum fusce placerat
-                                            ultricies integer quis auctor elit sed vulputate mi sit.
+                                            At StudyBhai, we envision everyone not only joining the industry but also succeeding there. Our ideal community for the digital industry is one where dreams come true and enthusiasm is united with purpose.
                                         </p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="it-about-3-btn-box p-relative">
-                            <a class="it-btn-yellow" href="about-us.html">
+                            <a class="it-btn-yellow" href="{{route("show.courses")}}">
                   <span>
-                    admission open
+                    Explore
                     <svg
                         width="17"
                         height="14"
@@ -583,7 +485,7 @@
 
                             <div class="it-feature-3-content">
                                 <h4 class="it-feature-3-title">
-                                    Interactive Learning
+                                    Interactive <br> Learning
                                 </h4>
                                 <p>
                                     Engaging materials for active participation.Videos, quizzes, and interactive

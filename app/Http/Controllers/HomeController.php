@@ -30,6 +30,10 @@ class HomeController extends Controller
             return redirect()->route('trainer.profile');
         }
 
+        if(auth()->user()->role == "s"){
+            return redirect()->route('dashboard');
+        }
+
         return redirect('/');
     }
 }

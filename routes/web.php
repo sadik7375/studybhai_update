@@ -47,8 +47,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
 
-// ------------------------------------user profile start-------------------------
-    Route::get('userprofile', [FrontController::class, 'userprofile'])->name('userprofile');
+//// ------------------------------------user profile start-------------------------
+//    Route::get('userprofile', [FrontController::class, 'userprofile'])->name('userprofile');
 
 
 //-------------------------------------user course show----------------------------

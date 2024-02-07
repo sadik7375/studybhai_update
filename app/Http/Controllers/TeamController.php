@@ -173,7 +173,7 @@ class TeamController extends Controller
         $trainer = Team::where('t_id', $user->id)->first();
 
         if (!$trainer) {
-            abort(404, 'Trainer not found');
+            return 1;
         }
 
 
