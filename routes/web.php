@@ -6,8 +6,8 @@ use App\Http\Controllers\FooterController;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\TeamController;
-use App\Http\Controllers\TotalStudentsController;
-
+//use App\Http\Controllers\TotalStudentsController;
+use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\usersettingsController;
 use App\Http\Controllers\assigncourseController;
 use App\Http\Controllers\DashboardController;
@@ -160,6 +160,16 @@ Route::middleware(['auth', 'admin'])
 //        Route::post('deleteassigncourse/{assignedCourse}', [assigncourseController::class, 'deleteAssignCourse'])->name('assign.course.delete');
 
 
+
+        //--------------------------------------gallery iamge--------------------------------------------
+
+        Route::get('/creategallery', [GalleryController::class, 'create'])->name('gallery.create');
+        Route::post('/storegallery', [GalleryController::class, 'store'])->name('gallery.store');
+
+        Route::get('/editgallery', [GalleryController::class, 'view'])->name('gallery.edit');
+        Route::put('/gallery/{id}', [GalleryController::class, 'update'])->name('gallery.update');
+        Route::delete('/gallery/{id}', [GalleryController::class, 'destroy'])->name('gallery.destroy');
+        Route::get('/galleryedit/{id}', [GalleryController::class, 'edit'])->name('edit.gallery');
     });
 
 // ----------------------------------------------------------------------- Admin -----------------------------------------------------------------------

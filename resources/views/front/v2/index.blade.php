@@ -28,7 +28,10 @@
                                     Learn new skills with <span>studybhai</span>
                                 </h1>
                                 <p>
-                                Blended learning combines traditional classroom instruction with online learning, providing a flexible, interactive environment for diverse learning styles, self-paced study and enhanced student experience through resources and multimedia content.
+                                    Blended learning combines traditional classroom instruction with online learning,
+                                    providing a flexible, interactive environment for diverse learning styles,
+                                    self-paced study and enhanced student experience through resources and multimedia
+                                    content.
                                 </p>
                             </div>
                             <div class="it-hero-3-btn-box d-flex align-items-center">
@@ -61,13 +64,13 @@
                       </svg>
                     </span>
                                 </a>
-{{--                                <div class="it-hero-3-client-box d-flex align-items-center">--}}
-{{--                    <span--}}
-{{--                    >Happy <br/>--}}
-{{--                      Students</span--}}
-{{--                    >--}}
-{{--                                    <img src="assets/img/hero/Happy Students.png" alt/>--}}
-{{--                                </div>--}}
+                                {{--                                <div class="it-hero-3-client-box d-flex align-items-center">--}}
+                                {{--                    <span--}}
+                                {{--                    >Happy <br/>--}}
+                                {{--                      Students</span--}}
+                                {{--                    >--}}
+                                {{--                                    <img src="assets/img/hero/Happy Students.png" alt/>--}}
+                                {{--                                </div>--}}
                             </div>
                         </div>
                     </div>
@@ -83,8 +86,6 @@
                 </div>
             </div>
         </div>
-
-
 
 
         <div class="it-about-3-area pt-120 pb-120 p-relative">
@@ -111,7 +112,6 @@
                     </div>
 
 
-
                     <div id="aboutus" class="col-xl-6 col-lg-6">
                         <div class="it-about-3-title-box">
                 <span class="it-section-subtitle-3">
@@ -123,7 +123,8 @@
                                 <span> know-how to gain essential professional skills.</span>
                             </h2>
                             <p>
-                                Unlock valuable professional skills with our expertise in blended learning.Tap into our blended learning <br/>
+                                Unlock valuable professional skills with our expertise in blended learning.Tap into our
+                                blended learning <br/>
 
                             </p>
                         </div>
@@ -133,7 +134,10 @@
                                     <div class="it-about-3-mv-item">
                                         <span class="it-about-3-mv-title">OUR MISSION:</span>
                                         <p>
-                                            Our goal is to close the achievement gap that exists between ambition and actuality. Our objective is to create a group of tech enthusiasts who can manage the opportunities and challenges brought about by the rapidly changing technological environment.
+                                            Our goal is to close the achievement gap that exists between ambition and
+                                            actuality. Our objective is to create a group of tech enthusiasts who can
+                                            manage the opportunities and challenges brought about by the rapidly
+                                            changing technological environment.
                                         </p>
                                     </div>
                                 </div>
@@ -141,7 +145,9 @@
                                     <div class="it-about-3-mv-item">
                                         <span class="it-about-3-mv-title">OUR VISSION:</span>
                                         <p>
-                                            At StudyBhai, we envision everyone not only joining the industry but also succeeding there. Our ideal community for the digital industry is one where dreams come true and enthusiasm is united with purpose.
+                                            At StudyBhai, we envision everyone not only joining the industry but also
+                                            succeeding there. Our ideal community for the digital industry is one where
+                                            dreams come true and enthusiasm is united with purpose.
                                         </p>
                                     </div>
                                 </div>
@@ -334,7 +340,6 @@
                             <p>
                                 "Experience the difference with our blended e-learning platform <br/>
                                 Stand out from the rest with our innovative approach to education!"
-
 
 
                             </p>
@@ -707,7 +712,6 @@
                             </h3>
 
 
-
                             {{-- <div class="it-video-button">
                                 <a class="it-btn-theme-2" href="contact.html">
                     <span>
@@ -739,8 +743,6 @@
                     </span>
                                 </a>
                             </div> --}}
-
-
 
 
                         </div>
@@ -782,7 +784,7 @@
                   Top Popular Course
                   <img src="{{ asset('assets/img/about/bg.svg') }}" alt/>
                 </span>
-                            <h4 class="it-section-title-3">Annual Exam Preparation</h4>
+                            <h4 class="it-section-title-3">Preliminary Assessment:</h4>
                         </div>
                     </div>
                 </div>
@@ -790,42 +792,48 @@
                     <div class="col-xl-6 col-lg-6 mb-30">
                         <div class="it-career-item p-relative fix">
                             <div class="it-career-content">
-                                <span>Medical Exam</span>
+                                <span>Machine Learning</span>
                                 <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.
+                                    Our preliminary assessments will help you understand the basics of Machine Learning
+                                    and begin your journey in the field.
+
                                 </p>
                                 <a class="it-btn-yellow mr-15" href="contact.html">
-                    <span>
-                      Join now
-                      <svg
-                          width="17"
-                          height="14"
-                          viewBox="0 0 17 14"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                            d="M11 1.24023L16 7.24023L11 13.2402"
-                            stroke="currentcolor"
-                            stroke-width="1.5"
-                            stroke-miterlimit="10"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                        />
-                        <path
-                            d="M1 7.24023H16"
-                            stroke="currentcolor"
-                            stroke-width="1.5"
-                            stroke-miterlimit="10"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                        />
-                      </svg>
-                    </span>
+
+
+                                    {{--                    <span>--}}
+                                    {{--                      Join now--}}
+                                    {{--                      <svg--}}
+                                    {{--                          width="17"--}}
+                                    {{--                          height="14"--}}
+                                    {{--                          viewBox="0 0 17 14"--}}
+                                    {{--                          fill="none"--}}
+                                    {{--                          xmlns="http://www.w3.org/2000/svg"--}}
+                                    {{--                      >--}}
+                                    {{--                        <path--}}
+                                    {{--                            d="M11 1.24023L16 7.24023L11 13.2402"--}}
+                                    {{--                            stroke="currentcolor"--}}
+                                    {{--                            stroke-width="1.5"--}}
+                                    {{--                            stroke-miterlimit="10"--}}
+                                    {{--                            stroke-linecap="round"--}}
+                                    {{--                            stroke-linejoin="round"--}}
+                                    {{--                        />--}}
+                                    {{--                        <path--}}
+                                    {{--                            d="M1 7.24023H16"--}}
+                                    {{--                            stroke="currentcolor"--}}
+                                    {{--                            stroke-width="1.5"--}}
+                                    {{--                            stroke-miterlimit="10"--}}
+                                    {{--                            stroke-linecap="round"--}}
+                                    {{--                            stroke-linejoin="round"--}}
+                                    {{--                        />--}}
+                                    {{--                      </svg>--}}
+                                    {{--                    </span>--}}
+
+
                                 </a>
                             </div>
                             <div class="it-career-thumb">
-                                <img src="{{ asset('assets/img/index/medical.png') }}" alt/>
+                                <img src="{{ asset('assets/img/index/exam1.png') }}" alt/>
                             </div>
                             <div class="it-career-shape-1">
                                 <img src="{{ asset('assets/img/career/shape-1.png') }}" alt/>
@@ -835,42 +843,42 @@
                     <div class="col-xl-6 col-lg-6 mb-30">
                         <div class="it-career-item p-relative fix">
                             <div class="it-career-content">
-                                <span>BCS Exam</span>
+                                <span>Data Analysis</span>
                                 <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.
+                                    The preliminary assessment provides quick insights from our initial data analysis.
                                 </p>
-                                <a class="it-btn-yellow mr-15" href="contact.html">
-                    <span>
-                      Join now
-                      <svg
-                          width="17"
-                          height="14"
-                          viewBox="0 0 17 14"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                            d="M11 1.24023L16 7.24023L11 13.2402"
-                            stroke="currentcolor"
-                            stroke-width="1.5"
-                            stroke-miterlimit="10"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                        />
-                        <path
-                            d="M1 7.24023H16"
-                            stroke="currentcolor"
-                            stroke-width="1.5"
-                            stroke-miterlimit="10"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                        />
-                      </svg>
-                    </span>
-                                </a>
+                                {{--                                <a class="it-btn-yellow mr-15" href="contact.html">--}}
+                                {{--                    <span>--}}
+                                {{--                      Join now--}}
+                                {{--                      <svg--}}
+                                {{--                          width="17"--}}
+                                {{--                          height="14"--}}
+                                {{--                          viewBox="0 0 17 14"--}}
+                                {{--                          fill="none"--}}
+                                {{--                          xmlns="http://www.w3.org/2000/svg"--}}
+                                {{--                      >--}}
+                                {{--                        <path--}}
+                                {{--                            d="M11 1.24023L16 7.24023L11 13.2402"--}}
+                                {{--                            stroke="currentcolor"--}}
+                                {{--                            stroke-width="1.5"--}}
+                                {{--                            stroke-miterlimit="10"--}}
+                                {{--                            stroke-linecap="round"--}}
+                                {{--                            stroke-linejoin="round"--}}
+                                {{--                        />--}}
+                                {{--                        <path--}}
+                                {{--                            d="M1 7.24023H16"--}}
+                                {{--                            stroke="currentcolor"--}}
+                                {{--                            stroke-width="1.5"--}}
+                                {{--                            stroke-miterlimit="10"--}}
+                                {{--                            stroke-linecap="round"--}}
+                                {{--                            stroke-linejoin="round"--}}
+                                {{--                        />--}}
+                                {{--                      </svg>--}}
+                                {{--                    </span>--}}
+                                {{--                                </a>--}}
                             </div>
                             <div class="it-career-thumb">
-                                <img src="{{ asset('assets/img/index/bcs.png') }}" alt/>
+                                <img src="{{ asset('assets/img/index/exam2.png') }}" alt/>
                             </div>
                             <div class="it-career-shape-1">
                                 <img src="{{ asset('assets/img/career/shape-1.png') }}" alt/>
@@ -971,11 +979,11 @@
                                 </h2>
                             </div>
                             <div class="it-event-content">
-                  {{-- <span
-                  >Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    sed do eiusmod <br/>
-                    tempor incididunt ut labore.</span
-                  > --}}
+                                {{-- <span
+                                >Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                  sed do eiusmod <br/>
+                                  tempor incididunt ut labore.</span
+                                > --}}
                                 <p>
                                     Introduction to Machine Learning<br>
                                     IoT Essentials Workshop<br>
@@ -1017,7 +1025,6 @@
                       </svg>
                     </span>
                                 </a> --}}
-
 
 
                             </div>
@@ -1100,17 +1107,8 @@
                     @endforeach
 
 
-
-
-
-
-
-
-
-
-
+                </div>
             </div>
-        </div>
 
 
         </div>

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\v2\FrontController;
+use App\Http\Controllers\GalleryController;
 use Illuminate\Support\Facades\Route;
 
 // ----------------------------------------- Front page -----------------------------------------
@@ -27,4 +28,6 @@ Route::get('team', [FrontController::class, 'team'])->name('team_info');
 
 
 
-// ----------------------------------------- Front page -----------------------------------------
+//------------------------------------------  Gallery   -----------------------------------------
+
+Route::get('/showgallery', [GalleryController::class, 'index'])->name('gallery.index');

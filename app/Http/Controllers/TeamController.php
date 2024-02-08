@@ -172,9 +172,6 @@ class TeamController extends Controller
 
         $trainer = Team::where('t_id', $user->id)->first();
 
-        if (!$trainer) {
-            return 1;
-        }
 
 
         $assignedCourses = $trainer->assignedCourses;

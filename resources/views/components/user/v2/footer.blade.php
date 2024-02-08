@@ -92,6 +92,8 @@
                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-50">
                     <div class="it-footer-widget footer-col-4">
                         <h4 class="it-footer-title">Gallery</h4>
+
+                        <a href="{{route('gallery.index')}}">
                         <div class="it-footer-gallery-box">
                             <div class="row gx-5">
                                 <div class="col-md-4 col-4">
@@ -126,6 +128,8 @@
                                 </div>
                             </div>
                         </div>
+
+                        </a>
                     </div>
                 </div>
             </div>

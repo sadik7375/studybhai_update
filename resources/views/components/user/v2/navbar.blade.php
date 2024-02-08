@@ -125,6 +125,8 @@
                                 </div>
                             </div>
                             <div class="col-xl-3 col-5">
+
+
                                 <div
                                     class="it-header-2-right d-flex align-items-center justify-content-end"
                                 >
@@ -160,12 +162,22 @@
                           </span>
                                         </a>
                                     </div>
+
+
+
+
                                     <div class="it-header-2-bar d-xl-none">
                                         <button class="it-menu-bar">
                                             <i class="fa-solid fa-bars"></i>
                                         </button>
                                     </div>
                                 </div>
+
+
+
+
+
+
                             </div>
                         </div>
                     </div>

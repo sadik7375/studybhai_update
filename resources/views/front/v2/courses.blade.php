@@ -5,7 +5,8 @@
 
 <main>
 
-<div class="it-breadcrumb-area it-breadcrumb-bg" data-background="assets/img/breadcrumb/breadcrumb.jpg">
+<div class="it-breadcrumb-area it-breadcrumb-bg" data-background= "{{ asset('assets/img/index/breadcrumb.jpg') }}">
+
 <div class="container">
 <div class="row ">
 <div class="col-md-12">

@@ -194,10 +194,15 @@
 
                             </div>
 
+                            @auth
+                                @if(auth()->user()->role === 'a' || auth()->user()->role === 't')
+                                    @csrf
+                                    <p class="text-danger">Admins and trainers cannot enroll in courses.</p>
 
-                            <form id="enrollForm" method="POST" action="{{ route('pay', ['course_id' => $courses->id]) }}">
-                            @csrf
-                            <input type="hidden" name="total_amount" id="total_amount" value="{{ $courses->price }}"/>
+                                @else
+                                   <form id="enrollForm" method="POST" action="{{ route('pay', ['course_id' => $courses->id]) }}">
+                                     @csrf
+                                     <input type="hidden" name="total_amount" id="total_amount" value="{{ $courses->price }}"/>
 
                             <input type="hidden" name="course_id" value="{{ $courses->id }}">
                             <input type="radio" id="fullPayment" name="payment_option" value="full" checked>
@@ -210,7 +215,15 @@
                             <button type="submit" class="it-btn w-100 text-center mb-20">
                                 Enroll Now
                             </button>
+
+
+
                         </form>
+                                @endif
+                            @else
+
+                                <p class="text-danger">You need to be logged in to enroll in the course.</p>
+                            @endauth
 
 
 
