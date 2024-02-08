@@ -24,6 +24,8 @@ class CreateCoursesTable extends Migration
             $table->string("timeline")->nullable();
             $table->string("class_starts")->nullable();
             $table->string("admission_ends")->nullable();
+            $table->string("lesson")->nullable();
+            $table->string("student")->nullable();
             $table->text("foundation")->nullable();
             $table->text("intermediate")->nullable();
             $table->text("advanced")->nullable();

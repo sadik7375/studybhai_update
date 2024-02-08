@@ -123,6 +123,38 @@
                 </div>
             </div>
 
+
+
+
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="lesson">Lesson</label>
+                    <input type="text" id="admission_ends" name="lesson"
+                        class="form-control @error('lesson') is-invalid @enderror">
+
+                    @error('lesson')
+                        <div class="alert alert-danger" style="margin-top: 10px">{{ $message }}</div>
+                    @enderror
+                </div>
+            </div>
+
+
+
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="lesson">Enroll Student</label>
+                    <input type="text" id="student" name="student"
+                        class="form-control @error('student') is-invalid @enderror">
+
+                    @error('student')
+                        <div class="alert alert-danger" style="margin-top: 10px">{{ $message }}</div>
+                    @enderror
+                </div>
+            </div>
+
+
+
+
             <div class="col-md-12">
                 <div class="form-group">
                     <label for="foundation">Foundation</label>

@@ -33,7 +33,7 @@
                             <ul>
                                 <li>
                                     <a href="#"
-                                    ><i class="fa-regular fa-angle-right"></i>{{ \App\Models\Footer::first()->phone ?? '' }}</a
+                                    ><i class="fa-regular fa-phone"></i>{{ \App\Models\Footer::first()->phone ?? '' }}</a
                                     >
                                 </li>
 
@@ -41,7 +41,7 @@
 
                                 <li>
                                     <a href="#"
-                                    ><i class="fa-regular fa-angle-right"></i>{{ \App\Models\Footer::first()->email ?? '' }}</a
+                                    ><i class="fa-regular fa-envelope"></i>{{ \App\Models\Footer::first()->email ?? '' }}</a
                                     >
                                 </li>
 
@@ -49,10 +49,10 @@
 
                                 <li>
                                     <a href="#"
-                                    ><i class="fa-regular fa-angle-right"></i>{{ \App\Models\Footer::first()->location ?? '' }}</a
+                                    ><i class="fa-regular fa-map-marker-alt"></i>{{ \App\Models\Footer::first()->location ?? '' }}</a
                                     >
                                 </li>
-                                
+
                             </ul>
                         </div>
                     </div>
@@ -62,7 +62,7 @@
                         <h4 class="it-footer-title">quick links:</h4>
                         <div class="it-footer-list">
                             <ul>
-                            
+
                                 <li>
                                     <a href="#aboutus"
                                     ><i class="fa-regular fa-angle-right"></i>About Us</a
@@ -96,32 +96,32 @@
                             <div class="row gx-5">
                                 <div class="col-md-4 col-4">
                                     <div class="it-footer-thumb mb-10">
-                                        <img src="{{ asset('assets/img/footer/thumb-1-1.png') }}" alt/>
+                                        <img src="{{ asset('assets/img/index/G1.png') }}" alt/>
                                     </div>
                                 </div>
                                 <div class="col-md-4 col-4">
                                     <div class="it-footer-thumb mb-10">
-                                        <img src="{{ asset('assets/img/footer/thumb-1-2.png') }}" alt/>
+                                        <img src="{{ asset('assets/img/index/G2.png') }}" alt/>
                                     </div>
                                 </div>
                                 <div class="col-md-4 col-4 mb-10">
                                     <div class="it-footer-thumb">
-                                        <img src="{{ asset('assets/img/footer/thumb-1-3.png') }}" alt/>
+                                        <img src="{{ asset('assets/img/index/G3.png') }}" alt/>
                                     </div>
                                 </div>
                                 <div class="col-md-4 col-4">
                                     <div class="it-footer-thumb">
-                                        <img src="{{ asset('assets/img/footer/thumb-1-4.png') }}" alt/>
+                                        <img src="{{ asset('assets/img/index/G4.png') }}" alt/>
                                     </div>
                                 </div>
                                 <div class="col-md-4 col-4">
                                     <div class="it-footer-thumb">
-                                        <img src="{{ asset('assets/img/footer/thumb-1-5.png') }}" alt/>
+                                        <img src="{{ asset('assets/img/index/G5.png') }}" alt/>
                                     </div>
                                 </div>
                                 <div class="col-md-4 col-4">
                                     <div class="it-footer-thumb">
-                                        <img src="{{ asset('assets/img/footer/thumb-1-6.png') }}" alt/>
+                                        <img src="{{ asset('assets/img/index/G6.png') }}" alt/>
                                     </div>
                                 </div>
                             </div>

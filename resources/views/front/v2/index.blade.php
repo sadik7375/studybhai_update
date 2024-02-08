@@ -89,7 +89,7 @@
 
         <div class="it-about-3-area pt-120 pb-120 p-relative">
             <div class="it-about-3-left-shape-4 d-none d-lg-block">
-                <img src="{{ asset('assets/img/about/about-3-shap-4.png') }}" alt/>
+                <img src="{{ asset('assets/img/about/benefit-shap-4.png') }}" alt/>
             </div>
             <div class="it-about-3-left-shape-5 d-none d-lg-block">
                 <img src="{{ asset('assets/img/about/about-3-shap-5.png') }}" alt/>
@@ -105,7 +105,7 @@
                                 <img src="{{ asset('assets/img/about/about-3-shap-2.png') }}" alt/>
                             </div>
                             <div class="it-about-3-thumb">
-                                <img src="{{ asset('assets/img/about/about-3-img.png') }}" alt/>
+                                <img src="{{ asset('assets/img/index/benefit.png') }}" alt/>
                             </div>
                         </div>
                     </div>
@@ -119,13 +119,12 @@
                   about us
                 </span>
                             <h2 class="it-section-title-3 pb-30">
-                                Benefit from our online learning expertise earn
-                                <span>professional</span>
+                                Benefit from our blended learning expertise and earn valuable
+                                <span> know-how to gain essential professional skills.</span>
                             </h2>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                                do <br/>
-                                eiusmod tempor incididunt ut labore.
+                                Unlock valuable professional skills with our expertise in blended learning.Tap into our blended learning <br/>
+
                             </p>
                         </div>
                         <div class="it-about-3-mv-box">
@@ -274,13 +273,18 @@
                                         class="it-course-info pb-15 mb-25 d-flex justify-content-between"
                                     >
                     <span
-                    ><i class="fa-light fa-file-invoice"></i>Lesson 10</span
+                    ><i class="fa-light fa-file-invoice"></i>{{ $course->lesson }} Lesson</span
                     >
                                         <span
                                         ><i class="fa-sharp fa-regular fa-clock"></i>{{ $course->duration }}</span
                                         >
-                                        <!-- <span><i class="fa-light fa-user"></i>Students 20+</span> -->
+                                        <span><i class="fa-light fa-user"></i>{{ $course->student }} Student</span>
                                     </div>
+
+                                    {{-- <div class="it-course-author pb-15">
+                                        <img src="assets/img/course/avata-1.png" alt>
+                                        <span>By <i>Angela</i> in <i>Development</i></span>
+                                        </div> --}}
                                     <div
                                         class="it-course-price-box d-flex justify-content-between"
                                     >
@@ -323,14 +327,16 @@
                   Top Popular Course
                 </span>
                             <h4 class="it-section-title-3 pb-25">
-                                Our Classroom is a very deferent <span>school</span> than all
+                                Our Blended E-Learning Platform Is A Very Different <span>Platform</span> Than All
                                 <br/>
-                                the others
+                                The Others
                             </h4>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                                do eiusmod <br/>
-                                tempor incididunt ut labore.
+                                "Experience the difference with our blended e-learning platform <br/>
+                                Stand out from the rest with our innovative approach to education!"
+
+
+
                             </p>
                         </div>
                         <div class="it-progress-bar-wrap">
@@ -443,10 +449,11 @@
                     <div class="col-xl-6 col-lg-6">
                         <div class="it-value-right-wrap text-end p-relative">
                             <div class="it-value-right-img p-relative">
-                                <img src="{{ asset('assets/img/value/value-1.jpg') }}" alt/>
-                                <a class="it-value-play-btn" href="#"
+                                {{-- <img src="{{ asset('assets/img/value/value-1.jpg') }}" alt/> --}}
+                                <img src="{{ asset('assets/img/index/classroom.png') }}" alt/>
+                                {{-- <a class="it-value-play-btn" href="#"
                                 ><i class="fa-sharp fa-solid fa-play"></i
-                                    ></a>
+                                    ></a> --}}
                             </div>
                             <div class="it-value-img-shape d-none d-xl-block">
                                 <img src="{{ asset('assets/img/value/value-shape-2.jpg') }}" alt/>
@@ -693,12 +700,15 @@
                 <div class="row align-items-center">
                     <div class="col-xl-7 col-lg-7 col-md-9 col-sm-9">
                         <div class="it-video-content">
-                            <span>Join Our New Session</span>
+                            <span>Join Our Session</span>
                             <h3 class="it-video-title">
-                                Call To Enroll Your Child <br/>
-                                <a href="tel:+91958423452">(+91)958423452</a>
+                                Call for Admission <br/>
+                                <a href="tel:+91958423452">019XXXXXX</a>
                             </h3>
-                            <div class="it-video-button">
+
+
+
+                            {{-- <div class="it-video-button">
                                 <a class="it-btn-theme-2" href="contact.html">
                     <span>
                       Join With us
@@ -728,7 +738,11 @@
                       </svg>
                     </span>
                                 </a>
-                            </div>
+                            </div> --}}
+
+
+
+
                         </div>
                     </div>
                     <div class="col-xl-5 col-lg-5 col-md-3 col-sm-3">
@@ -738,7 +752,7 @@
                             <div class="it-video-play text-center">
                                 <a
                                     class="popup-video play"
-                                    href="https://www.youtube.com/watch?v=PO_fBTkoznc"
+                                    href=""
                                 ><i class="fas fa-play"></i
                                     ></a>
                                 <a class="text" href="#">watch now</a>
@@ -811,7 +825,7 @@
                                 </a>
                             </div>
                             <div class="it-career-thumb">
-                                <img src="{{ asset('assets/img/career/thumb-1.png') }}" alt/>
+                                <img src="{{ asset('assets/img/index/medical.png') }}" alt/>
                             </div>
                             <div class="it-career-shape-1">
                                 <img src="{{ asset('assets/img/career/shape-1.png') }}" alt/>
@@ -856,7 +870,7 @@
                                 </a>
                             </div>
                             <div class="it-career-thumb">
-                                <img src="{{ asset('assets/img/career/thumb-2.png') }}" alt/>
+                                <img src="{{ asset('assets/img/index/bcs.png') }}" alt/>
                             </div>
                             <div class="it-career-shape-1">
                                 <img src="{{ asset('assets/img/career/shape-1.png') }}" alt/>
@@ -876,7 +890,7 @@
                 <div class="row align-items-center">
                     <div class="col-xl-5 col-lg-4 d-none d-lg-block">
                         <div class="it-testimonial-3-thumb">
-                            <img src="{{ asset('assets/img/testimonial/thumb-2.png') }}" alt/>
+                            <img src="{{ asset('assets/img/index/comment.png') }}" alt/>
                         </div>
                     </div>
                     <div class="col-xl-7 col-lg-8">
@@ -953,23 +967,28 @@
                     explore Events
                   </span>
                                 <h2 class="it-section-title-3 pb-20">
-                                    our best upcoming events
+                                    our best events
                                 </h2>
                             </div>
                             <div class="it-event-content">
-                  <span
+                  {{-- <span
                   >Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                     sed do eiusmod <br/>
                     tempor incididunt ut labore.</span
-                  >
+                  > --}}
                                 <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                                    do eiusmod tempor incididunt ut labore et dolore magna
-                                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                    Duis aute irure dolor in reprehenderit in voluptate
+                                    Introduction to Machine Learning<br>
+                                    IoT Essentials Workshop<br>
+                                    Data Analysis Bootcamp<br>
+                                    Web Development Crash Course<br>
+                                    Project Showcase<br>
+                                    Web Development Hackathon<br>
+                                    Data Visualization Workshop
+
                                 </p>
-                                <a class="it-btn-theme-2" href="contact.html">
+
+
+                                {{-- <a class="it-btn-theme-2" href="contact.html">
                     <span>
                       admission open
                       <svg
@@ -997,7 +1016,10 @@
                         />
                       </svg>
                     </span>
-                                </a>
+                                </a> --}}
+
+
+
                             </div>
                         </div>
                     </div>
@@ -1012,7 +1034,7 @@
                                 <img src="{{ asset('assets/img/event/shape-1-6.png') }}" alt/>
                             </div>
                             <div class="it-event-thumb">
-                                <img src="{{ asset('assets/img/event/thumb-1.png') }}" alt/>
+                                <img src="{{ asset('assets/img/index/events.png') }}" alt/>
                             </div>
                         </div>
                     </div>

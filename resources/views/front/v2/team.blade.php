@@ -30,7 +30,7 @@
             <div class="container">
                 <div class="row">
 
-                    <div class="col"></div>
+                    {{-- <div class="col"></div> --}}
 
                     @foreach($teams as $team)
                         <div class="col-xl-3 col-lg-4 col-md-6 mb-30">
@@ -53,16 +53,17 @@
                                     <div class="it-team-3-author-box">
                                         <h4 class="it-team-3-title"><a href="teacher-details.html">{{$team->name}}</a>
                                         </h4>
-                                        <span>{{ $team->profession }}</span>
+                                        <span>{{ $team->profession }}</span><br>
                                         <span>{{ $team->expertise }}</span>
+
                                     </div>
                                 </div>
                             </div>
                         </div>
                     @endforeach
 
-                    <div class="col"></div>
-                    
+                    {{-- <div class="col"></div> --}}
+
 
                 </div>
             </div>

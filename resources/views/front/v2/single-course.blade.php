@@ -42,9 +42,9 @@
 
                             <h4 class="it-evn-details-title mb-0 pb-5">{{$courses->title}}</h4>
                             <div class="postbox__meta">
-                                <span><i class="fa-light fa-file-invoice"></i>Lesson 10</span>
+                                <span><i class="fa-light fa-file-invoice"></i>Lesson {{$courses->lesson}}</span>
 
-                                <span><i class="fa-light fa-user"></i>Students 20+</span>
+                                <span><i class="fa-light fa-user"></i>Student {{$courses->student}}</span>
                             </div>
 {{--                            <div class="it-course-details-nav pb-60">--}}
 {{--                                <nav>--}}
