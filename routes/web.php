@@ -42,13 +42,14 @@ Route::get('test', function () {
     return view('welcometest');
 });
 
+//------------------------------------user profile start-------------------------
+
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
 
-//// ------------------------------------user profile start-------------------------
-//    Route::get('userprofile', [FrontController::class, 'userprofile'])->name('userprofile');
+
 
 
 //-------------------------------------user course show----------------------------
@@ -63,7 +64,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('settings', [FrontController::class, 'usersettings'])->name('settings');
 
 
-    Route::get('usersettings', [FrontController::class, 'usersettings'])->name('usersettings');
+
 
 //-------------------------------------password change---------------------------
 
@@ -108,8 +109,13 @@ Route::get('log_out', function () {
 })->name('log_out');
 
 
-//Userprofile Route
-Route::patch('/update-profile', [UserProfileController::class, 'update'])->name('update-profile');
+
+////Userprofile Route
+//Route::patch('/update-profile', [UserProfileController::class, 'update'])->name('update-profile');
+
+
+
+
 
 // ----------------------------------------------------------------------- Admin -----------------------------------------------------------------------
 
@@ -122,7 +128,7 @@ Route::middleware(['auth', 'admin'])
         // ------------------------------------------ Course ------------------------------------------
 
         Route::resource('course', CourseController::class); //course.store
-        Route::resource('order', OrderController::class); //course.store
+        Route::resource('order', OrderController::class); //course.order
 
         // ------------------------------------------ Course ------------------------------------------
 
@@ -172,17 +178,7 @@ Route::middleware(['auth', 'admin'])
         Route::get('/galleryedit/{id}', [GalleryController::class, 'edit'])->name('edit.gallery');
     });
 
-// ----------------------------------------------------------------------- Admin -----------------------------------------------------------------------
 
-// ----------------------------------------------------------------------- User [ public route ] -------------------------------------------------------
-
-//Route::get('course-info/{id}', [FrontController::class, 'course_info'])->name('single_course_info');
-
-// ------------------------------------------ Team ------------------------------------------
-
-//Route::get('team', [FrontController::class, 'team'])->name('team_info');
-
-// ------------------------------------------ Dashboard ------------------------------------------
 
 
 Route::middleware(['auth', 't'])->group(function () {

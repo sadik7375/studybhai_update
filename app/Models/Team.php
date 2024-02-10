@@ -14,7 +14,6 @@ class Team extends Model
 
     protected $guarded = ['id'];
 
-
     public function courses()
     {
         return $this->belongsToMany(Course::class, 'assigncourses', 'trainer_id', 'course_id');
@@ -26,6 +25,12 @@ public function assignedCourses()
 {
     return $this->belongsToMany(Course::class, 'assigncourses', 'trainer_id', 'course_id');
 }
+
+
+public function user()
+    {
+        return $this->belongsTo(User::class, 't_id');
+    }
 
 
 }

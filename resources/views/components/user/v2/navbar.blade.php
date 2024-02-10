@@ -89,7 +89,7 @@
                         <div class="row align-items-center">
                             <div class="col-xl-2 col-7">
                                 <div class="it-header-2-logo">
-                                    <a href="index.html"
+                                    <a href="{{route("index-page")}}"
                                     ><img src="{{ asset('assets/logo/StudyBhai.png') }}" alt
                                         /></a>
                                 </div>
@@ -113,7 +113,7 @@
                                             @elseif(auth()->user()->role == 'a')
                                                 <li><a href="{{ route("course.index") }}">Panel</a></li>
                                             @elseif(auth()->user()->role == 't')
-                                                <li><a href="{{ route("userprofile") }}">Trainer Profile</a></li>
+                                                <li><a href="{{ route("trainer.profile") }}">Trainer Profile</a></li>
                                             @elseif(auth()->user()->role == 's')
                                                 <li><a href="{{ route("dashboard") }}">Profile</a></li>
                                             @endif

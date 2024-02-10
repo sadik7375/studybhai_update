@@ -35,7 +35,7 @@
                                 </p>
                             </div>
                             <div class="it-hero-3-btn-box d-flex align-items-center">
-                                <a class="it-btn-white" href="course-details.html">
+                                <a class="it-btn-white" href="route("courses.show")">
                     <span>
                       Find The Course
                       <svg
@@ -257,7 +257,7 @@
                         <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
                             <div class="it-course-item">
                                 <div class="it-course-thumb mb-20 p-relative">
-                                    <a href="course-details.html"
+                                    <a href="{{ route('single_course_info', ['id' => $course->id]) }}"
                                     ><img src="{{ asset('storage/' . $course->image) }}" alt
                                         /></a>
                                 </div>
@@ -271,7 +271,7 @@
                                     {{--                                        <span>(4.7)</span>--}}
                                     {{--                                    </div>--}}
                                     <h4 class="it-course-title pb-5">
-                                        <a href="course-details.html"
+                                        <a href="{{ route('single_course_info', ['id' => $course->id]) }}"
                                         >{{ $course->title }}</a
                                         >
                                     </h4>
@@ -798,39 +798,39 @@
                                     and begin your journey in the field.
 
                                 </p>
-                                <a class="it-btn-yellow mr-15" href="contact.html">
+{{--                                <a class="it-btn-yellow mr-15" href="contact.html">--}}
 
 
-                                    {{--                    <span>--}}
-                                    {{--                      Join now--}}
-                                    {{--                      <svg--}}
-                                    {{--                          width="17"--}}
-                                    {{--                          height="14"--}}
-                                    {{--                          viewBox="0 0 17 14"--}}
-                                    {{--                          fill="none"--}}
-                                    {{--                          xmlns="http://www.w3.org/2000/svg"--}}
-                                    {{--                      >--}}
-                                    {{--                        <path--}}
-                                    {{--                            d="M11 1.24023L16 7.24023L11 13.2402"--}}
-                                    {{--                            stroke="currentcolor"--}}
-                                    {{--                            stroke-width="1.5"--}}
-                                    {{--                            stroke-miterlimit="10"--}}
-                                    {{--                            stroke-linecap="round"--}}
-                                    {{--                            stroke-linejoin="round"--}}
-                                    {{--                        />--}}
-                                    {{--                        <path--}}
-                                    {{--                            d="M1 7.24023H16"--}}
-                                    {{--                            stroke="currentcolor"--}}
-                                    {{--                            stroke-width="1.5"--}}
-                                    {{--                            stroke-miterlimit="10"--}}
-                                    {{--                            stroke-linecap="round"--}}
-                                    {{--                            stroke-linejoin="round"--}}
-                                    {{--                        />--}}
-                                    {{--                      </svg>--}}
-                                    {{--                    </span>--}}
+{{--                                    --}}{{--                    <span>--}}
+{{--                                    --}}{{--                      Join now--}}
+{{--                                    --}}{{--                      <svg--}}
+{{--                                    --}}{{--                          width="17"--}}
+{{--                                    --}}{{--                          height="14"--}}
+{{--                                    --}}{{--                          viewBox="0 0 17 14"--}}
+{{--                                    --}}{{--                          fill="none"--}}
+{{--                                    --}}{{--                          xmlns="http://www.w3.org/2000/svg"--}}
+{{--                                    --}}{{--                      >--}}
+{{--                                    --}}{{--                        <path--}}
+{{--                                    --}}{{--                            d="M11 1.24023L16 7.24023L11 13.2402"--}}
+{{--                                    --}}{{--                            stroke="currentcolor"--}}
+{{--                                    --}}{{--                            stroke-width="1.5"--}}
+{{--                                    --}}{{--                            stroke-miterlimit="10"--}}
+{{--                                    --}}{{--                            stroke-linecap="round"--}}
+{{--                                    --}}{{--                            stroke-linejoin="round"--}}
+{{--                                    --}}{{--                        />--}}
+{{--                                    --}}{{--                        <path--}}
+{{--                                    --}}{{--                            d="M1 7.24023H16"--}}
+{{--                                    --}}{{--                            stroke="currentcolor"--}}
+{{--                                    --}}{{--                            stroke-width="1.5"--}}
+{{--                                    --}}{{--                            stroke-miterlimit="10"--}}
+{{--                                    --}}{{--                            stroke-linecap="round"--}}
+{{--                                    --}}{{--                            stroke-linejoin="round"--}}
+{{--                                    --}}{{--                        />--}}
+{{--                                    --}}{{--                      </svg>--}}
+{{--                                    --}}{{--                    </span>--}}
 
 
-                                </a>
+{{--                                </a>--}}
                             </div>
                             <div class="it-career-thumb">
                                 <img src="{{ asset('assets/img/index/exam1.png') }}" alt/>

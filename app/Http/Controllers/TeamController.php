@@ -154,8 +154,17 @@ class TeamController extends Controller
      */
     public function destroy(Team $team)
     {
+        $user = $team->user;
+
+        // Delete the team
         $team->delete();
-        session()->flash('success', 'Team member Successfully Deleted');
+
+        // Delete the user
+        if ($user) {
+            $user->delete();
+        }
+
+        session()->flash('success', 'Team member and associated user successfully deleted');
         return back();
     }
 //    public function __construct()
