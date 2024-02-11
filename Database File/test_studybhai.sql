@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 08, 2024 at 01:00 PM
+-- Generation Time: Feb 11, 2024 at 08:36 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -40,7 +40,7 @@ CREATE TABLE `assigncourses` (
 --
 
 INSERT INTO `assigncourses` (`id`, `course_id`, `trainer_id`, `created_at`, `updated_at`) VALUES
-(31, 5, 4, '2024-01-29 05:58:37', '2024-01-29 05:58:37');
+(34, 7, 4, '2024-02-10 23:30:33', '2024-02-10 23:30:33');
 
 -- --------------------------------------------------------
 
@@ -75,8 +75,8 @@ CREATE TABLE `courses` (
 --
 
 INSERT INTO `courses` (`id`, `title`, `description`, `image`, `duration`, `price`, `discounted_price`, `timeline`, `class_starts`, `admission_ends`, `lesson`, `student`, `foundation`, `intermediate`, `advanced`, `availability`, `user_id`, `created_at`, `updated_at`) VALUES
-(5, 'Web Development', '<p>This is a good project</p>', 'photos/Umlp9Oeks93sl4b0vfbBGogwPTagrjC8U9eTxsnE.png', '5 month', '30000', '10000', '4', '12 january 2024', '10 january 2024', '60', '23', '<p>html</p>', '<p>css</p>', '<p>js</p>', 'available', '8', '2024-01-04 04:07:23', '2024-02-07 04:53:34'),
-(7, 'Machine Learning', '<p>This is our ML course</p>', 'photos/1ZchWzRElksUH0Gdw5klaMT2SUwVObxzTvTS7nD9.jpg', '6 month', '20000', '40000', '4', '12 january 2024', '10 january 2024', '60', '30', '<p>python</p>', '<p>CNN</p>', '<p>SVM</p>', 'available', '8', '2024-01-14 01:55:38', '2024-02-07 04:54:37');
+(5, 'Web Development', '<p>This is a good project</p>', 'photos/iKfrNrnzzV3v86fjX4RIZGUnTEy4ysYa8rJi13kW.png', '5 month', '30000', '10000', '4', '12 january 2024', '10 january 2024', '60', '23', '<p>html</p>', '<p>css</p>', '<p>js</p>', 'available', '8', '2024-01-04 04:07:23', '2024-02-11 00:14:50'),
+(7, 'Machine Learning', '<p>This is our ML course</p>', 'photos/KbipzGet8hTvJnz7WpJO0BO6vHp3T5RBLcaMhhEA.jpg', '6 month', '20000', '40000', '4', '12 january 2024', '10 january 2024', '60', '30', '<p>python</p>', '<p>CNN</p>', '<p>SVM</p>', 'available', '8', '2024-01-14 01:55:38', '2024-02-11 00:15:08');
 
 -- --------------------------------------------------------
 
@@ -115,8 +115,8 @@ CREATE TABLE `feedback` (
 --
 
 INSERT INTO `feedback` (`id`, `title`, `image`, `description`, `user_id`, `created_at`, `updated_at`) VALUES
-(1, 'Tahmid Ferdous', 'photos/mxvDYjLW3M0KyPACWjb67XzjcqEXT4OnpyLFcWA9.jpg', 'Incorporate interactive features like forums, discussion boards, and live chat support for students to engage with each other and instructors. Utilize gamification elements to enhance user engagement and motivation.', '25', '2024-02-08 00:52:50', '2024-02-08 00:52:50'),
-(2, 'wahid sadik', 'photos/uanglV1RRucYx41KUTvGSPQN6xQFfIK4397FYjS6.jpg', 'Incorporate interactive features like forums, discussion boards, and live chat support for students to engage with each other and instructors. Utilize gamification elements to enhance user engagement and motivation.', '25', '2024-02-08 00:53:14', '2024-02-08 00:53:14');
+(1, 'Tahmid Ferdous', 'photos/Haa0d8e1TdEeEMQqp6NLxkrT1v5puNpjSNzqSs2q.jpg', 'Incorporate interactive features like forums, discussion boards, and live chat support for students to engage with each other and instructors. Utilize gamification elements to enhance user engagement and motivation.', '25', '2024-02-08 00:52:50', '2024-02-11 00:03:26'),
+(2, 'wahid sadik', 'photos/yxk618UrMz9200eGU4cAcYxvhi4aFaBcIcoLkvLI.jpg', 'Incorporate interactive features like forums, discussion boards, and live chat support for students to engage with each other and instructors. Utilize gamification elements to enhance user engagement and motivation.', '25', '2024-02-08 00:53:14', '2024-02-11 00:03:50');
 
 -- --------------------------------------------------------
 
@@ -139,7 +139,7 @@ CREATE TABLE `footers` (
 --
 
 INSERT INTO `footers` (`id`, `phone`, `email`, `location`, `user_id`, `created_at`, `updated_at`) VALUES
-(1, '1029838333', 'studybhai@gmail.com', 'Monsurabad,Adabar,Dhaka', '25', '2024-02-08 00:50:09', '2024-02-08 00:50:09');
+(1, '+880 1959-938009', 'studybhai@gmail.com', 'Monsurabad,Adabar,Dhaka', '25', '2024-02-08 00:50:09', '2024-02-11 00:01:47');
 
 -- --------------------------------------------------------
 
@@ -160,8 +160,8 @@ CREATE TABLE `galleries` (
 --
 
 INSERT INTO `galleries` (`id`, `title`, `image`, `created_at`, `updated_at`) VALUES
-(7, 'dd', 'photos/u01ZqGeUDIOj9cQUcNxJfcpQ2km3E3agpyBELFhd.png', '2024-02-08 03:48:30', '2024-02-08 03:48:30'),
-(9, 'sadik', 'photos/9Py6NHYIldWmVO0vZ2su4p31VkNszlVHC70gAVJX.png', '2024-02-08 03:56:27', '2024-02-08 03:57:58');
+(7, 'ML Events', 'photos/JPCwgFbWEWwzuWr6x17goGLXyUekSF6ZnOuPwtNB.jpg', '2024-02-08 03:48:30', '2024-02-10 23:58:31'),
+(10, 'Deep Learning Events', 'photos/5OSmj4W87qkkirIt9q9mYM8Qs88xXKDyikGbh65s.jpg', '2024-02-10 23:58:02', '2024-02-10 23:58:02');
 
 -- --------------------------------------------------------
 
@@ -326,10 +326,10 @@ CREATE TABLE `teams` (
 --
 
 INSERT INTO `teams` (`id`, `name`, `image`, `institution`, `profession`, `expertise`, `category`, `address`, `user_id`, `t_id`, `created_at`, `updated_at`) VALUES
-(2, 'Sheikh Abujar', 'photos/GmtJHCktzxJjxc2EkRP8i5M1qtM2F2lepif69INc.jpg', '', 'Doctoral Student at The University of Alabama at Birmingham', 'Data Science,Computer Vision', 'trainer', 'Birmingham, Alabama, United States', '1', '', '2023-12-21 13:02:42', '2024-02-07 03:24:11'),
-(3, 'Nushrat Jahan Ria', 'photos/cnPxm6ZMLOeHGmkND9vwKl7gcAnXC6G2RgsnF9gz.jpg', '', 'Ph.D. Student at louisiana state university', 'Machine Learning,Artificial Intelligence', 'trainer', 'louisiana , United States', '1', '', '2023-12-21 13:12:06', '2024-02-07 04:09:21'),
-(4, 'Mr. Abu Kaisar', 'photos/Cj9gRHEDqU91jssqHPf1jKlBTC8ybPw3nf6XXLJl.jpg', '', 'Ph.D. Student at Florida Institute of Technology', 'Machine Learning,Artificial Intelligence', 'advisor', 'Melbourne, Florida, United States', '1', '', '2023-12-23 10:34:51', '2024-02-07 04:10:36'),
-(12, 'Muntaser Syed', 'photos/3eWlVsoLOeqPS2wK4UHH5312YBvA9a1yx7tc3Jxl.png', NULL, 'GPU developer at Nividia', 'GPU developer', 'trainer', 'USA', '25', '26', '2024-02-07 03:41:34', '2024-02-07 04:12:05');
+(2, 'Sheikh Abujar', 'photos/BZ5MdsrpjTun613b2ax8YrRoUe9QCcGnQtlbMSTM.jpg', '', 'Doctoral Student at The University of Alabama', 'Data Science,Computer Vision', 'trainer', 'Birmingham, Alabama, United States', '1', '', '2023-12-21 13:02:42', '2024-02-10 23:35:21'),
+(3, 'Nushrat Jahan Ria', 'photos/LSsM1gN6DZRU4Vxrx7Jh5v1tL5urcvjag4O1mQxJ.jpg', '', 'Ph.D. Student at louisiana state university', 'Machine Learning,Artificial Intelligence', 'trainer', 'louisiana , United States', '1', '', '2023-12-21 13:12:06', '2024-02-10 23:31:39'),
+(4, 'Mr. Abu Kaisar', 'photos/Uua3myHNbz5LtOndMDb88bm0zLVXOuVWrQq0lZ9P.jpg', '', 'Ph.D. Student at Florida Institute of Technology', 'Machine Learning,Artificial Intelligence', 'advisor', 'Melbourne, Florida, United States', '1', '', '2023-12-23 10:34:51', '2024-02-10 23:31:48'),
+(12, 'Muntaser Syed', 'photos/JVeXdBfBCHZ7knPHotZobd3m9kHiUfTxeGoxGIpr.png', NULL, 'GPU developer at Nividia', 'GPU developer', 'trainer', 'USA', '25', '26', '2024-02-07 03:41:34', '2024-02-10 23:32:20');
 
 -- --------------------------------------------------------
 
@@ -358,7 +358,7 @@ INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `ro
 (5, 'sadik', 'wahid@gmail.com', NULL, '$2y$10$I9tW2ePCNUs7omccYNWNrOeVFfcGI20bXcBDsl3Oppv6kspgl23K2', 's', '0107586645', NULL, '2023-12-26 05:50:17', '2024-01-03 01:44:24'),
 (11, 'sadik', 'sadik22@gmail.com', NULL, '$2y$10$5aZhXZFvW3zGACUNPMYsBuLVuQWM4MbBJ1LgCLTFGtou3x6OTdnwe', 's', '01701737576', NULL, '2024-01-11 02:16:26', '2024-01-11 02:16:26'),
 (12, 'sadik', 'wahid7375@gmail.com', NULL, '$2y$10$USWWMVHmsK0qk0J.086X9eRDzuwxcB7zhTg4GYKIXVkM2layeNiy.', 's', '017615275246', NULL, '2024-01-14 00:12:51', '2024-01-14 00:12:51'),
-(14, 'sadik', 'wahidsadik7375@gmail.com', NULL, '$2y$10$6oGdSFcp2/s9nWxGx86zGOFiMKh1nLFKKD4YRUP9r5i9vqbsqdota', 's', '014254724435', NULL, '2024-01-23 22:40:40', '2024-01-23 22:40:40'),
+(14, 'sadik', 'wahidsadik7375@gmail.com', NULL, '$2y$10$6oGdSFcp2/s9nWxGx86zGOFiMKh1nLFKKD4YRUP9r5i9vqbsqdota', 'a', '014254724435', NULL, '2024-01-23 22:40:40', '2024-01-23 22:40:40'),
 (25, 'sadik', 'sadik123@gmail.com', NULL, '$2y$10$RVl7eZ1I5MXhhH3Rm5wlee.M4klaG8Y7/6zDm5eb7WxfhV7bbykmq', 'a', '01701737576', NULL, '2024-01-29 22:28:18', '2024-01-29 22:28:18'),
 (26, 'Muntaser Syed', 'wahidsadik123@gmail.com', NULL, '$2y$10$ZIyKJDl.Yx8Nq0ljRijIP.kq6ynEndeEmaB2BkXlY5wAQB9RvTZ2q', 't', '12345678', NULL, '2024-02-07 03:41:34', '2024-02-07 03:41:34');
 
@@ -466,7 +466,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `assigncourses`
 --
 ALTER TABLE `assigncourses`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT for table `courses`
@@ -496,7 +496,7 @@ ALTER TABLE `footers`
 -- AUTO_INCREMENT for table `galleries`
 --
 ALTER TABLE `galleries`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `gallery`

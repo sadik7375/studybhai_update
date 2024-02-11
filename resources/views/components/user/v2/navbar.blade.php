@@ -11,7 +11,7 @@
                         <div class="it-header-2-top-left">
                             <ul>
                                 <li>
-                                    <a href="tel:568367-987-237">
+                                    <a href="phone:+880 1959-938009">
                         <span>
                           <svg
                               width="20"
@@ -41,7 +41,7 @@
                             </defs>
                           </svg>
                         </span>
-                                       012345678
+                                        +880 1959-938009
                                     </a>
                                 </li>
                                 <li class="d-none d-lg-inline-block">
@@ -104,7 +104,8 @@
                                             </li>
                                             <li><a href="{{route("show.courses")}}">Course</a></li>
                                             <li><a href="{{route("team_info")}}">Team</a></li>
-                                            <li><a href="#aboutus">about us</a></li>
+                                            <li><a href="{{route('gallery.index')}}">Gallery</a></li>
+
                                             <li><a href="#footer">contact</a></li>
 
 
@@ -132,7 +133,7 @@
                                 >
 
                                     <div class="it-header-2-button d-none d-md-block">
-                                        <a class="it-btn-white" href="contact.html">
+                                        <a class="it-btn-white" href="#footer">
                           <span>
                             Contact Us
                             <svg

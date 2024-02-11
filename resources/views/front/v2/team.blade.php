@@ -4,7 +4,7 @@
 
     <main>
 
-        <div class="it-breadcrumb-area it-breadcrumb-bg" data-background="assets/img/breadcrumb/breadcrumb.jpg">
+        <div class="it-breadcrumb-area it-breadcrumb-bg" data-background="assets/img/index/Teacher.png">
             <div class="container">
                 <div class="row ">
                     <div class="col-md-12">
@@ -16,7 +16,7 @@
                                 <div class="it-breadcrumb-list">
                                     <span><a href="index.html">home</a></span>
                                     <span class="dvdr">//</span>
-                                    <span>TEACHER</span>
+                                    <span>Team</span>
                                 </div>
                             </div>
                         </div>
@@ -44,17 +44,17 @@
                                             <i class="fa-light fa-share-nodes"></i>
                                         </button>
                                         <div class="it-team-3-social-wrap">
-                                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                                            <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+{{--                                            <a href="#"><i class="fa-brands fa-instagram"></i></a>--}}
+{{--                                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>--}}
+{{--                                            <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>--}}
                                             <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
                                         </div>
                                     </div>
                                     <div class="it-team-3-author-box">
                                         <h4 class="it-team-3-title"><a href="teacher-details.html">{{$team->name}}</a>
                                         </h4>
-                                        <span>{{ $team->profession }}</span><br>
-                                        <span>{{ $team->expertise }}</span>
+                                        <span>Profession:{{ $team->profession }}</span><br>
+                                        <span>Expertise:{{ $team->expertise }}</span>
 
                                     </div>
                                 </div>

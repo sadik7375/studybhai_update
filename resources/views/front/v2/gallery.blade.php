@@ -4,21 +4,15 @@
 
     <main>
 
-        <div class="it-breadcrumb-area it-breadcrumb-bg" data-background="assets/img/breadcrumb/breadcrumb.jpg">
+        <div class="it-breadcrumb-area it-breadcrumb-bg" data-background="{{ asset('assets/img/index/breadcrumb.jpg') }}">
             <div class="container">
                 <div class="row ">
                     <div class="col-md-12">
                         <div class="it-breadcrumb-content z-index-3 text-center">
-                            <div class="it-breadcrumb-title-box">
-                                <h3 class="it-breadcrumb-title">Gallery</h3>
-                            </div>
-                            <div class="it-breadcrumb-list-wrap">
-                                <div class="it-breadcrumb-list">
-                                    <span><a href="index.html">home</a></span>
-                                    <span class="dvdr">//</span>
-                                    <span>Gallery</span>
-                                </div>
-                            </div>
+{{--                            <div class="it-breadcrumb-title-box">--}}
+{{--                                <h3 class="it-breadcrumb-title">Gallery</h3>--}}
+{{--                            </div>--}}
+
                         </div>
                     </div>
                 </div>
@@ -37,8 +31,7 @@
                     <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
                         <div class="it-blog-item-box" data-background="assets/img/blog/bg-1.jpg">
                             <div class="it-blog-item">
-                                <div class="it-blog-thumb fix">
-                                    <a href="blog-details.html"><img src="{{ asset('storage/' . $gallery->image) }}"  alt></a>
+                                <div class="it-blog-thumb fix"><img src="{{ asset('storage/' . $gallery->image) }}"  alt>
                                 </div>
                                 <div class="it-blog-meta pb-15">
 <span>
@@ -48,7 +41,7 @@
 {{--<i class="fa-light fa-messages"></i>--}}
 {{--Comment (06)</span>--}}
                                 </div>
-                                <h4 class="it-blog-title"><a href="blog-details.html">{{$gallery->title}}</a></h4>
+                                <h4 class="it-blog-title">{{$gallery->title}}</h4>
 {{--                                <a class="it-btn sm" href="blog-details.html">--}}
 {{--<span>--}}
 {{--read more--}}

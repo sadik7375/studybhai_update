@@ -25,7 +25,7 @@
                         <div class="it-hero-3-title-wrap it-hero-3-ptb">
                             <div class="it-hero-3-title-box">
                                 <h1 class="it-hero-3-title">
-                                    Learn new skills with <span>studybhai</span>
+                                    Discover StudyBhai  <span>A Blanded Learning Hub </span>
                                 </h1>
                                 <p>
                                     Blended learning combines traditional classroom instruction with online learning,
@@ -35,7 +35,8 @@
                                 </p>
                             </div>
                             <div class="it-hero-3-btn-box d-flex align-items-center">
-                                <a class="it-btn-white" href="route("courses.show")">
+                                <a class="it-btn-white" href="#courses">
+
                     <span>
                       Find The Course
                       <svg
@@ -198,7 +199,7 @@
 
         <div
             class="it-course-area it-course-style-3 it-course-bg p-relative grey-bg pt-120 pb-120"
-            data-background="assets/img/course/course-bg.png"
+            data-background="assets/img/course/course-bg.png"  id="courses"
         >
             <div class="container">
                 <div class="it-course-title-wrap mb-60">
@@ -479,7 +480,7 @@
                         <div class="it-feature-3-title-box text-center mb-60">
                 <span class="it-section-subtitle-3">
                   <img src="{{ asset('assets/img/about/bg.svg') }}" alt/>
-                  HISTUDY FEATURE
+                  STUDYBHAI SERVICES
                   <img src="{{ asset('assets/img/about/bg.svg') }}" alt/>
                 </span>
                             <h4 class="it-section-title-3">
@@ -708,7 +709,7 @@
                             <span>Join Our Session</span>
                             <h3 class="it-video-title">
                                 Call for Admission <br/>
-                                <a href="tel:+91958423452">019XXXXXX</a>
+                                <a href="tel:+91958423452">+880 1959-938009</a>
                             </h3>
 
 
@@ -751,14 +752,14 @@
                         <div
                             class="it-video-play-wrap d-flex justify-content-start justify-content-md-end align-items-center"
                         >
-                            <div class="it-video-play text-center">
-                                <a
-                                    class="popup-video play"
-                                    href=""
-                                ><i class="fas fa-play"></i
-                                    ></a>
-                                <a class="text" href="#">watch now</a>
-                            </div>
+{{--                            <div class="it-video-play text-center">--}}
+{{--                                <a--}}
+{{--                                    class="popup-video play"--}}
+{{--                                    href=""--}}
+{{--                                ><i class="fas fa-play"></i--}}
+{{--                                    ></a>--}}
+{{--                                <a class="text" href="https://www.facebook.com/Studybhaibd">visit now</a>--}}
+{{--                            </div>--}}
                         </div>
                     </div>
                 </div>
@@ -794,8 +795,8 @@
                             <div class="it-career-content">
                                 <span>Machine Learning</span>
                                 <p>
-                                    Our preliminary assessments will help you understand the basics of Machine Learning
-                                    and begin your journey in the field.
+                                    Our preliminary assessments will help you understand the basics of Machine Learning.
+
 
                                 </p>
 {{--                                <a class="it-btn-yellow mr-15" href="contact.html">--}}
@@ -1061,7 +1062,7 @@
                         <div class="it-event-title-box text-center pb-40">
                 <span class="it-section-subtitle-3">
                   <img src="{{ asset('assets/img/about/bg-2.svg') }}" alt/>
-                  Teacher
+                  Team
                   <img src="{{ asset('assets/img/about/bg-2.svg') }}" alt/>
                 </span>
                             <h2 class="it-section-title-3">
@@ -1098,8 +1099,8 @@
                                     <div class="it-team-3-author-box">
                                         <h4 class="it-team-3-title"><a href="teacher-details.html">{{$team->name}}</a>
                                         </h4>
-                                        <span>{{ $team->profession }}</span>
-                                        <span>{{ $team->expertise }}</span>
+                                        <span>Profession:{{ $team->profession }}</span><br>
+                                        <span>Expertise:{{ $team->expertise }}</span>
                                     </div>
                                 </div>
                             </div>

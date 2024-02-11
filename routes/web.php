@@ -172,6 +172,8 @@ Route::middleware(['auth', 'admin'])
         Route::get('/creategallery', [GalleryController::class, 'create'])->name('gallery.create');
         Route::post('/storegallery', [GalleryController::class, 'store'])->name('gallery.store');
 
+
+
         Route::get('/editgallery', [GalleryController::class, 'view'])->name('gallery.edit');
         Route::put('/gallery/{id}', [GalleryController::class, 'update'])->name('gallery.update');
         Route::delete('/gallery/{id}', [GalleryController::class, 'destroy'])->name('gallery.destroy');

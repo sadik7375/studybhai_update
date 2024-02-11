@@ -11,7 +11,7 @@
             <th>Name</th>
             <th>Email</th>
             <th>Amount</th>
-            <th>Currency</th>
+            <th>Phone Number</th>
             <th>Status</th>
             <th>Course ID</th>
             <th>Transaction ID</th>
