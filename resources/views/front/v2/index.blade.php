@@ -79,7 +79,7 @@
                     <div class="col-xl-6">
                         <div class="it-hero-3-thumb">
 
-                            <img src="{{ asset('assets/img/career/demo.png') }}" alt/>
+                            <img src="{{ asset('assets/img/career/hero-3-img.png') }}" alt/>
                         </div>
                     </div>
 
