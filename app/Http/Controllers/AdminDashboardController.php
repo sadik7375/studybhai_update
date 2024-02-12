@@ -1,7 +1,7 @@
 <?php
 namespace App\Http\Controllers;
 
-use App\Models\Admin\Course;
+use App\Models\admin\Course;
 use App\Models\Orders;
 use App\Models\Team;
 use App\Models\User;
@@ -12,7 +12,7 @@ class AdminDashboardController extends Controller
 {
     public function index()
     {
-        $coursesCount = Course::count();
+//        $coursesCount = Course::count();
         $studentsCount = Orders::count();
         $trainersCount = Team::count();
         $orders = Orders::all(); // Or use your own query to fetch orders
