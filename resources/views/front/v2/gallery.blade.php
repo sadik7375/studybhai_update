@@ -9,9 +9,9 @@
                 <div class="row ">
                     <div class="col-md-12">
                         <div class="it-breadcrumb-content z-index-3 text-center">
-{{--                            <div class="it-breadcrumb-title-box">--}}
-{{--                                <h3 class="it-breadcrumb-title">Gallery</h3>--}}
-{{--                            </div>--}}
+                            <div class="it-breadcrumb-title-box">
+                                <h3 class="it-breadcrumb-title">Gallery</h3>
+                            </div>
 
                         </div>
                     </div>

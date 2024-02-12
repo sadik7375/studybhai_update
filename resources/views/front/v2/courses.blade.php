@@ -11,9 +11,9 @@
 <div class="row ">
 <div class="col-md-12">
 <div class="it-breadcrumb-content z-index-3 text-center">
-<!-- <div class="it-breadcrumb-title-box">
-<h3 class="it-breadcrumb-title">COURSE 01</h3>
-</div> -->
+<div class="it-breadcrumb-title-box">
+<h3 class="it-breadcrumb-title">COURSES</h3>
+</div>
 <div class="it-breadcrumb-list-wrap">
 <div class="it-breadcrumb-list">
 <!-- <span><a href="index.html">home</a></span>
