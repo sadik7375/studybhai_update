@@ -24,8 +24,8 @@
                     <div class="col-xl-6">
                         <div class="it-hero-3-title-wrap it-hero-3-ptb">
                             <div class="it-hero-3-title-box">
-                                <h1 class="it-hero-3-title">
-                                    Discover StudyBhai  <span>A Blanded Learning Hub </span>
+                                <h1 class="it-hero-3-title" style="font-size: 49px">
+                                    Discover StudyBhai <span><br>A Blanded Learning Hub </span>
                                 </h1>
                                 <p>
                                     Blended learning combines traditional classroom instruction with online learning,
@@ -119,7 +119,7 @@
                   <img src="{{ asset('assets/img/about/bg.svg') }}" alt/>
                   about us
                 </span>
-                            <h2 class="it-section-title-3 pb-30">
+                            <h2 class="it-section-title-3 pb-30" style="font-size: 37px">
                                 Benefit from our blended learning expertise and earn valuable
                                 <span> know-how to gain essential professional skills.</span>
                             </h2>
@@ -199,7 +199,7 @@
 
         <div
             class="it-course-area it-course-style-3 it-course-bg p-relative grey-bg pt-120 pb-120"
-            data-background="assets/img/course/course-bg.png"  id="courses"
+            data-background="assets/img/course/course-bg.png" id="courses"
         >
             <div class="container">
                 <div class="it-course-title-wrap mb-60">
@@ -752,14 +752,14 @@
                         <div
                             class="it-video-play-wrap d-flex justify-content-start justify-content-md-end align-items-center"
                         >
-{{--                            <div class="it-video-play text-center">--}}
-{{--                                <a--}}
-{{--                                    class="popup-video play"--}}
-{{--                                    href=""--}}
-{{--                                ><i class="fas fa-play"></i--}}
-{{--                                    ></a>--}}
-{{--                                <a class="text" href="https://www.facebook.com/Studybhaibd">visit now</a>--}}
-{{--                            </div>--}}
+                            {{--                            <div class="it-video-play text-center">--}}
+                            {{--                                <a--}}
+                            {{--                                    class="popup-video play"--}}
+                            {{--                                    href=""--}}
+                            {{--                                ><i class="fas fa-play"></i--}}
+                            {{--                                    ></a>--}}
+                            {{--                                <a class="text" href="https://www.facebook.com/Studybhaibd">visit now</a>--}}
+                            {{--                            </div>--}}
                         </div>
                     </div>
                 </div>
@@ -799,39 +799,39 @@
 
 
                                 </p>
-{{--                                <a class="it-btn-yellow mr-15" href="contact.html">--}}
+                                {{--                                <a class="it-btn-yellow mr-15" href="contact.html">--}}
 
 
-{{--                                    --}}{{--                    <span>--}}
-{{--                                    --}}{{--                      Join now--}}
-{{--                                    --}}{{--                      <svg--}}
-{{--                                    --}}{{--                          width="17"--}}
-{{--                                    --}}{{--                          height="14"--}}
-{{--                                    --}}{{--                          viewBox="0 0 17 14"--}}
-{{--                                    --}}{{--                          fill="none"--}}
-{{--                                    --}}{{--                          xmlns="http://www.w3.org/2000/svg"--}}
-{{--                                    --}}{{--                      >--}}
-{{--                                    --}}{{--                        <path--}}
-{{--                                    --}}{{--                            d="M11 1.24023L16 7.24023L11 13.2402"--}}
-{{--                                    --}}{{--                            stroke="currentcolor"--}}
-{{--                                    --}}{{--                            stroke-width="1.5"--}}
-{{--                                    --}}{{--                            stroke-miterlimit="10"--}}
-{{--                                    --}}{{--                            stroke-linecap="round"--}}
-{{--                                    --}}{{--                            stroke-linejoin="round"--}}
-{{--                                    --}}{{--                        />--}}
-{{--                                    --}}{{--                        <path--}}
-{{--                                    --}}{{--                            d="M1 7.24023H16"--}}
-{{--                                    --}}{{--                            stroke="currentcolor"--}}
-{{--                                    --}}{{--                            stroke-width="1.5"--}}
-{{--                                    --}}{{--                            stroke-miterlimit="10"--}}
-{{--                                    --}}{{--                            stroke-linecap="round"--}}
-{{--                                    --}}{{--                            stroke-linejoin="round"--}}
-{{--                                    --}}{{--                        />--}}
-{{--                                    --}}{{--                      </svg>--}}
-{{--                                    --}}{{--                    </span>--}}
+                                {{--                                    --}}{{--                    <span>--}}
+                                {{--                                    --}}{{--                      Join now--}}
+                                {{--                                    --}}{{--                      <svg--}}
+                                {{--                                    --}}{{--                          width="17"--}}
+                                {{--                                    --}}{{--                          height="14"--}}
+                                {{--                                    --}}{{--                          viewBox="0 0 17 14"--}}
+                                {{--                                    --}}{{--                          fill="none"--}}
+                                {{--                                    --}}{{--                          xmlns="http://www.w3.org/2000/svg"--}}
+                                {{--                                    --}}{{--                      >--}}
+                                {{--                                    --}}{{--                        <path--}}
+                                {{--                                    --}}{{--                            d="M11 1.24023L16 7.24023L11 13.2402"--}}
+                                {{--                                    --}}{{--                            stroke="currentcolor"--}}
+                                {{--                                    --}}{{--                            stroke-width="1.5"--}}
+                                {{--                                    --}}{{--                            stroke-miterlimit="10"--}}
+                                {{--                                    --}}{{--                            stroke-linecap="round"--}}
+                                {{--                                    --}}{{--                            stroke-linejoin="round"--}}
+                                {{--                                    --}}{{--                        />--}}
+                                {{--                                    --}}{{--                        <path--}}
+                                {{--                                    --}}{{--                            d="M1 7.24023H16"--}}
+                                {{--                                    --}}{{--                            stroke="currentcolor"--}}
+                                {{--                                    --}}{{--                            stroke-width="1.5"--}}
+                                {{--                                    --}}{{--                            stroke-miterlimit="10"--}}
+                                {{--                                    --}}{{--                            stroke-linecap="round"--}}
+                                {{--                                    --}}{{--                            stroke-linejoin="round"--}}
+                                {{--                                    --}}{{--                        />--}}
+                                {{--                                    --}}{{--                      </svg>--}}
+                                {{--                                    --}}{{--                    </span>--}}
 
 
-{{--                                </a>--}}
+                                {{--                                </a>--}}
                             </div>
                             <div class="it-career-thumb">
                                 <img src="{{ asset('assets/img/index/exam1.png') }}" alt/>
@@ -985,16 +985,23 @@
                                   sed do eiusmod <br/>
                                   tempor incididunt ut labore.</span
                                 > --}}
-                                <p>
-                                    Introduction to Machine Learning<br>
-                                    IoT Essentials Workshop<br>
-                                    Data Analysis Bootcamp<br>
-                                    Web Development Crash Course<br>
-                                    Project Showcase<br>
-                                    Web Development Hackathon<br>
-                                    Data Visualization Workshop
 
-                                </p>
+{{--                               ` <ul style="padding-left: 34px">--}}
+{{--                                    <li>Introduction to Machine Learning</li>--}}
+{{--                                    <li>Introduction to Machine Learning</li>--}}
+{{--                                    <li>Introduction to Machine Learning</li>--}}
+{{--                                </ul>`--}}
+
+                                                                <p>
+                                                                    Introduction to Machine Learning<br>
+                                                                    IoT Essentials Workshop<br>
+                                                                    Data Analysis Bootcamp<br>
+                                                                    Web Development Crash Course<br>
+                                                                    Project Showcase<br>
+                                                                    Web Development Hackathon<br>
+                                                                    Data Visualization Workshop
+
+                                                                </p>
 
 
                                 {{-- <a class="it-btn-theme-2" href="contact.html">
