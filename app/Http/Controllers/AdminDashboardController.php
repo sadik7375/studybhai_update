@@ -19,6 +19,6 @@ class AdminDashboardController extends Controller
 
         $totalRevenue = $orders->sum('amount');
 
-        return view('dashboard.adminindex', compact('coursesCount', 'studentsCount', 'trainersCount', 'totalRevenue', 'orders'));
+        return view('dashboard.adminindex', compact( 'studentsCount', 'trainersCount', 'totalRevenue', 'orders'));
     }
 }
