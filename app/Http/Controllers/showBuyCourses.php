@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Orders;
 use App\Models\admin\Course;
+
 class showBuyCourses extends Controller
 {
 
