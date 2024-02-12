@@ -12,7 +12,7 @@ use App\Http\Controllers\usersettingsController;
 use App\Http\Controllers\assigncourseController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\AdminDashboardController;
-use App\Http\Controllers\ProfileEditController;
+//use App\Http\Controllers\ProfileEditController;
 use App\Http\Controllers\SslCommerzPaymentController;
 use App\Models\Footer;
 use Illuminate\Support\Facades\Auth;
@@ -75,7 +75,7 @@ Route::middleware(['auth'])->group(function () {
 
     Route::get('editprofile', [FrontController::class, 'usereditProfile'])->name('editprofile');
 
-    Route::post('profile/update', [ProfileEditController::class, 'updateProfile'])->name('profile.update');
+    Route::post('profile/update', [\App\Http\Controllers\profileEditController::class, 'updateProfile'])->name('profile.update');
 
 //------------------------------------user profile End--------------------------
 
