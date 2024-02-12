@@ -194,7 +194,7 @@ Route::middleware(['auth', 't'])->group(function () {
 
     Route::get('trainer/settings', [TeamController::class, 'trainersettings'])->name('trainer.settings');
 
-    Route::post('trainer/profileupdate', [ProfileEditController::class, 'trainerprofileupdate'])->name('trainer.profileupdate');
+    Route::post('trainer/profileupdate', [\App\Http\Controllers\profileEditController::class, 'trainerprofileupdate'])->name('trainer.profileupdate');
 
 });
 
