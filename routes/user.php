@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\v2\FrontController;
 use App\Http\Controllers\GalleryController;
+use App\Http\Controllers\MessageControllerController;
 use Illuminate\Support\Facades\Route;
 
 // ----------------------------------------- Front page -----------------------------------------
@@ -31,3 +32,12 @@ Route::get('team', [FrontController::class, 'team'])->name('team_info');
 //------------------------------------------  Gallery   -----------------------------------------
 
 Route::get('/showgallery', [GalleryController::class, 'index'])->name('gallery.index');
+
+//------------------------------------------Contract Us------------------------------------------
+
+Route::get('contractus', [FrontController::class, 'footer'])->name('contact.info');
+
+
+//-------------------------------------------  Message ---------------------------------------------
+
+Route::resource('message',\App\Http\Controllers\MessageController::class);

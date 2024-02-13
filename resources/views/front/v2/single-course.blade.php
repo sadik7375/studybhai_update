@@ -46,16 +46,16 @@
 
                                 <span><i class="fa-light fa-user"></i>Student {{$courses->student}}</span>
                             </div>
-{{--                            <div class="it-course-details-nav pb-60">--}}
-{{--                                <nav>--}}
-{{--                                    <div class="nav nav-tab" id="nav-tab" role="tablist">--}}
-{{--                                        <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">overview</button>--}}
-{{--                                        <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">curriculum</button>--}}
-{{--                                        <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">instructor</button>--}}
-{{--                                        <button class="nav-link" id="nav-reviews-tab" data-bs-toggle="tab" data-bs-target="#nav-reviews" type="button" role="tab" aria-controls="nav-reviews" aria-selected="false">reviews</button>--}}
-{{--                                    </div>--}}
-{{--                                </nav>--}}
-{{--                            </div>--}}
+                            <div class="it-course-details-nav pb-60">
+                                <nav>
+                                    <div class="nav nav-tab" id="nav-tab" role="tablist">
+                                        <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">overview</button>
+                                        <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">curriculum</button>
+                                        <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">instructor</button>
+                                        <button class="nav-link" id="nav-reviews-tab" data-bs-toggle="tab" data-bs-target="#nav-reviews" type="button" role="tab" aria-controls="nav-reviews" aria-selected="false">reviews</button>
+                                    </div>
+                                </nav>
+                            </div>
                             <div class="it-course-details-content">
                                 <div class="tab-content" id="nav-tabContent">
                                     <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
@@ -184,8 +184,13 @@
                     <div class="col-xl-3 col-lg-4">
                         <div class="it-evn-sidebar-box it-course-sidebar-box">
                             <div class="it-evn-sidebar-thumb mb-30">
-                                <img src="assets/img/event/details-sm.jpg" alt>
+                                <img src="{{ asset('storage/' . $courses->image) }}" alt>
                             </div>
+
+
+
+
+
                             <div class="it-course-sidebar-rate-box pb-20">
                                 <div class="it-course-sidebar-rate d-flex justify-content-between align-items-center">
                                     <span>course fee</span>
@@ -235,7 +240,7 @@
                                     <li><span>Admision End:</span><span>{{ $courses->admission_ends }}</span></li>
                                     <li><span>Class Starts:</span><span>{{$courses->class_starts}}</span></li>
 {{--                                    <li><span>skill level</span><span>Basic</span></li>--}}
-{{--                                    <li><span>class day</span><span>Monday-friday</span></li>--}}
+                                    <li><span>class day</span><span>{{ $courses->classday }}</span></li>
                                     <li><span>language</span><span>Bangla</span></li>
                                 </ul>
                             </div>
@@ -245,7 +250,36 @@
             </div>
         </div>
 
-
+        <div class="it-newsletter-area it-newsletter-height fix p-relative theme-bg">
+            <div class="it-newsletter-shape-1 d-none d-lg-block">
+                <img src="assets/img/newsletter/shape-1-1.png" alt>
+            </div>
+            <div class="it-newsletter-shape-2 d-none d-lg-block">
+                <img src="assets/img/newsletter/shape-1-2.png" alt>
+            </div>
+            <div class="it-newsletter-shape-3 d-none d-xl-block">
+                <img src="assets/img/newsletter/shape-1-3.png" alt>
+            </div>
+            <div class="it-newsletter-shape-4 d-none d-xl-block">
+                <img src="assets/img/newsletter/shape-1-4.png" alt>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-6">
+                        <div class="it-newsletter-left">
+                            <h4 class="it-section-title text-white pb-20">Join Our Newsletter</h4>
+                            <span>Subscribe our newsletter to get our latest update & news.</span>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6">
+                        <div class="it-newsletter-right p-relative text-end">
+                            <input type="text" placeholder="Enter your email:">
+                            <button class="it-btn black-bg" type="submit"><span>subscribe now</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
     </main>

@@ -28,44 +28,39 @@
 
         <div class="it-team-3-area it-team-3-style-2  it-team-3-style-3 pt-110 pb-90">
             <div class="container">
+
+
                 <div class="row">
-
-                    {{-- <div class="col"></div> --}}
-
                     @foreach($teams as $team)
                         <div class="col-xl-3 col-lg-4 col-md-6 mb-30">
                             <div class="it-team-3-item text-center">
-                                <div class="it-team-3-thumb fix">
-                                    <img src="{{ asset('storage/' . $team->image) }}" alt>
+                                <div class="it-team-3-thumb fix" style="height: 200px; overflow: hidden;">
+                                    <img src="{{ asset('storage/' . $team->image) }}" alt style="height: 100%; width: 100%; object-fit: cover;">
                                 </div>
-                                <div class="it-team-3-content">
+                                <div class="it-team-3-content" style="height: 240px;">
                                     <div class="it-team-3-social-box p-relative">
                                         <button>
                                             <i class="fa-light fa-share-nodes"></i>
                                         </button>
                                         <div class="it-team-3-social-wrap">
-{{--                                            <a href="#"><i class="fa-brands fa-instagram"></i></a>--}}
-{{--                                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>--}}
-{{--                                            <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>--}}
+                                            {{-- Add social media links here if needed --}}
                                             <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
                                         </div>
                                     </div>
                                     <div class="it-team-3-author-box">
-                                        <h4 class="it-team-3-title">{{$team->name}}
-                                        </h4>
+                                        <h4 class="it-team-3-title">{{$team->name}}</h4>
                                         <span>Profession:{{ $team->profession }}</span><br>
                                         <span>Expertise:{{ $team->expertise }}</span>
-
                                     </div>
                                 </div>
                             </div>
                         </div>
                     @endforeach
-
-                    {{-- <div class="col"></div> --}}
-
-
                 </div>
+
+
+
+
             </div>
         </div>
 

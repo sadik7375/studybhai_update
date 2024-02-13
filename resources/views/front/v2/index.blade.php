@@ -19,6 +19,10 @@
             <div class="it-hero-3-shape-5 d-none d-xxl-block">
                 <img src="assets/img/hero/hero-3-shape5.png" alt/>
             </div>
+
+
+
+
             <div class="container">
                 <div class="row align-items-end">
                     <div class="col-xl-6">
@@ -65,13 +69,13 @@
                       </svg>
                     </span>
                                 </a>
-                                {{--                                <div class="it-hero-3-client-box d-flex align-items-center">--}}
-                                {{--                    <span--}}
-                                {{--                    >Happy <br/>--}}
-                                {{--                      Students</span--}}
-                                {{--                    >--}}
-                                {{--                                    <img src="assets/img/hero/Happy Students.png" alt/>--}}
-                                {{--                                </div>--}}
+                                <div class="it-hero-3-client-box d-flex align-items-center">
+                                                    <span
+                                                    >Happy <br/>
+                                                      Students</span
+                                                    >
+                                    <img src="{{asset('assets/img/hero/happy.png')}}" alt/>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -79,13 +83,21 @@
                     <div class="col-xl-6">
                         <div class="it-hero-3-thumb">
 
-                            <img src="{{ asset('assets/img/career/demo.png') }}" alt/>
+                            <img src="{{ asset('assets/img/career/hero-3-img.png') }}" alt/>
                         </div>
                     </div>
 
 
                 </div>
             </div>
+
+
+
+
+
+
+
+
         </div>
 
 
@@ -211,7 +223,7 @@
                     Top Popular Course
                   </span>
                                 <h4 class="it-section-title-3">
-                                    Check out best <span>courses</span>
+                                    Check our best <span>courses</span>
                                 </h4>
                             </div>
                         </div>
@@ -263,14 +275,14 @@
                                         /></a>
                                 </div>
                                 <div class="it-course-content">
-                                    {{--                                    <div class="it-course-rating mb-10">--}}
-                                    {{--                                        <i class="fa-sharp fa-solid fa-star"></i>--}}
-                                    {{--                                        <i class="fa-sharp fa-solid fa-star"></i>--}}
-                                    {{--                                        <i class="fa-sharp fa-solid fa-star"></i>--}}
-                                    {{--                                        <i class="fa-sharp fa-solid fa-star"></i>--}}
-                                    {{--                                        <i class="fa-sharp fa-regular fa-star"></i>--}}
-                                    {{--                                        <span>(4.7)</span>--}}
-                                    {{--                                    </div>--}}
+                                    <div class="it-course-rating mb-10">
+                                        <i class="fa-sharp fa-solid fa-star"></i>
+                                        <i class="fa-sharp fa-solid fa-star"></i>
+                                        <i class="fa-sharp fa-solid fa-star"></i>
+                                        <i class="fa-sharp fa-solid fa-star"></i>
+                                        <i class="fa-sharp fa-regular fa-star"></i>
+                                        <span>(4.7)</span>
+                                    </div>
                                     <h4 class="it-course-title pb-5">
                                         <a href="{{ route('single_course_info', ['id' => $course->id]) }}"
                                         >{{ $course->title }}</a
@@ -288,10 +300,10 @@
                                         <span><i class="fa-light fa-user"></i>{{ $course->student }} Student</span>
                                     </div>
 
-                                    {{-- <div class="it-course-author pb-15">
+                                    <div class="it-course-author pb-15">
                                         <img src="assets/img/course/avata-1.png" alt>
                                         <span>By <i>Angela</i> in <i>Development</i></span>
-                                        </div> --}}
+                                    </div>
                                     <div
                                         class="it-course-price-box d-flex justify-content-between"
                                     >
@@ -407,7 +419,7 @@
                                             data-wow-delay=".1s"
                                             data-wow-duration="2s"
                                             role="progressbar"
-                                            data-width="65%"
+                                            data-width="72%"
                                             aria-valuenow="58"
                                             aria-valuemin="0"
                                             aria-valuemax="100"
@@ -419,7 +431,7 @@
                           animation-name: slideInLeft;
                         "
                                         >
-                                            <span>65%</span>
+                                            <span>73%</span>
                                         </div>
                                     </div>
                                 </div>
@@ -433,7 +445,7 @@
                                             data-wow-delay=".1s"
                                             data-wow-duration="2s"
                                             role="progressbar"
-                                            data-width="58%"
+                                            data-width="86%"
                                             aria-valuenow="58"
                                             aria-valuemin="0"
                                             aria-valuemax="100"
@@ -445,7 +457,7 @@
                           animation-name: slideInLeft;
                         "
                                         >
-                                            <span>98%</span>
+                                            <span>88%</span>
                                         </div>
                                     </div>
                                 </div>
@@ -474,17 +486,19 @@
             class="it-feature-3-area it-feature-3-bg grey-bg pt-120 pb-90"
             data-background="assets/img/feature/feature-bg.png"
         >
+
+
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-xl-8 col-lg-7 col-md-8">
                         <div class="it-feature-3-title-box text-center mb-60">
                 <span class="it-section-subtitle-3">
-                  <img src="{{ asset('assets/img/about/bg.svg') }}" alt/>
-                  STUDYBHAI SERVICES
-                  <img src="{{ asset('assets/img/about/bg.svg') }}" alt/>
+                  <img src="assets/img/about/bg.svg" alt/>
+                  HISTUDY FEATURE
+                  <img src="assets/img/about/bg.svg" alt/>
                 </span>
                             <h4 class="it-section-title-3">
-                                Our best services <br/>
+                                Check out educate features <br/>
 
                             </h4>
                         </div>
@@ -492,195 +506,213 @@
                 </div>
 
 
+
+
                 <div class="row">
                     <div class="col-xl-3 col-lg-6 col-md-6">
                         <div class="it-feature-3-item mb-30 text-center">
-
+                            <div class="it-feature-3-icon">
+                                <span><i class="flaticon-coach"></i></span>
+                            </div>
                             <div class="it-feature-3-content">
                                 <h4 class="it-feature-3-title">
-                                    Interactive <br> Learning
+                                    <a href="">Blended Learning Hub</a>
                                 </h4>
                                 <p>
-                                    Engaging materials for active participation.Videos, quizzes, and interactive
-                                    content.
-
+                                    To improve the learning process, our platform provides a combination of online learning
+                                    materials and traditional in-person education and instruction.
                                 </p>
                             </div>
-                            {{--                            <div class="it-feature-3-btn">--}}
-                            {{--                                <a class="it-btn-theme-sm" href="service-details.html">--}}
-                            {{--                    <span>--}}
-                            {{--                      view details--}}
-                            {{--                      <svg--}}
-                            {{--                          width="17"--}}
-                            {{--                          height="14"--}}
-                            {{--                          viewBox="0 0 17 14"--}}
-                            {{--                          fill="none"--}}
-                            {{--                          xmlns="http://www.w3.org/2000/svg"--}}
-                            {{--                      >--}}
-                            {{--                        <path--}}
-                            {{--                            d="M11 1.24023L16 7.24023L11 13.2402"--}}
-                            {{--                            stroke="currentcolor"--}}
-                            {{--                            stroke-width="1.5"--}}
-                            {{--                            stroke-miterlimit="10"--}}
-                            {{--                            stroke-linecap="round"--}}
-                            {{--                            stroke-linejoin="round"--}}
-                            {{--                        />--}}
-                            {{--                        <path--}}
-                            {{--                            d="M1 7.24023H16"--}}
-                            {{--                            stroke="currentcolor"--}}
-                            {{--                            stroke-width="1.5"--}}
-                            {{--                            stroke-miterlimit="10"--}}
-                            {{--                            stroke-linecap="round"--}}
-                            {{--                            stroke-linejoin="round"--}}
-                            {{--                        />--}}
-                            {{--                      </svg>--}}
-                            {{--                    </span>--}}
-                            {{--                                </a>--}}
-                            {{--                            </div>--}}
+                            <div class="it-feature-3-btn">
+                                <a class="it-btn-theme-sm" href="">
+                    <span>
+                      view details
+                      <svg
+                          width="17"
+                          height="14"
+                          viewBox="0 0 17 14"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                            d="M11 1.24023L16 7.24023L11 13.2402"
+                            stroke="currentcolor"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                        <path
+                            d="M1 7.24023H16"
+                            stroke="currentcolor"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                      </svg>
+                    </span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-6 col-md-6">
                         <div class="it-feature-3-item mb-30 text-center">
-                            <!-- <div class="it-feature-3-icon">
+                            <div class="it-feature-3-icon">
                                 <span><i class="flaticon-study"></i></span>
-                            </div> -->
+                            </div>
                             <div class="it-feature-3-content">
                                 <h4 class="it-feature-3-title">
-                                    Experienced Instructors
+                                    <a href="">Career Counseling</a>
                                 </h4>
                                 <p>
-                                    Qualified teachers with practical knowledge.Experts in their respective fields.
+                                    Our career counseling and placement assistance services offer personalized guidance to help
+                                    learners identify career goals, develop skills.
                                 </p>
                             </div>
-                            {{--                            <div class="it-feature-3-btn">--}}
-                            {{--                                <a class="it-btn-theme-sm" href="service-details.html">--}}
-                            {{--                    <span>--}}
-                            {{--                      view details--}}
-                            {{--                      <svg--}}
-                            {{--                          width="17"--}}
-                            {{--                          height="14"--}}
-                            {{--                          viewBox="0 0 17 14"--}}
-                            {{--                          fill="none"--}}
-                            {{--                          xmlns="http://www.w3.org/2000/svg"--}}
-                            {{--                      >--}}
-                            {{--                        <path--}}
-                            {{--                            d="M11 1.24023L16 7.24023L11 13.2402"--}}
-                            {{--                            stroke="currentcolor"--}}
-                            {{--                            stroke-width="1.5"--}}
-                            {{--                            stroke-miterlimit="10"--}}
-                            {{--                            stroke-linecap="round"--}}
-                            {{--                            stroke-linejoin="round"--}}
-                            {{--                        />--}}
-                            {{--                        <path--}}
-                            {{--                            d="M1 7.24023H16"--}}
-                            {{--                            stroke="currentcolor"--}}
-                            {{--                            stroke-width="1.5"--}}
-                            {{--                            stroke-miterlimit="10"--}}
-                            {{--                            stroke-linecap="round"--}}
-                            {{--                            stroke-linejoin="round"--}}
-                            {{--                        />--}}
-                            {{--                      </svg>--}}
-                            {{--                    </span>--}}
-                            {{--                                </a>--}}
-                            {{--                            </div>--}}
+                            <div class="it-feature-3-btn">
+                                <a class="it-btn-theme-sm" href="">
+                    <span>
+                      view details
+                      <svg
+                          width="17"
+                          height="14"
+                          viewBox="0 0 17 14"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                            d="M11 1.24023L16 7.24023L11 13.2402"
+                            stroke="currentcolor"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                        <path
+                            d="M1 7.24023H16"
+                            stroke="currentcolor"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                      </svg>
+                    </span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-6 col-md-6">
                         <div class="it-feature-3-item mb-30 text-center">
-                            <!-- <div class="it-feature-3-icon">
+                            <div class="it-feature-3-icon">
                                 <span><i class="flaticon-booking"></i></span>
-                            </div> -->
+                            </div>
                             <div class="it-feature-3-content">
                                 <h4 class="it-feature-3-title">
-                                    Live Q&A Sessions
+                                    <a href="">Practical Hands-on Projects</a>
                                 </h4>
                                 <p>
-                                    Real-time Live discussions with instructors.Students can ask questions and get
-                                    immediate answers.
+                                    Practical projects provide learners with real-world experience and theoretical knowledge
+                                    application, enhancing their understanding.
                                 </p>
                             </div>
-                            {{--                            <div class="it-feature-3-btn">--}}
-                            {{--                                <a class="it-btn-theme-sm" href="service-details.html">--}}
-                            {{--                    <span>--}}
-                            {{--                      view details--}}
-                            {{--                      <svg--}}
-                            {{--                          width="17"--}}
-                            {{--                          height="14"--}}
-                            {{--                          viewBox="0 0 17 14"--}}
-                            {{--                          fill="none"--}}
-                            {{--                          xmlns="http://www.w3.org/2000/svg"--}}
-                            {{--                      >--}}
-                            {{--                        <path--}}
-                            {{--                            d="M11 1.24023L16 7.24023L11 13.2402"--}}
-                            {{--                            stroke="currentcolor"--}}
-                            {{--                            stroke-width="1.5"--}}
-                            {{--                            stroke-miterlimit="10"--}}
-                            {{--                            stroke-linecap="round"--}}
-                            {{--                            stroke-linejoin="round"--}}
-                            {{--                        />--}}
-                            {{--                        <path--}}
-                            {{--                            d="M1 7.24023H16"--}}
-                            {{--                            stroke="currentcolor"--}}
-                            {{--                            stroke-width="1.5"--}}
-                            {{--                            stroke-miterlimit="10"--}}
-                            {{--                            stroke-linecap="round"--}}
-                            {{--                            stroke-linejoin="round"--}}
-                            {{--                        />--}}
-                            {{--                      </svg>--}}
-                            {{--                    </span>--}}
-                            {{--                                </a>--}}
-                            {{--                            </div>--}}
+                            <div class="it-feature-3-btn">
+                                <a class="it-btn-theme-sm" href="">
+                    <span>
+                      view details
+                      <svg
+                          width="17"
+                          height="14"
+                          viewBox="0 0 17 14"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                            d="M11 1.24023L16 7.24023L11 13.2402"
+                            stroke="currentcolor"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                        <path
+                            d="M1 7.24023H16"
+                            stroke="currentcolor"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                      </svg>
+                    </span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-6 col-md-6">
                         <div class="it-feature-3-item mb-30 text-center">
-                            <!-- <div class="it-feature-3-icon">
+                            <div class="it-feature-3-icon">
                                 <span><i class="flaticon-video"></i></span>
-                            </div> -->
+                            </div>
                             <div class="it-feature-3-content">
                                 <h4 class="it-feature-3-title">
-                                    24/7 Technical Support
+                                    <a href="">Expert Facilitators</a>
                                 </h4>
                                 <p>
-                                    Technical Support will be available 24/7.Helps with any technical issues or
-                                    concerns.
+                                    Our platform is staffed by highly experienced teachers and industry specialists who provide
+                                    knowledgeable learning guides, insightful advice.
                                 </p>
                             </div>
-                            {{--                            <div class="it-feature-3-btn">--}}
-                            {{--                                <a class="it-btn-theme-sm" href="service-details.html">--}}
-                            {{--                    <span>--}}
-                            {{--                      view details--}}
-                            {{--                      <svg--}}
-                            {{--                          width="17"--}}
-                            {{--                          height="14"--}}
-                            {{--                          viewBox="0 0 17 14"--}}
-                            {{--                          fill="none"--}}
-                            {{--                          xmlns="http://www.w3.org/2000/svg"--}}
-                            {{--                      >--}}
-                            {{--                        <path--}}
-                            {{--                            d="M11 1.24023L16 7.24023L11 13.2402"--}}
-                            {{--                            stroke="currentcolor"--}}
-                            {{--                            stroke-width="1.5"--}}
-                            {{--                            stroke-miterlimit="10"--}}
-                            {{--                            stroke-linecap="round"--}}
-                            {{--                            stroke-linejoin="round"--}}
-                            {{--                        />--}}
-                            {{--                        <path--}}
-                            {{--                            d="M1 7.24023H16"--}}
-                            {{--                            stroke="currentcolor"--}}
-                            {{--                            stroke-width="1.5"--}}
-                            {{--                            stroke-miterlimit="10"--}}
-                            {{--                            stroke-linecap="round"--}}
-                            {{--                            stroke-linejoin="round"--}}
-                            {{--                        />--}}
-                            {{--                      </svg>--}}
-                            {{--                    </span>--}}
-                            {{--                                </a>--}}
-                            {{--                            </div>--}}
+                            <div class="it-feature-3-btn">
+                                <a class="it-btn-theme-sm" href="">
+                    <span>
+                      view details
+                      <svg
+                          width="17"
+                          height="14"
+                          viewBox="0 0 17 14"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                            d="M11 1.24023L16 7.24023L11 13.2402"
+                            stroke="currentcolor"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                        <path
+                            d="M1 7.24023H16"
+                            stroke="currentcolor"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                      </svg>
+                    </span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
+
+
+
+
+
+
+
+
+
             </div>
+
+
+        </div>
+
+
         </div>
 
         <div
@@ -713,8 +745,8 @@
                             </h3>
 
 
-                            {{-- <div class="it-video-button">
-                                <a class="it-btn-theme-2" href="contact.html">
+                            <div class="it-video-button">
+                                <a class="it-btn-theme-2" href="{{route('contact.info')}}">
                     <span>
                       Join With us
                       <svg
@@ -743,7 +775,7 @@
                       </svg>
                     </span>
                                 </a>
-                            </div> --}}
+                            </div>
 
 
                         </div>
@@ -752,14 +784,14 @@
                         <div
                             class="it-video-play-wrap d-flex justify-content-start justify-content-md-end align-items-center"
                         >
-                            {{--                            <div class="it-video-play text-center">--}}
-                            {{--                                <a--}}
-                            {{--                                    class="popup-video play"--}}
-                            {{--                                    href=""--}}
-                            {{--                                ><i class="fas fa-play"></i--}}
-                            {{--                                    ></a>--}}
-                            {{--                                <a class="text" href="https://www.facebook.com/Studybhaibd">visit now</a>--}}
-                            {{--                            </div>--}}
+                            <div class="it-video-play text-center">
+                                <a
+                                    class="popup-video play"
+                                    href=""
+                                ><i class="fas fa-play"></i
+                                    ></a>
+                                <a class="text" href="https://www.facebook.com/Studybhaibd">watch now</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -785,7 +817,7 @@
                   Top Popular Course
                   <img src="{{ asset('assets/img/about/bg.svg') }}" alt/>
                 </span>
-                            <h4 class="it-section-title-3">Preliminary Assessment:</h4>
+                            <h4 class="it-section-title-3">Preliminary Assessment</h4>
                         </div>
                     </div>
                 </div>
@@ -799,39 +831,39 @@
 
 
                                 </p>
-                                {{--                                <a class="it-btn-yellow mr-15" href="contact.html">--}}
+                                                                <a class="it-btn-yellow mr-15" href="contact.html">
 
 
-                                {{--                                    --}}{{--                    <span>--}}
-                                {{--                                    --}}{{--                      Join now--}}
-                                {{--                                    --}}{{--                      <svg--}}
-                                {{--                                    --}}{{--                          width="17"--}}
-                                {{--                                    --}}{{--                          height="14"--}}
-                                {{--                                    --}}{{--                          viewBox="0 0 17 14"--}}
-                                {{--                                    --}}{{--                          fill="none"--}}
-                                {{--                                    --}}{{--                          xmlns="http://www.w3.org/2000/svg"--}}
-                                {{--                                    --}}{{--                      >--}}
-                                {{--                                    --}}{{--                        <path--}}
-                                {{--                                    --}}{{--                            d="M11 1.24023L16 7.24023L11 13.2402"--}}
-                                {{--                                    --}}{{--                            stroke="currentcolor"--}}
-                                {{--                                    --}}{{--                            stroke-width="1.5"--}}
-                                {{--                                    --}}{{--                            stroke-miterlimit="10"--}}
-                                {{--                                    --}}{{--                            stroke-linecap="round"--}}
-                                {{--                                    --}}{{--                            stroke-linejoin="round"--}}
-                                {{--                                    --}}{{--                        />--}}
-                                {{--                                    --}}{{--                        <path--}}
-                                {{--                                    --}}{{--                            d="M1 7.24023H16"--}}
-                                {{--                                    --}}{{--                            stroke="currentcolor"--}}
-                                {{--                                    --}}{{--                            stroke-width="1.5"--}}
-                                {{--                                    --}}{{--                            stroke-miterlimit="10"--}}
-                                {{--                                    --}}{{--                            stroke-linecap="round"--}}
-                                {{--                                    --}}{{--                            stroke-linejoin="round"--}}
-                                {{--                                    --}}{{--                        />--}}
-                                {{--                                    --}}{{--                      </svg>--}}
-                                {{--                                    --}}{{--                    </span>--}}
+                                                                                        <span>
+                                                                                          Join now
+                                                                                          <svg
+                                                                                              width="17"
+                                                                                              height="14"
+                                                                                              viewBox="0 0 17 14"
+                                                                                              fill="none"
+                                                                                              xmlns="http://www.w3.org/2000/svg"
+                                                                                          >
+                                                                                            <path
+                                                                                                d="M11 1.24023L16 7.24023L11 13.2402"
+                                                                                                stroke="currentcolor"
+                                                                                                stroke-width="1.5"
+                                                                                                stroke-miterlimit="10"
+                                                                                                stroke-linecap="round"
+                                                                                                stroke-linejoin="round"
+                                                                                            />
+                                                                                            <path
+                                                                                                d="M1 7.24023H16"
+                                                                                                stroke="currentcolor"
+                                                                                                stroke-width="1.5"
+                                                                                                stroke-miterlimit="10"
+                                                                                                stroke-linecap="round"
+                                                                                                stroke-linejoin="round"
+                                                                                            />
+                                                                                          </svg>
+                                                                                        </span>
 
 
-                                {{--                                </a>--}}
+                                                                </a>
                             </div>
                             <div class="it-career-thumb">
                                 <img src="{{ asset('assets/img/index/exam1.png') }}" alt/>
@@ -848,35 +880,35 @@
                                 <p>
                                     The preliminary assessment provides quick insights from our initial data analysis.
                                 </p>
-                                {{--                                <a class="it-btn-yellow mr-15" href="contact.html">--}}
-                                {{--                    <span>--}}
-                                {{--                      Join now--}}
-                                {{--                      <svg--}}
-                                {{--                          width="17"--}}
-                                {{--                          height="14"--}}
-                                {{--                          viewBox="0 0 17 14"--}}
-                                {{--                          fill="none"--}}
-                                {{--                          xmlns="http://www.w3.org/2000/svg"--}}
-                                {{--                      >--}}
-                                {{--                        <path--}}
-                                {{--                            d="M11 1.24023L16 7.24023L11 13.2402"--}}
-                                {{--                            stroke="currentcolor"--}}
-                                {{--                            stroke-width="1.5"--}}
-                                {{--                            stroke-miterlimit="10"--}}
-                                {{--                            stroke-linecap="round"--}}
-                                {{--                            stroke-linejoin="round"--}}
-                                {{--                        />--}}
-                                {{--                        <path--}}
-                                {{--                            d="M1 7.24023H16"--}}
-                                {{--                            stroke="currentcolor"--}}
-                                {{--                            stroke-width="1.5"--}}
-                                {{--                            stroke-miterlimit="10"--}}
-                                {{--                            stroke-linecap="round"--}}
-                                {{--                            stroke-linejoin="round"--}}
-                                {{--                        />--}}
-                                {{--                      </svg>--}}
-                                {{--                    </span>--}}
-                                {{--                                </a>--}}
+                                                                <a class="it-btn-yellow mr-15" href="contact.html">
+                                                    <span>
+                                                      Join now
+                                                      <svg
+                                                          width="17"
+                                                          height="14"
+                                                          viewBox="0 0 17 14"
+                                                          fill="none"
+                                                          xmlns="http://www.w3.org/2000/svg"
+                                                      >
+                                                        <path
+                                                            d="M11 1.24023L16 7.24023L11 13.2402"
+                                                            stroke="currentcolor"
+                                                            stroke-width="1.5"
+                                                            stroke-miterlimit="10"
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                        />
+                                                        <path
+                                                            d="M1 7.24023H16"
+                                                            stroke="currentcolor"
+                                                            stroke-width="1.5"
+                                                            stroke-miterlimit="10"
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                        />
+                                                      </svg>
+                                                    </span>
+                                                                </a>
                             </div>
                             <div class="it-career-thumb">
                                 <img src="{{ asset('assets/img/index/exam2.png') }}" alt/>
@@ -954,9 +986,9 @@
 
 
         <div class="it-event-area p-relative pt-120 pb-120">
-            <div class="it-event-shape-3 d-none d-xxl-block">
-                <img src="{{ asset('assets/img/event/shape-1-1.png') }}" alt/>
-            </div>
+{{--            <div class="it-event-shape-3 d-none d-xxl-block">--}}
+{{--                <img src="{{ asset('assets/img/event/shape-1-1.png') }}" alt/>--}}
+{{--            </div>--}}
             <div class="it-event-shape-4 d-none d-xl-block">
                 <img src="{{ asset('assets/img/event/shape-1-2.png') }}" alt/>
             </div>
@@ -976,35 +1008,55 @@
                     explore Events
                   </span>
                                 <h2 class="it-section-title-3 pb-20">
-                                    our best events
+                                    our upcoming courses
                                 </h2>
                             </div>
                             <div class="it-event-content">
-                                {{-- <span
+                                 <span
                                 >Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                                   sed do eiusmod <br/>
                                   tempor incididunt ut labore.</span
-                                > --}}
+                                >
 
-{{--                               ` <ul style="padding-left: 34px">--}}
-{{--                                    <li>Introduction to Machine Learning</li>--}}
-{{--                                    <li>Introduction to Machine Learning</li>--}}
-{{--                                    <li>Introduction to Machine Learning</li>--}}
-{{--                                </ul>`--}}
+{{--                                                               ` <ul style="padding-left: 34px">--}}
+{{--                                                                    <li>Introduction to Machine Learning</li>--}}
+{{--                                                                    <li>Introduction to Machine Learning</li>--}}
+{{--                                                                    <li>Introduction to Machine Learning</li>--}}
+{{--                                                                </ul>`--}}
 
-                                                                <p>
-                                                                    Introduction to Machine Learning<br>
-                                                                    IoT Essentials Workshop<br>
-                                                                    Data Analysis Bootcamp<br>
-                                                                    Web Development Crash Course<br>
-                                                                    Project Showcase<br>
-                                                                    Web Development Hackathon<br>
-                                                                    Data Visualization Workshop
+                                <h6>
+                                    Introduction to Machine Learning
 
-                                                                </p>
+                                </h6>
+                                <p>Our upcoming course will explore the world of Machine Learning, focusing on the use of
+                                    algorithms and data to develop intelligent systems that learn and adapt</p>
+
+                                <h6>
+                                    Data Analysis
+
+                                </h6>
+                                <p>In our next Data Analysis course, you will learn how to use insights from data and
+                                    explore datasets for useful information to help you make decisions based on accurate
+                                    information</p>
+
+                                <h6>
+                                    IoT
+
+                                </h6>
+                                <p>Discover the power of IoT in our upcoming course! Learn to connect everyday objects to
+                                    the internet and unlock endless possibilities in our hands-on workshop</p>
 
 
-                                {{-- <a class="it-btn-theme-2" href="contact.html">
+                                <h6>
+                                    Web Development
+
+                                </h6>
+                                <p>You can create dynamic websites and explore your creative potential with technology by
+                                    enrolling in our upcoming course, which provides an in-depth description of web development</p>
+
+
+
+                                 <a class="it-btn-theme-2" href="{{route('contact.info')}}">
                     <span>
                       admission open
                       <svg
@@ -1032,7 +1084,7 @@
                         />
                       </svg>
                     </span>
-                                </a> --}}
+                                </a>
 
 
                             </div>
@@ -1073,7 +1125,7 @@
                   <img src="{{ asset('assets/img/about/bg-2.svg') }}" alt/>
                 </span>
                             <h2 class="it-section-title-3">
-                                meet our expert Instructor
+                                meet our Instructor
                             </h2>
                         </div>
                     </div>
@@ -1083,29 +1135,24 @@
                 {{--                --------------------------trainer show-----------------------------------------}}
 
                 <div class="row">
-
-
                     @foreach($teams as $team)
                         <div class="col-xl-3 col-lg-4 col-md-6 mb-30">
                             <div class="it-team-3-item text-center">
-                                <div class="it-team-3-thumb fix">
-                                    <img src="{{ asset('storage/' . $team->image) }}" alt>
+                                <div class="it-team-3-thumb fix" style="height: 200px; overflow: hidden;">
+                                    <img src="{{ asset('storage/' . $team->image) }}" alt style="height: 100%; width: 100%; object-fit: cover;">
                                 </div>
-                                <div class="it-team-3-content">
+                                <div class="it-team-3-content" style="height: 240px;">
                                     <div class="it-team-3-social-box p-relative">
                                         <button>
                                             <i class="fa-light fa-share-nodes"></i>
                                         </button>
                                         <div class="it-team-3-social-wrap">
-                                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                                            <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+                                            {{-- Add social media links here if needed --}}
                                             <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
                                         </div>
                                     </div>
                                     <div class="it-team-3-author-box">
-                                        <h4 class="it-team-3-title"><a href="teacher-details.html">{{$team->name}}</a>
-                                        </h4>
+                                        <h4 class="it-team-3-title"><a href="">{{$team->name}}</a></h4>
                                         <span>Profession:{{ $team->profession }}</span><br>
                                         <span>Expertise:{{ $team->expertise }}</span>
                                     </div>
@@ -1113,9 +1160,254 @@
                             </div>
                         </div>
                     @endforeach
-
-
                 </div>
+
+
+
+
+
+
+
+
+
+
+                <br>
+                <br>
+
+                <div class="it-blog-area it-blog-color pb-90">
+                    <div class="container">
+                        <div class="it-blog-title-wrap mb-80">
+                            <div class="row align-items-end">
+                                <div class="col-xl-7 col-lg-7 col-md-8">
+                                    <div class="it-course-title-box">
+                  <span class="it-section-subtitle-3">
+                    <img src="assets/img/about/bg.svg" alt/>
+                    Top Popular Course
+                  </span>
+                                        <h4 class="it-section-title-3">
+                                            Check our educate features <br/>
+                                            win any exam
+                                        </h4>
+                                    </div>
+                                </div>
+                                <div class="col-xl-5 col-lg-5 col-md-4">
+                                    <div class="it-course-button text-start text-md-end pt-25">
+                                        <a class="it-btn-theme-2" href="blog-2.html">
+                    <span>
+                      all blog post
+                      <svg
+                          width="17"
+                          height="14"
+                          viewBox="0 0 17 14"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                            d="M11 1.24023L16 7.24023L11 13.2402"
+                            stroke="currentcolor"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                        <path
+                            d="M1 7.24023H16"
+                            stroke="currentcolor"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                      </svg>
+                    </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                                <div
+                                    class="it-blog-item-box"
+                                    data-background="assets/img/blog/bg-1.jpg"
+                                >
+                                    <div class="it-blog-item">
+                                        <div class="it-blog-thumb fix">
+                                            <a href="blog-details.html"
+                                            ><img src="assets/img/blog/blog-1-1.jpg" alt
+                                                /></a>
+                                        </div>
+                                        <div class="it-blog-meta pb-15">
+                    <span>
+                      <i class="fa-solid fa-calendar-days"></i>
+                      14 June 2023</span
+                    >
+                                            <span>
+                      <i class="fa-light fa-messages"></i>
+                      Comment (06)</span
+                                            >
+                                        </div>
+                                        <h4 class="it-blog-title">
+                                            <a href="blog-details.html"
+                                            >velit esse cillum dolore eu fugiat nulla pariatur.
+                                                Excepteur sint occaecat cupidatat</a
+                                            >
+                                        </h4>
+                                        <a class="it-btn-theme-sm" href="blog-details.html">
+                    <span>
+                      read more
+                      <svg
+                          width="17"
+                          height="14"
+                          viewBox="0 0 17 14"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                            d="M11 1.24023L16 7.24023L11 13.2402"
+                            stroke="currentcolor"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                        <path
+                            d="M1 7.24023H16"
+                            stroke="currentcolor"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                      </svg>
+                    </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                                <div
+                                    class="it-blog-item-box"
+                                    data-background="assets/img/blog/bg-1.jpg"
+                                >
+                                    <div class="it-blog-item">
+                                        <div class="it-blog-thumb fix">
+                                            <a href="blog-details.html"
+                                            ><img src="assets/img/blog/blog-1-2.jpg" alt
+                                                /></a>
+                                        </div>
+                                        <div class="it-blog-meta pb-15">
+                    <span>
+                      <i class="fa-solid fa-calendar-days"></i>
+                      14 June 2023</span
+                    >
+                                            <span>
+                      <i class="fa-light fa-messages"></i>
+                      Comment (06)</span
+                                            >
+                                        </div>
+                                        <h4 class="it-blog-title">
+                                            <a href="blog-details.html"
+                                            >velit esse cillum dolore eu fugiat nulla pariatur.
+                                                Excepteur sint occaecat cupidatat</a
+                                            >
+                                        </h4>
+                                        <a class="it-btn-theme-sm" href="blog-details.html">
+                    <span>
+                      read more
+                      <svg
+                          width="17"
+                          height="14"
+                          viewBox="0 0 17 14"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                            d="M11 1.24023L16 7.24023L11 13.2402"
+                            stroke="currentcolor"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                        <path
+                            d="M1 7.24023H16"
+                            stroke="currentcolor"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                      </svg>
+                    </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                                <div
+                                    class="it-blog-item-box"
+                                    data-background="assets/img/blog/bg-1.jpg"
+                                >
+                                    <div class="it-blog-item">
+                                        <div class="it-blog-thumb fix">
+                                            <a href="blog-details.html"
+                                            ><img src="assets/img/blog/blog-1-3.jpg" alt
+                                                /></a>
+                                        </div>
+                                        <div class="it-blog-meta pb-15">
+                    <span>
+                      <i class="fa-solid fa-calendar-days"></i>
+                      14 June 2023</span
+                    >
+                                            <span>
+                      <i class="fa-light fa-messages"></i>
+                      Comment (06)</span
+                                            >
+                                        </div>
+                                        <h4 class="it-blog-title">
+                                            <a href="blog-details.html"
+                                            >velit esse cillum dolore eu fugiat nulla pariatur.
+                                                Excepteur sint occaecat cupidatat</a
+                                            >
+                                        </h4>
+                                        <a class="it-btn-theme-sm" href="blog-details.html">
+                    <span>
+                      read more
+                      <svg
+                          width="17"
+                          height="14"
+                          viewBox="0 0 17 14"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                            d="M11 1.24023L16 7.24023L11 13.2402"
+                            stroke="currentcolor"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                        <path
+                            d="M1 7.24023H16"
+                            stroke="currentcolor"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                      </svg>
+                    </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
 
 

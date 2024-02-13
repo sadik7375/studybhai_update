@@ -59,6 +59,16 @@ class FrontController extends Controller
 }
 
 
+public function footer()
+{
+
+    return view('front.v2.contractus');
+}
+
+
+
+
+
 
 
 // ------------------------------ front page ------------------------------

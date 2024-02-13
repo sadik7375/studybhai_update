@@ -26,37 +26,64 @@
                         </div>
                     </div>
                 </div>
+
+
+
+
+
+
+
                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-50">
                     <div class="it-footer-widget footer-col-2">
-                        <h4 class="it-footer-title">Contact Us:</h4>
+                        <h4 class="it-footer-title">our services:</h4>
                         <div class="it-footer-list">
                             <ul>
                                 <li>
                                     <a href="#"
-                                    ><i class="fa-regular fa-phone"></i>{{ \App\Models\Footer::first()->phone ?? '' }}</a
+                                    ><i class="fa-regular fa-angle-right"></i>Web
+                                        development</a
                                     >
                                 </li>
-
-
-
                                 <li>
                                     <a href="#"
-                                    ><i class="fa-regular fa-envelope"></i>{{ \App\Models\Footer::first()->email ?? '' }}</a
+                                    ><i class="fa-regular fa-angle-right"></i>UI/UX
+                                        Design</a
                                     >
                                 </li>
-
-
-
                                 <li>
                                     <a href="#"
-                                    ><i class="fa-regular fa-map-marker-alt"></i>{{ \App\Models\Footer::first()->location ?? '' }}</a
+                                    ><i class="fa-regular fa-angle-right"></i>Management</a
                                     >
                                 </li>
-
+                                <li>
+                                    <a href="#"
+                                    ><i class="fa-regular fa-angle-right"></i>Digital
+                                        Marketing</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#"
+                                    ><i class="fa-regular fa-angle-right"></i>Blog News</a
+                                    >
+                                </li>
                             </ul>
                         </div>
                     </div>
                 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 <div class="col-xl-2 col-lg-4 col-md-6 col-sm-6 mb-50">
                     <div class="it-footer-widget footer-col-3">
                         <h4 class="it-footer-title">quick links:</h4>
@@ -79,6 +106,19 @@
                                     ><i class="fa-regular fa-angle-right"></i>Team</a
                                     >
                                 </li>
+
+                                <li>
+                                    <a href="{{route("contact.info")}}"
+                                    ><i class="fa-regular fa-angle-right"></i>Contact Us</a
+                                    >
+                                </li>
+
+
+                                <li>
+                                    <a href="{{route('gallery.index')}}"
+                                    ><i class="fa-regular fa-angle-right"></i>Gallery</a
+                                    >
+                                </li>
                                 <!-- <li>
                                     <a href="#"
                                     ><i class="fa-regular fa-angle-right"></i>privacy &
@@ -98,32 +138,32 @@
                             <div class="row gx-5">
                                 <div class="col-md-4 col-4">
                                     <div class="it-footer-thumb mb-10">
-                                        <img src="{{ asset('assets/img/index/G1.png') }}" alt/>
+                                        <img src="{{ asset('assets/img/index/Teacher 1.png') }}" alt/>
                                     </div>
                                 </div>
                                 <div class="col-md-4 col-4">
                                     <div class="it-footer-thumb mb-10">
-                                        <img src="{{ asset('assets/img/index/G2.png') }}" alt/>
+                                        <img src="{{ asset('assets/img/index/Group 1.png') }}" alt/>
                                     </div>
                                 </div>
                                 <div class="col-md-4 col-4 mb-10">
                                     <div class="it-footer-thumb">
-                                        <img src="{{ asset('assets/img/index/G3.png') }}" alt/>
+                                        <img src="{{ asset('assets/img/index/Group 2.png') }}" alt/>
                                     </div>
                                 </div>
                                 <div class="col-md-4 col-4">
                                     <div class="it-footer-thumb">
-                                        <img src="{{ asset('assets/img/index/G4.png') }}" alt/>
+                                        <img src="{{ asset('assets/img/index/Student 1.png') }}" alt/>
                                     </div>
                                 </div>
                                 <div class="col-md-4 col-4">
                                     <div class="it-footer-thumb">
-                                        <img src="{{ asset('assets/img/index/G5.png') }}" alt/>
+                                        <img src="{{ asset('assets/img/index/Student 2.png') }}" alt/>
                                     </div>
                                 </div>
                                 <div class="col-md-4 col-4">
                                     <div class="it-footer-thumb">
-                                        <img src="{{ asset('assets/img/index/G6.png') }}" alt/>
+                                        <img src="{{ asset('assets/img/index/Teacher 2.png') }}" alt/>
                                     </div>
                                 </div>
                             </div>

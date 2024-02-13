@@ -153,6 +153,20 @@
             </div>
 
 
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="lesson">Class day and Time</label>
+                    <input type="text" id="student" name="classday"
+                           class="form-control @error('classday') is-invalid @enderror">
+
+                    @error('classday')
+                    <div class="alert alert-danger" style="margin-top: 10px">{{ $message }}</div>
+                    @enderror
+                </div>
+            </div>
+
+
+
 
 
             <div class="col-md-12">

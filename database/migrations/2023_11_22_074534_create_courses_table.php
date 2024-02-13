@@ -26,6 +26,7 @@ class CreateCoursesTable extends Migration
             $table->string("admission_ends")->nullable();
             $table->string("lesson")->nullable();
             $table->string("student")->nullable();
+            $table->string("classday")->nullable();
             $table->text("foundation")->nullable();
             $table->text("intermediate")->nullable();
             $table->text("advanced")->nullable();

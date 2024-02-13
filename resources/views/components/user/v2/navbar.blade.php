@@ -106,7 +106,7 @@
                                             <li><a href="{{route("team_info")}}">Team</a></li>
                                             <li><a href="{{route('gallery.index')}}">Gallery</a></li>
 
-                                            <li><a href="#footer">contact</a></li>
+{{--                                            <li><a href="#footer">contact</a></li>--}}
 
 
                                             @if(auth()->user() == null)
@@ -133,7 +133,7 @@
                                 >
 
                                     <div class="it-header-2-button d-none d-md-block">
-                                        <a class="it-btn-white" href="#footer">
+                                        <a class="it-btn-white" href="{{route('contact.info')}}">
                           <span>
                             Contact Us
                             <svg
@@ -186,6 +186,8 @@
             </div>
         </div>
     </div>
+
+
 </header>
 
 {{-- ----------------------------------------- navbar ----------------------------------------- --}}
