@@ -9,13 +9,15 @@
         @endif
     </div>
 
-    <h4>Create Gallery</h4>
+    <h4>Create Blog</h4>
     <hr>
 
     <form action="{{ route('gallery.store') }}" method="post" enctype="multipart/form-data">
         {{ csrf_field() }}
 
         <div class="row">
+
+
             <div class="col-md-6">
                 <div class="form-group">
                     <label for="exampleInputEmail1">Enter title</label>
@@ -41,6 +43,22 @@
                 </div>
             </div>
 
+
+
+
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Enter Description</label>
+                    <textarea type="text" id="exampleInputEmail1" aria-describedby="emailHelp"
+                           placeholder="" name="description"
+                           class="form-control @error('description') is-invalid @enderror"></textarea>
+
+                    @error('description')
+                    <div class="alert alert-danger" style="margin-top: 10px">{{ $message }}</div>
+                    @enderror
+                </div>
+            </div>
+
 {{--            <div class="col-md-12">--}}
 {{--                <div class="form-group">--}}
 {{--                    <label for="description">Description</label>--}}
@@ -57,7 +75,7 @@
 
             <!-- Add other fields similarly -->
             <div class="col-md-12">
-                <input type="submit" value="Add Photo" class="btn btn-success">
+                <input type="submit" value="Add Blog" class="btn btn-success">
             </div>
 
             <br><br><br>

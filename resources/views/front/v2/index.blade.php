@@ -301,9 +301,21 @@
                                     </div>
 
                                     <div class="it-course-author pb-15">
-                                        <img src="assets/img/course/avata-1.png" alt>
-                                        <span>By <i>Angela</i> in <i>Development</i></span>
+                                        @if($course->teams->isNotEmpty())
+                                            @foreach($course->teams as $team)
+                                                Course Instructor: {{ $team->name }}
+
+                                            @endforeach
+                                        @else
+
+                                            No Trainer Assigned
+                                        @endif
                                     </div>
+
+
+
+
+
                                     <div
                                         class="it-course-price-box d-flex justify-content-between"
                                     >
@@ -468,7 +480,7 @@
                         <div class="it-value-right-wrap text-end p-relative">
                             <div class="it-value-right-img p-relative">
                                 {{-- <img src="{{ asset('assets/img/value/value-1.jpg') }}" alt/> --}}
-                                <img src="{{ asset('assets/img/index/classroom.png') }}" alt/>
+                                <img src="{{ asset('assets/img/index/top.png') }}" alt/>
                                 {{-- <a class="it-value-play-btn" href="#"
                                 ><i class="fa-sharp fa-solid fa-play"></i
                                     ></a> --}}
@@ -498,7 +510,7 @@
                   <img src="assets/img/about/bg.svg" alt/>
                 </span>
                             <h4 class="it-section-title-3">
-                                Check out educate features <br/>
+                                Check our educate features <br/>
 
                             </h4>
                         </div>
@@ -511,9 +523,11 @@
                 <div class="row">
                     <div class="col-xl-3 col-lg-6 col-md-6">
                         <div class="it-feature-3-item mb-30 text-center">
-                            <div class="it-feature-3-icon">
-                                <span><i class="flaticon-coach"></i></span>
-                            </div>
+{{--                            <div class="it-feature-3-icon">--}}
+{{--                                <span><i class="flaticon-coach"></i></span>--}}
+{{--                            </div>--}}
+                            <span><img src="{{ asset('assets/img/index/classroom2.png') }}" alt/></i></span>
+
                             <div class="it-feature-3-content">
                                 <h4 class="it-feature-3-title">
                                     <a href="">Blended Learning Hub</a>
@@ -558,9 +572,14 @@
                     </div>
                     <div class="col-xl-3 col-lg-6 col-md-6">
                         <div class="it-feature-3-item mb-30 text-center">
-                            <div class="it-feature-3-icon">
-                                <span><i class="flaticon-study"></i></span>
-                            </div>
+
+{{--                            <div class="it-feature-3-icon">--}}
+{{--                                <span><i class="flaticon-study"></i></span>--}}
+{{--                            </div>--}}
+
+                            <span><img src="{{ asset('assets/img/index/career.png') }}" alt/></i></span>
+
+
                             <div class="it-feature-3-content">
                                 <h4 class="it-feature-3-title">
                                     <a href="">Career Counseling</a>
@@ -605,9 +624,12 @@
                     </div>
                     <div class="col-xl-3 col-lg-6 col-md-6">
                         <div class="it-feature-3-item mb-30 text-center">
-                            <div class="it-feature-3-icon">
-                                <span><i class="flaticon-booking"></i></span>
-                            </div>
+
+{{--                            <div class="it-feature-3-icon">--}}
+{{--                                <span><i class="flaticon-booking"></i></span>--}}
+{{--                            </div>--}}
+                            <span><img src="{{ asset('assets/img/index/project.png') }}" alt/></i></span>
+
                             <div class="it-feature-3-content">
                                 <h4 class="it-feature-3-title">
                                     <a href="">Practical Hands-on Projects</a>
@@ -652,9 +674,11 @@
                     </div>
                     <div class="col-xl-3 col-lg-6 col-md-6">
                         <div class="it-feature-3-item mb-30 text-center">
-                            <div class="it-feature-3-icon">
-                                <span><i class="flaticon-video"></i></span>
-                            </div>
+{{--                            <div class="it-feature-3-icon">--}}
+{{--                                <span><i class="flaticon-video"></i></span>--}}
+{{--                            </div>--}}
+
+                            <span><img src="{{ asset('assets/img/index/teacher.png') }}" alt/></span>
                             <div class="it-feature-3-content">
                                 <h4 class="it-feature-3-title">
                                     <a href="">Expert Facilitators</a>
@@ -831,7 +855,7 @@
 
 
                                 </p>
-                                                                <a class="it-btn-yellow mr-15" href="contact.html">
+                                                                <a class="it-btn-yellow mr-15" href="">
 
 
                                                                                         <span>
@@ -880,7 +904,7 @@
                                 <p>
                                     The preliminary assessment provides quick insights from our initial data analysis.
                                 </p>
-                                                                <a class="it-btn-yellow mr-15" href="contact.html">
+                                                                <a class="it-btn-yellow mr-15" href="">
                                                     <span>
                                                       Join now
                                                       <svg
@@ -985,6 +1009,11 @@
         </div>
 
 
+
+
+
+
+
         <div class="it-event-area p-relative pt-120 pb-120">
 {{--            <div class="it-event-shape-3 d-none d-xxl-block">--}}
 {{--                <img src="{{ asset('assets/img/event/shape-1-1.png') }}" alt/>--}}
@@ -998,7 +1027,8 @@
             <div class="it-event-shape-6">
                 <img src="{{ asset('assets/img/event/shape-1-4.png') }}" alt/>
             </div>
-            <div class="container">
+
+            <div class="container" id="upcourse"  >
                 <div class="row align-items-center">
                     <div class="col-xl-7 col-lg-7">
                         <div class="it-event-left">
@@ -1012,11 +1042,11 @@
                                 </h2>
                             </div>
                             <div class="it-event-content">
-                                 <span
-                                >Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                  sed do eiusmod <br/>
-                                  tempor incididunt ut labore.</span
-                                >
+{{--                                 <span--}}
+{{--                                >Lorem ipsum dolor sit amet, consectetur adipiscing elit,--}}
+{{--                                  sed do eiusmod <br/>--}}
+{{--                                  tempor incididunt ut labore.</span--}}
+{{--                                >--}}
 
 {{--                                                               ` <ul style="padding-left: 34px">--}}
 {{--                                                                    <li>Introduction to Machine Learning</li>--}}
@@ -1174,6 +1204,13 @@
                 <br>
                 <br>
 
+
+
+
+
+
+
+
                 <div class="it-blog-area it-blog-color pb-90">
                     <div class="container">
                         <div class="it-blog-title-wrap mb-80">
@@ -1192,7 +1229,7 @@
                                 </div>
                                 <div class="col-xl-5 col-lg-5 col-md-4">
                                     <div class="it-course-button text-start text-md-end pt-25">
-                                        <a class="it-btn-theme-2" href="blog-2.html">
+                                        <a class="it-btn-theme-2" href="{{route('gallery.index')}}">
                     <span>
                       all blog post
                       <svg
@@ -1225,22 +1262,28 @@
                                 </div>
                             </div>
                         </div>
+
+
                         <div class="row">
-                            <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+
+
+                            @foreach ($blogs as $blog)
+
+                                  <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
                                 <div
                                     class="it-blog-item-box"
                                     data-background="assets/img/blog/bg-1.jpg"
                                 >
                                     <div class="it-blog-item">
                                         <div class="it-blog-thumb fix">
-                                            <a href="blog-details.html"
-                                            ><img src="assets/img/blog/blog-1-1.jpg" alt
+                                            <a href="{{ route('blog.details', $blog->id) }}"
+                                            ><img src="{{ asset('storage/' . $blog->image) }}" alt
                                                 /></a>
                                         </div>
                                         <div class="it-blog-meta pb-15">
                     <span>
                       <i class="fa-solid fa-calendar-days"></i>
-                      14 June 2023</span
+                      {{$blog->created_at}}</span
                     >
                                             <span>
                       <i class="fa-light fa-messages"></i>
@@ -1248,12 +1291,11 @@
                                             >
                                         </div>
                                         <h4 class="it-blog-title">
-                                            <a href="blog-details.html"
-                                            >velit esse cillum dolore eu fugiat nulla pariatur.
-                                                Excepteur sint occaecat cupidatat</a
-                                            >
+                                            <a href="{{ route('blog.details', $blog->id) }}"
+                                            >{{$blog->title}}
+                                            </a>
                                         </h4>
-                                        <a class="it-btn-theme-sm" href="blog-details.html">
+                                        <a class="it-btn-theme-sm" href="{{ route('blog.details', $blog->id) }}">
                     <span>
                       read more
                       <svg
@@ -1285,125 +1327,16 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
-                                <div
-                                    class="it-blog-item-box"
-                                    data-background="assets/img/blog/bg-1.jpg"
-                                >
-                                    <div class="it-blog-item">
-                                        <div class="it-blog-thumb fix">
-                                            <a href="blog-details.html"
-                                            ><img src="assets/img/blog/blog-1-2.jpg" alt
-                                                /></a>
-                                        </div>
-                                        <div class="it-blog-meta pb-15">
-                    <span>
-                      <i class="fa-solid fa-calendar-days"></i>
-                      14 June 2023</span
-                    >
-                                            <span>
-                      <i class="fa-light fa-messages"></i>
-                      Comment (06)</span
-                                            >
-                                        </div>
-                                        <h4 class="it-blog-title">
-                                            <a href="blog-details.html"
-                                            >velit esse cillum dolore eu fugiat nulla pariatur.
-                                                Excepteur sint occaecat cupidatat</a
-                                            >
-                                        </h4>
-                                        <a class="it-btn-theme-sm" href="blog-details.html">
-                    <span>
-                      read more
-                      <svg
-                          width="17"
-                          height="14"
-                          viewBox="0 0 17 14"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                            d="M11 1.24023L16 7.24023L11 13.2402"
-                            stroke="currentcolor"
-                            stroke-width="1.5"
-                            stroke-miterlimit="10"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                        />
-                        <path
-                            d="M1 7.24023H16"
-                            stroke="currentcolor"
-                            stroke-width="1.5"
-                            stroke-miterlimit="10"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                        />
-                      </svg>
-                    </span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
-                                <div
-                                    class="it-blog-item-box"
-                                    data-background="assets/img/blog/bg-1.jpg"
-                                >
-                                    <div class="it-blog-item">
-                                        <div class="it-blog-thumb fix">
-                                            <a href="blog-details.html"
-                                            ><img src="assets/img/blog/blog-1-3.jpg" alt
-                                                /></a>
-                                        </div>
-                                        <div class="it-blog-meta pb-15">
-                    <span>
-                      <i class="fa-solid fa-calendar-days"></i>
-                      14 June 2023</span
-                    >
-                                            <span>
-                      <i class="fa-light fa-messages"></i>
-                      Comment (06)</span
-                                            >
-                                        </div>
-                                        <h4 class="it-blog-title">
-                                            <a href="blog-details.html"
-                                            >velit esse cillum dolore eu fugiat nulla pariatur.
-                                                Excepteur sint occaecat cupidatat</a
-                                            >
-                                        </h4>
-                                        <a class="it-btn-theme-sm" href="blog-details.html">
-                    <span>
-                      read more
-                      <svg
-                          width="17"
-                          height="14"
-                          viewBox="0 0 17 14"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                            d="M11 1.24023L16 7.24023L11 13.2402"
-                            stroke="currentcolor"
-                            stroke-width="1.5"
-                            stroke-miterlimit="10"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                        />
-                        <path
-                            d="M1 7.24023H16"
-                            stroke="currentcolor"
-                            stroke-width="1.5"
-                            stroke-miterlimit="10"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                        />
-                      </svg>
-                    </span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
+
+
+                            @endforeach
+
                         </div>
+
+
+
+
+
                     </div>
                 </div>
 

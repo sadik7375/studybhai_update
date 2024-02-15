@@ -31,6 +31,10 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.3.0/css/flat-ui.min.css"
         rel="stylesheet"
     />
+
+
+
+
 </head>
 <body>
 <div id="preloader">
@@ -152,5 +156,7 @@
 <script src="{{ asset('assets/js/imagesloaded-pkgd.js') }}"></script>
 <script src="{{ asset('assets/js/ajax-form.js') }}"></script>
 <script src="{{ asset('assets/js/main.js') }}"></script>
+
+
 </body>
 </html>

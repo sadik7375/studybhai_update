@@ -17,6 +17,7 @@
                 <th>Serial</th>
                 <th>Title</th>
                 <th>image</th>
+                <th>Description</th>
 
                 <th>Update</th>
                 <th>Delete</th>
@@ -30,7 +31,7 @@
                     <td>{{ $id += 1 }}</td>
                     <td>{!! $gallery->title !!}</td>
                     <td><img src="{{ asset('storage/' . $gallery->image) }}" alt="" style="width: 100px"></td>
-
+                    <td>{!! $gallery->description !!}</td>
 
                     <td><a href="{{ route('edit.gallery', $gallery->id) }}" class="btn btn-info">Update</a></td>
                     <td>

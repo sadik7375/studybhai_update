@@ -43,9 +43,23 @@
             </div>
 
 
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Enter Decription</label>
+                    <textarea type="text" id="exampleInputEmail1" aria-describedby="emailHelp"
+                           placeholder="" name="description"
+                              class="form-control @error('description') is-invalid @enderror" >{{ $gallery->description}}</textarea>
+
+                    @error('description')
+                    <div class="alert alert-danger" style="margin-top: 10px">{{ $message }}</div>
+                    @enderror
+                </div>
+            </div>
+
+
             <!-- Add other fields similarly -->
             <div class="col-md-12">
-                <input type="submit" value="Add Feedback" class="btn btn-success">
+                <input type="submit" value="update blog" class="btn btn-success">
             </div>
 
             <br><br><br>

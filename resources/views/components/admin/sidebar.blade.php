@@ -114,13 +114,13 @@
     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#Gallery" aria-expanded="true"
        aria-controls="Gallery">
         <i class="fas fa-fw fa-cog"></i>
-        <span>Gallery</span>
+        <span>Blog</span>
     </a>
     <div id="Gallery" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
         <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Custom Components:</h6>
-            <a class="collapse-item" href="{{ route('gallery.create') }}">Create Gallery</a>
-            <a class="collapse-item" href="{{ route('gallery.edit') }}">View Gallery</a>
+            <a class="collapse-item" href="{{ route('gallery.create') }}">Create Blog</a>
+            <a class="collapse-item" href="{{ route('gallery.edit') }}">View Blog</a>
         </div>
     </div>
 </li>

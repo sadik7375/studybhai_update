@@ -72,7 +72,7 @@
                                     <div class="it-header-2-top-social">
                                         <a href="https://www.facebook.com/Studybhaibd"><i class="fab fa-facebook-f"></i></a>
 
-                                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                                        <a href="https://www.linkedin.com/company/study-bhai-app/"><i class="fab fa-linkedin"></i></a>
                                     </div>
                                 </li>
                             </ul>
@@ -104,7 +104,7 @@
                                             </li>
                                             <li><a href="{{route("show.courses")}}">Course</a></li>
                                             <li><a href="{{route("team_info")}}">Team</a></li>
-                                            <li><a href="{{route('gallery.index')}}">Gallery</a></li>
+                                            <li><a href="{{route('gallery.index')}}">Blog</a></li>
 
 {{--                                            <li><a href="#footer">contact</a></li>--}}
 

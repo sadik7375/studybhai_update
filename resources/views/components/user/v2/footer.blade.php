@@ -39,31 +39,29 @@
                         <div class="it-footer-list">
                             <ul>
                                 <li>
-                                    <a href="#"
+                                    <a href="#upcourse"
                                     ><i class="fa-regular fa-angle-right"></i>Web
                                         development</a
                                     >
                                 </li>
                                 <li>
-                                    <a href="#"
-                                    ><i class="fa-regular fa-angle-right"></i>UI/UX
-                                        Design</a
+                                    <a href="#upcourse"
+                                    ><i class="fa-regular fa-angle-right"></i>Machine Learing</a
                                     >
                                 </li>
                                 <li>
-                                    <a href="#"
-                                    ><i class="fa-regular fa-angle-right"></i>Management</a
+                                    <a href="#upcourse"
+                                    ><i class="fa-regular fa-angle-right"></i>Data Analysis</a
                                     >
                                 </li>
                                 <li>
-                                    <a href="#"
-                                    ><i class="fa-regular fa-angle-right"></i>Digital
-                                        Marketing</a
+                                    <a href="#upcourse"
+                                    ><i class="fa-regular fa-angle-right"></i>Iot</a
                                     >
                                 </li>
                                 <li>
-                                    <a href="#"
-                                    ><i class="fa-regular fa-angle-right"></i>Blog News</a
+                                    <a href="#upcourse"
+                                    ><i class="fa-regular fa-angle-right"></i>SQA</a
                                     >
                                 </li>
                             </ul>

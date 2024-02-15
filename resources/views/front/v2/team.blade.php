@@ -4,7 +4,7 @@
 
     <main>
 
-        <div class="it-breadcrumb-area it-breadcrumb-bg" data-background="assets/img/index/Teacher.png">
+        <div class="it-breadcrumb-area it-breadcrumb-bg" data-background="assets/img/index/background.png">
             <div class="container">
                 <div class="row ">
                     <div class="col-md-12">

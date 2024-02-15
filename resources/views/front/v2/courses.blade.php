@@ -60,10 +60,21 @@
 <span><i class="fa-sharp fa-regular fa-clock"></i>{{$course->duration}}</span>
  <span><i class="fa-light fa-user"></i>{{$course->student}} Student</span>
 </div>
- <div class="it-course-author pb-15">
-    <img src="assets/img/course/avata-1.png" alt>
-    <span>By <i>Angela</i> in <i>Development</i></span>
+
+    <div class="it-course-author pb-15">
+        @if($course->teams->isNotEmpty())
+            @foreach($course->teams as $team)
+                Course Trainer: {{ $team->name }}
+
+            @endforeach
+        @else
+
+            No Trainer Assigned
+        @endif
     </div>
+
+
+
 <div class="it-course-price-box d-flex justify-content-between">
 <span><i>{{$course->price}} </i>BDT</span>
 <a href="{{ route('single_course_info', $course->id) }}"><i class="fa-light fa-cart-shopping"></i>Enroll now</a>

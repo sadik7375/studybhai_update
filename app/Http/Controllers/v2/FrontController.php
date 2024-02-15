@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\v2;
 
 use App\Http\Controllers\Controller;
+use App\Models\Gallery;
 use Illuminate\Http\Request;
 use App\Models\admin\Course;
 use App\Models\admin\Feedback;
@@ -19,7 +20,8 @@ class FrontController extends Controller
         $courses = Course::all();
         $feedbacks = Feedback::all();
         $teams = Team::all();
-        return view("front.v2.index", compact('courses',"feedbacks",'teams'));
+        $blogs=Gallery::all();
+        return view("front.v2.index", compact('courses',"feedbacks",'teams','blogs'));
 
     }
 
@@ -64,6 +66,17 @@ public function footer()
 
     return view('front.v2.contractus');
 }
+
+
+
+public function showassigntrainer()
+{
+
+
+
+}
+
+
 
 
 

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\admin\Course;
 use App\Models\admin\Feedback;
+use App\Models\Gallery;
 use App\Models\Team;
 use Illuminate\Http\Request;
 
@@ -12,8 +13,10 @@ class FrontController extends Controller
     public function front(){
         $courses = Course::all();
         $feedbacks = Feedback::all();
-    
-        return view("front.v2.index", compact('courses',"feedbacks"));
+        $blogs=Gallery::all();
+
+
+        return view("front.v2.index", compact('courses',"feedbacks","blogs"));
     }
 
     public function course_info($id){

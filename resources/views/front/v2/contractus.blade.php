@@ -6,7 +6,7 @@
 
     <main>
 
-        <div class="it-breadcrumb-area it-breadcrumb-bg" data-background="{{ asset('assets/img/index/breadcrumb.jpg') }}">
+        <div class="it-breadcrumb-area it-breadcrumb-bg" data-background="{{ asset('assets/img/index/contract.png') }}">
             <div class="container">
                 <div class="row ">
                     <div class="col-md-12">
@@ -80,9 +80,9 @@
                                         <a href="#it-newsletter"><i class="fa-solid fa-arrow-down"></i>Customer Care</a>
                                     </div>
                                     <div class="it-footer-social">
-                                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                                        <a href="https://www.facebook.com/Studybhaibd"><i class="fa-brands fa-facebook-f"></i></a>
+{{--                                        <a href="#"><i class="fa-brands fa-instagram"></i></a>--}}
+                                        <a href="https://www.linkedin.com/company/study-bhai-app/"><i class="fa-brands fa-linkedin"></i></a>
 {{--                                        <a href="#"><i class="fa-brands fa-twitter"></i></a>--}}
                                     </div>
                                 </div>

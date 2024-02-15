@@ -20,6 +20,7 @@ class GalleryController extends Controller
         $input = $request->validate([
             'title' => 'required|max:255',
             'image' => 'required|mimes:jpeg,jpg,png,gif',
+            'description' => 'required',
         ]);
 
 
@@ -58,6 +59,15 @@ class GalleryController extends Controller
 
 
 
+    public function details($id)
+    {
+        $gallery = Gallery::findOrFail($id);
+        return view('front.v2.gallerydetails', compact('gallery'));
+    }
+
+
+
+
 
 
     // Update the specified resource in storage.
@@ -68,10 +78,12 @@ class GalleryController extends Controller
         $request->validate([
             'title' => 'required',
             'image' => 'image|mimes:jpeg,png,jpg,gif|max:2048', // optional update for image
+            'description' => 'required'
         ]);
 
         // Update the title
         $gallery->title = $request->title;
+        $gallery->description = $request->description;
 
         // Update the image if a new one is provided
         if ($request->hasFile('image')) {
@@ -82,7 +94,7 @@ class GalleryController extends Controller
 
         $gallery->save();
 
-        return redirect()->route('gallery.index')
+        return redirect()->route('gallery.edit')
             ->with('success', 'Gallery item updated successfully.');
     }
 
@@ -91,7 +103,7 @@ class GalleryController extends Controller
     {
         $gallery = Gallery::findOrFail($id);
         $gallery->delete();
-        return redirect()->route('gallery.index')
+        return redirect()->route('gallery.edit')
             ->with('success', 'Gallery item deleted successfully.');
     }
 

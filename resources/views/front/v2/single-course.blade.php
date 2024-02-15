@@ -15,7 +15,7 @@
                     <div class="col-md-12">
                         <div class="it-breadcrumb-content z-index-3 text-center">
                             <div class="it-breadcrumb-title-box">
-                                <h3 class="it-breadcrumb-title">course details</h3>
+                                <h3 class="it-breadcrumb-title">{{$courses->title}}</h3>
                             </div>
 {{--                            <div class="it-breadcrumb-list-wrap">--}}
 {{--                                <div class="it-breadcrumb-list">--}}
@@ -65,82 +65,64 @@
                                                 <p>{!! $courses->description !!}
                                                 </p>
                                             </div>
-                                            <div class="it-evn-details-text">
-                                                <h6 class="it-evn-details-title-sm pb-5">What Will I Learn From This Course?</h6>
-                                                <p>
-                                                    {!! $courses->foundation !!} <br>
-                                                    {!! $courses->intermediate !!} <br>
-                                                    {!! $courses->advanced !!}
-                                                </p>
-                                            </div>
+{{--                                            <div class="it-evn-details-text">--}}
+{{--                                                <h6 class="it-evn-details-title-sm pb-5">What Will I Learn From This Course?</h6>--}}
+{{--                                                <p>--}}
+{{--                                                    {!! $courses->foundation !!} <br>--}}
+{{--                                                    {!! $courses->intermediate !!} <br>--}}
+{{--                                                    {!! $courses->advanced !!}--}}
+{{--                                                </p>--}}
+{{--                                            </div>--}}
                                         </div>
                                     </div>
                                     <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
                                         <div class="it-course-details-wrapper">
                                             <div class="it-evn-details-text mb-40">
-                                                <h6 class="it-evn-details-title-sm pb-5">Course Description</h6>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                                    incididunt ut labore et dolore
-                                                    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                                                    nisi ut aliquip ex ea
-                                                    commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                                    cillum dolore eu fugiat nulla
-                                                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                                                    officia deserunt mollit anim..
+                                                <h6 class="it-evn-details-title-sm pb-5">Basic</h6>
+                                                <p>
+                                                    {!! $courses->foundation !!}
+
                                                 </p>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                                    incididunt ut labore et dolore
-                                                    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                                                    nisi ut aliquip ex ea
-                                                    commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                                    cillum..</p>
+                                                <h6 class="it-evn-details-title-sm pb-5">Intermediate</h6>
+                                                <p>{!! $courses->intermediate !!} </p>
+                                                <h6 class="it-evn-details-title-sm pb-5">Advanced</h6>
+
+                                                <p>   {!! $courses->advanced !!} </p>
+
+
                                             </div>
-                                            <div class="it-evn-details-text">
-                                                <h6 class="it-evn-details-title-sm pb-5">What Will I Learn From This Course?</h6>
-                                                <p>Himenaeos. Vestibulum sollicitudin varius mauris non dignissim. Sed quis iaculis
-                                                    est. Nulla quam neque,
-                                                    interdum vitae fermentum lacinia, interdum eu magna. Mauris non posuere tellus.
-                                                    Donec quis euismod
-                                                    tellus. Nam vel lacus eu nisl bibendum accumsan vitae vitae nibh. Nam nec eros id
-                                                    magna hendrerit sagittis
-                                                    Nullam sed mi non odio feugiat volutpat sit amet nec elit. Maecenas id hendrerit
-                                                    ipsum
-                                                </p>
-                                            </div>
+{{--                                            <div class="it-evn-details-text">--}}
+{{--                                                <h6 class="it-evn-details-title-sm pb-5">What Will I Learn From This Course?</h6>--}}
+{{--                                                <p>Himenaeos. Vestibulum sollicitudin varius mauris non dignissim. Sed quis iaculis--}}
+{{--                                                    est. Nulla quam neque,--}}
+{{--                                                    interdum vitae fermentum lacinia, interdum eu magna. Mauris non posuere tellus.--}}
+{{--                                                    Donec quis euismod--}}
+{{--                                                    tellus. Nam vel lacus eu nisl bibendum accumsan vitae vitae nibh. Nam nec eros id--}}
+{{--                                                    magna hendrerit sagittis--}}
+{{--                                                    Nullam sed mi non odio feugiat volutpat sit amet nec elit. Maecenas id hendrerit--}}
+{{--                                                    ipsum--}}
+{{--                                                </p>--}}
+{{--                                            </div>--}}
                                         </div>
                                     </div>
                                     <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
                                         <div class="it-course-details-wrapper">
                                             <div class="it-evn-details-text mb-40">
-                                                <h6 class="it-evn-details-title-sm pb-5">Course Description</h6>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                                    incididunt ut labore et dolore
-                                                    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                                                    nisi ut aliquip ex ea
-                                                    commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                                    cillum dolore eu fugiat nulla
-                                                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                                                    officia deserunt mollit anim..
-                                                </p>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                                    incididunt ut labore et dolore
-                                                    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                                                    nisi ut aliquip ex ea
-                                                    commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                                    cillum..</p>
+                                                <h6 class="it-evn-details-title-sm pb-5">Instructor</h6>
+                                                <div class="it-course-author pb-15">
+                                                    @if($courses->teams->isNotEmpty())
+                                                        @foreach($courses->teams as $team)
+                                                            {{ $team->name }}
+
+                                                        @endforeach
+                                                    @else
+
+                                                        No Trainer Assigned
+                                                    @endif
+                                                </div>
+
                                             </div>
-                                            <div class="it-evn-details-text">
-                                                <h6 class="it-evn-details-title-sm pb-5">What Will I Learn From This Course?</h6>
-                                                <p>Himenaeos. Vestibulum sollicitudin varius mauris non dignissim. Sed quis iaculis
-                                                    est. Nulla quam neque,
-                                                    interdum vitae fermentum lacinia, interdum eu magna. Mauris non posuere tellus.
-                                                    Donec quis euismod
-                                                    tellus. Nam vel lacus eu nisl bibendum accumsan vitae vitae nibh. Nam nec eros id
-                                                    magna hendrerit sagittis
-                                                    Nullam sed mi non odio feugiat volutpat sit amet nec elit. Maecenas id hendrerit
-                                                    ipsum
-                                                </p>
-                                            </div>
+
                                         </div>
                                     </div>
                                     <div class="tab-pane fade" id="nav-reviews" role="tabpanel" aria-labelledby="nav-reviews-tab">

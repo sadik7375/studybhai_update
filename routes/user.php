@@ -31,7 +31,8 @@ Route::get('team', [FrontController::class, 'team'])->name('team_info');
 
 //------------------------------------------  Gallery   -----------------------------------------
 
-Route::get('/showgallery', [GalleryController::class, 'index'])->name('gallery.index');
+Route::get('/showblogs', [GalleryController::class, 'index'])->name('gallery.index');
+Route::get('/blogdetails/{id}', [GalleryController::class, 'details'])->name('blog.details');
 
 //------------------------------------------Contract Us------------------------------------------
 
