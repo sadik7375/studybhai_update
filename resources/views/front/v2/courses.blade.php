@@ -76,7 +76,7 @@
 
 
 <div class="it-course-price-box d-flex justify-content-between">
-<span><i>{{$course->price}} </i>BDT</span>
+<span><i>{{$course->price}} </i><del>{{ $course->discounted_price }}</del> BDT</span>
 <a href="{{ route('single_course_info', $course->id) }}"><i class="fa-light fa-cart-shopping"></i>Enroll now</a>
 </div>
 </div>

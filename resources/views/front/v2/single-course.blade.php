@@ -9,7 +9,7 @@
 
 
 
-        <div class="it-breadcrumb-area it-breadcrumb-bg" data-background="assets/img/breadcrumb/breadcrumb.jpg">
+        <div class="it-breadcrumb-area it-breadcrumb-bg" data-background="{{ asset('storage/' . $courses->image) }}">
             <div class="container">
                 <div class="row ">
                     <div class="col-md-12">
@@ -125,40 +125,47 @@
 
                                         </div>
                                     </div>
+
+
                                     <div class="tab-pane fade" id="nav-reviews" role="tabpanel" aria-labelledby="nav-reviews-tab">
                                         <div class="it-course-details-wrapper">
                                             <div class="it-evn-details-text mb-40">
-                                                <h6 class="it-evn-details-title-sm pb-5">Course Description</h6>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                                    incididunt ut labore et dolore
-                                                    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                                                    nisi ut aliquip ex ea
-                                                    commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                                    cillum dolore eu fugiat nulla
-                                                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                                                    officia deserunt mollit anim..
-                                                </p>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                                    incididunt ut labore et dolore
-                                                    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                                                    nisi ut aliquip ex ea
-                                                    commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                                    cillum..</p>
+{{--                                                <h6 class="it-evn-details-title-sm pb-5">Course Description</h6>--}}
+{{--                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor--}}
+{{--                                                    incididunt ut labore et dolore--}}
+{{--                                                    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris--}}
+{{--                                                    nisi ut aliquip ex ea--}}
+{{--                                                    commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse--}}
+{{--                                                    cillum dolore eu fugiat nulla--}}
+{{--                                                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui--}}
+{{--                                                    officia deserunt mollit anim..--}}
+{{--                                                </p>--}}
+{{--                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor--}}
+{{--                                                    incididunt ut labore et dolore--}}
+{{--                                                    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris--}}
+{{--                                                    nisi ut aliquip ex ea--}}
+{{--                                                    commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse--}}
+{{--                                                    cillum..</p>--}}
                                             </div>
                                             <div class="it-evn-details-text">
-                                                <h6 class="it-evn-details-title-sm pb-5">What Will I Learn From This Course?</h6>
-                                                <p>Himenaeos. Vestibulum sollicitudin varius mauris non dignissim. Sed quis iaculis
-                                                    est. Nulla quam neque,
-                                                    interdum vitae fermentum lacinia, interdum eu magna. Mauris non posuere tellus.
-                                                    Donec quis euismod
-                                                    tellus. Nam vel lacus eu nisl bibendum accumsan vitae vitae nibh. Nam nec eros id
-                                                    magna hendrerit sagittis
-                                                    Nullam sed mi non odio feugiat volutpat sit amet nec elit. Maecenas id hendrerit
-                                                    ipsum
-                                                </p>
+{{--                                                <h6 class="it-evn-details-title-sm pb-5">What Will I Learn From This Course?</h6>--}}
+{{--                                                <p>Himenaeos. Vestibulum sollicitudin varius mauris non dignissim. Sed quis iaculis--}}
+{{--                                                    est. Nulla quam neque,--}}
+{{--                                                    interdum vitae fermentum lacinia, interdum eu magna. Mauris non posuere tellus.--}}
+{{--                                                    Donec quis euismod--}}
+{{--                                                    tellus. Nam vel lacus eu nisl bibendum accumsan vitae vitae nibh. Nam nec eros id--}}
+{{--                                                    magna hendrerit sagittis--}}
+{{--                                                    Nullam sed mi non odio feugiat volutpat sit amet nec elit. Maecenas id hendrerit--}}
+{{--                                                    ipsum--}}
+{{--                                                </p>--}}
                                             </div>
                                         </div>
                                     </div>
+
+
+
+
+
                                 </div>
                             </div>
                         </div>

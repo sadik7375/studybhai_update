@@ -303,7 +303,7 @@
                                     <div class="it-course-author pb-15">
                                         @if($course->teams->isNotEmpty())
                                             @foreach($course->teams as $team)
-                                                Course Instructor: {{ $team->name }}
+                                                Instructor: {{ $team->name }}
 
                                             @endforeach
                                         @else
@@ -319,7 +319,7 @@
                                     <div
                                         class="it-course-price-box d-flex justify-content-between"
                                     >
-                                        <span><i>{{ $course->price }} </i>BDT</span>
+                                        <span><i>{{ $course->price }} </i>  <del>{{ $course->discounted_price }}</del> BDT</span>
                                         <a href="{{ route('single_course_info', ['id' => $course->id]) }}"
                                         ><i class="fa-light fa-cart-shopping"></i>Enroll Now</a
                                         >

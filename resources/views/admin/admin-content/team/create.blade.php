@@ -106,7 +106,7 @@
                     <input type="text" id="expertise" name="email"
                         class="form-control @error('expertise') is-invalid @enderror">
 
-                    @error('expertise')
+                    @error('email')
                         <div class="alert alert-danger" style="margin-top: 10px">{{ $message }}</div>
                     @enderror
                 </div>
@@ -117,7 +117,7 @@
                     <input type="text" id="expertise" name="password"
                         class="form-control @error('expertise') is-invalid @enderror">
 
-                    @error('expertise')
+                    @error('password')
                         <div class="alert alert-danger" style="margin-top: 10px">{{ $message }}</div>
                     @enderror
                 </div>
@@ -131,7 +131,7 @@
                     <input type="text" id="expertise" name="phone_number"
                         class="form-control @error('expertise') is-invalid @enderror">
 
-                    @error('expertise')
+                    @error('phone_number')
                         <div class="alert alert-danger" style="margin-top: 10px">{{ $message }}</div>
                     @enderror
                 </div>
