@@ -10,9 +10,9 @@
             <div class="it-hero-3-shape-2">
                 <img src="assets/img/hero/hero-3-shape2.png" alt/>
             </div>
-            <div class="it-hero-3-shape-3 d-none d-lg-block">
-                <img src="assets/img/hero/hero-3-shape3.png" alt/>
-            </div>
+{{--            <div class="it-hero-3-shape-3 d-none d-lg-block">--}}
+{{--                <img src="assets/img/hero/hero-3-shape3.png" alt/>--}}
+{{--            </div>--}}
             <div class="it-hero-3-shape-4 d-none d-xxl-block">
                 <img src="assets/img/hero/hero-3-shape4.png" alt/>
             </div>
@@ -1131,7 +1131,7 @@
                                 <img src="{{ asset('assets/img/event/shape-1-6.png') }}" alt/>
                             </div>
                             <div class="it-event-thumb">
-                                <img src="{{ asset('assets/img/index/events.png') }}" alt/>
+                                <img src="{{ asset('assets/img/index/events.jpg') }}" alt/>
                             </div>
                         </div>
                     </div>
@@ -1183,8 +1183,8 @@
                                     </div>
                                     <div class="it-team-3-author-box">
                                         <h4 class="it-team-3-title"><a href="">{{$team->name}}</a></h4>
-                                        <span>Profession:{{ $team->profession }}</span><br>
-                                        <span>Expertise:{{ $team->expertise }}</span>
+                                        <span>{{ $team->profession }}</span><br>
+                                        <span>{{ $team->expertise }}</span>
                                     </div>
                                 </div>
                             </div>

@@ -49,8 +49,8 @@
                                     </div>
                                     <div class="it-team-3-author-box">
                                         <h4 class="it-team-3-title">{{$team->name}}</h4>
-                                        <span>Profession:{{ $team->profession }}</span><br>
-                                        <span>Expertise:{{ $team->expertise }}</span>
+                                        <span>{{ $team->profession }}</span><br>
+                                        <span>{{ $team->expertise }}</span>
                                     </div>
                                 </div>
                             </div>

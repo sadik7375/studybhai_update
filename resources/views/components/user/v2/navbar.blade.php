@@ -49,7 +49,7 @@
                         <span>
                           <i class="fa-light fa-location-dot"></i>
                         </span>
-                                        Monsurabad,Adabar,Dhaka
+                                        Monsurabad Housing, Adabar, Dhaka
                                     </a>
                                 </li>
                             </ul>
